@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<title>I Love You!</title>
+<style>
+body { background: #f7565b; }
+.heart { position: relative; z-index: 1; }
+.heart:before, .heart:after { content: ""; z-index: -1; position: absolute; top: 0; }
+.heart:before { box-shadow: -10px 1px 15px 0 rgba(0,0,0,0.2),  inset 20px -195px 65px 0 #640d0d,  inset -2px 2px 0 rgba(255,255,255,.75),  inset -5px 20px 0 rgba(255,255,255,.35),  inset -5px 20px 10px rgba(255,255,255,.25); }
+.heart:after { box-shadow: 15px 3px 25px rgba(0,0,0,0.35),  inset -25px 10px 35px rgba(0,0,0,.35); }
+.heart .message { text-shadow: -1px -1px 1px #ae6363, 1px 1px 1px #450000; padding: 45px 0 0 30px; transform: rotate(-15deg); -webkit-transform: rotate(-15deg); }
+.popover { position: absolute; right: 10px; }
+.popover:after { position: absolute; right: 0; content: ""; display: block; width: 0; height: 0; }
+.heart:before, .heart:after { width: 150px; height: 240px; border-radius: 75px 75px 0 0; }
+.heart { width: 300px; height: 280px; margin: 40px 50px 0 100px; }
+.heart:before { left: 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); background-color: #cf9797; }
+.heart:after { left: 64px; background-color: #640d0d; transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+.heart .message { font-size: 64px; font-family: cursive; font-weight: bold; color: #640d0d; }
+.popover:before { content: 'I love you, forever and ever!'; color: #fff; font-size: 26px; }
+.popover { padding: 15px 30px; background: #F9787C; border-radius: 10px; }
+.popover:after { border-bottom: 28px solid transparent; border-right: 58px solid #F9787C; }
+</style>
+</head>
+
+<body>
+<div class="heart">
+  <div class="message">Love</div>
+</div>
+<div class="popover"></div>
+</body>
+</html>
