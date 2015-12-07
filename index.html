@@ -23,7 +23,7 @@
 		</div>
 	</div>
     <div id="con_jytab_1">
-    <form method="post" action="">
+    <form method="post" action="" id="" name="">
 	<div class="little_nav">
 		<div class="con">
 			<div class="Menubox">
@@ -39,14 +39,18 @@
 			 </div>
 			 <div class="edit_user">
 				<a href="#">导入用户</a>
-				<a href="#">修改用户等级</a>
-				<a href="#">发送邀请码</a>
+				<a href="javascript:void(0)">修改用户等级</a>
+				<a href="javascript:void(0)" class="rev_clas">发送邀请码</a>
 			 </div>
+             <div class="check_btn">
+             	<a href="javascript:void(0)" onClick="TanB(6)" class="check_next">下一步</a>
+             	<a href="javascript:void(0)" class="check_esc">取消</a>
+             </div>
 		</div>
 	</div>
 	<div class="con">
 			<div class="user_list" id="con_xytab_1">
-				<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
+				<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="100%">
 				  <tbody>
 					<tr>
 						<th width="12%">头像</th>
@@ -57,7 +61,7 @@
 						<th width="15%">所在机构</th>
 						<th width="10%">职位</th>
 						<th width="6%">等级</th>
-						<th><label for="chkall_common" class="chkall"><input name="chkall_common" type="checkbox" id="chkall_common" value="" />全选</label></th>
+						<th><label for="chkall" class="chkall"><input name="chkall" type="checkbox" id="chkall" value="" />全选</label></th>
 					</tr>
 					<tr>
 					  <td><img src="images/touxiang.jpg"></td>
@@ -67,14 +71,14 @@
 					  <td>15112345678</td>
 					  <td>红杉资本</td>
 					  <td>投资顾问</td>
-					  <td>普通</td>
+					  <td>VIP</td>
 					  <td class="do_sth">
                       	<div class="black">
                             <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -92,7 +96,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
                     <tr>
@@ -110,7 +114,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -128,7 +132,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
                     <tr>
@@ -146,7 +150,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -164,7 +168,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
 					  </td>
 					</tr>
 				  </tbody>
@@ -329,7 +333,7 @@
 						<th width="15%">所在机构</th>
 						<th width="10%">职位</th>
 						<th width="6%">等级</th>
-						<th><label for="chkall_common" class="chkall"><input name="chkall_common" type="checkbox" id="chkall_common" value="" />全选</label></th>
+						<th><label for="chkall_vip" class="chkall"><input name="chkall_vip" type="checkbox" id="chkall_vip" value="" />全选</label></th>
 					</tr>
 					<tr>
 					  <td><img src="images/touxiang.jpg"></td>
@@ -339,14 +343,14 @@
 					  <td>15112345678</td>
 					  <td>红杉资本</td>
 					  <td>投资顾问</td>
-					  <td>普通</td>
+					  <td>VIP</td>
 					  <td class="do_sth">
                       	<div class="black">
                             <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -364,7 +368,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
                     <tr>
@@ -382,7 +386,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -400,7 +404,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
                     <tr>
@@ -414,11 +418,13 @@
 					  <td>VIP</td>
 					  <td class="do_sth">
                       	<div class="black">
+
+
                             <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
 					<tr>
@@ -436,7 +442,7 @@
                             <a href="javascript:void(0)" class="blacklist"></a>
                             <a href="javascript:void(0)" class="add_blacklist">解除拉黑</a>
                         </div>
-                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_vip" ></div>
 					  </td>
 					</tr>
 				  </tbody>
@@ -547,6 +553,57 @@
 					</tr>
                   </tbody>
             </table>
+		</form>
+	</div>
+    <!-- 修改等级弹窗 -->
+    <div id="tanbox5" class="box_con rev_class">
+		<div class="tan_tit">选择修改等级<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form5" id="form5" action="" method="post">
+		  <div class="set_class">
+			<div class="two_class"><a href="javascript:void(0)" class="ori_class">普通等级</a><a href="javascript:void(0)" class="hover">VIP用户</a></div>
+			<div class="class_btn"><a class="class_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="class_save" href="javascript:void(0)">保存</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送邀请码 -->
+    <div id="tanbox6" class="box_con user_tel_box">
+		<div class="tan_tit">未注册用户的手机<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form6" id="form6" action="" method="post">
+		  <div class="user_tel">
+			<div class="user_tel_div"><textarea class="user_tel_text" onblur="if(this.value==''){this.value='请输入手机号，以空格区分';this.className='user_tel_text';}" onclick="if(this.value=='请输入手机号，以空格区分'){this.value='';this.className='user_tel_text1';}" >请输入手机号，以空格区分</textarea></div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="closee()" class="user_tel_reback">返回</a><a class="user_tel_next" href="javascript:void(0)" onClick="TanB(7)">下一步</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 设置邀请码 -->
+    <div id="tanbox7" class="box_con set_code_box">
+		<div class="tan_tit">设置邀请码<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form7" id="form7" action="" method="post">
+		  <div class="user_input">
+			<div class="user_code_input">
+            	<div class="user_code_num">
+                	<span class="user_num_left">数 &nbsp;&nbsp; 量：</span>
+            		<input type="text" name="" id="" value="5" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：条</span>
+                </div>
+                <div class="user_code_num mt15">
+                	<span class="user_num_left">有效期：</span>
+            		<input type="text" name="" id="" value="30" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：天</span>
+                </div>
+            </div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="TanB(6)" class="user_tel_reback">返回</a><a class="user_send" href="javascript:void(0)">确认发送</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送成功 -->
+    <div id="tanbox8" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="lead_in">
+			<div class="lead_icon code_icon"></div>
+			<div class="lead_fon">邀请码发送成功</div>
+		  </div>
 		</form>
 	</div>
 </div>
