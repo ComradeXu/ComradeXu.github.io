@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5 canvas制作逼真的下雨雨滴效果js插件|DEMO4_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style media="screen">
+           body {
+                overflow: hidden;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #333;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #infobox {
+                z-index: 100;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            #infobox div {
+                width: 260px;
+                padding: 15px;
+                background-color: #f2f2f2;
+                visibility: hidden;
+            }
+            #infobox:hover div {
+                visibility: visible;
+            }
+        </style>
+        <script src="js/rainyday.min.js"></script>
+        <script>
+            function run() {
+                var image = document.getElementById('background');
+                image.onload = function() {
+                    var engine = new RainyDay({
+                        image: this,
+                        gravityAngle: Math.PI / 9
+                    });
+                    engine.trail = engine.TRAIL_SMUDGE;
+                    engine.rain([ [1, 0, 1000], [3, 3, 1] ], 100);
+                };
+                image.crossOrigin = 'anonymous';
+                image.src = 'img/VuX2Nf0.jpg';
+
+                // hide info container
+                document.getElementById('infobox').children[0].style.visibility = 'visible';
+                setTimeout(function(){
+                    // remove inline style -otherwise the hover effect would not be effective
+                    document.getElementById('infobox').children[0].style.visibility = '';
+                }, 5000);
+           }
+        </script>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body onload="run();">
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>HTML5 canvas制作逼真的下雨雨滴效果js插件 <span>A simple script for simulating raindrops falling on a glass surface</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/html5/html5-canvas/201502061336.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+            <div class="htmleaf-demo center">
+              <a href="index.html">DEMO1</a>
+              <a href="index2.html">DEMO2</a>
+              <a href="index3.html">DEMO3</a>
+              <a href="index4.html" class="current">DEMO4</a>
+              <a href="index5.html">DEMO5</a>
+            </div>
+		</header>
+		
+	</div>
+	<img id="background" alt="background" src="" />
+        <div id="infobox" >
+            <div>
+                <h1>rainyday.js</h1>
+                <p>A simple script for simulating raindrops falling on a glass surface.</p>
+
+                <p>
+                    <button onclick="document.getElementById('background').src='http://i.imgur.com/U1Tqqdw.jpg';">Dark Image</button>
+                    <button onclick="document.getElementById('background').src='http://i.imgur.com/VuX2Nf0.jpg';">Light Image</button>
+                </p>
+
+               
+            </div>
+        </div>
+</body>
+</html>

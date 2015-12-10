@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5 canvas制作逼真的下雨雨滴效果js插件|DEMO5_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style media="screen">
+           body {
+                overflow: hidden;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #canvasHolder {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                width: 100px;
+                height: 100px;
+            }
+
+            img {
+                width: ;
+            }
+        </style>
+        <script src="js/rainyday.min.js"></script>
+        <script>
+            function run() {
+                var image = document.getElementById('background');
+                image.onload = function() {
+                    var engine = new RainyDay({
+                        image: this,
+                        crop: [ 50, 50, 600, 400]
+                    }, document.getElementById('canvas'));
+                    engine.trail = engine.TRAIL_SMUDGE;
+                    engine.rain([ [3, 3, 0.1] ], 33);
+                };
+                image.crossOrigin = 'anonymous';
+                image.src = 'img/HRtuQo8.jpg';
+            }
+        </script>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body onload="run();">
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>HTML5 canvas制作逼真的下雨雨滴效果js插件 <span>A simple script for simulating raindrops falling on a glass surface</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-home" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-arrow-right3" href="http://www.htmleaf.com/html5/html5-canvas/201502061336.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+            <div class="htmleaf-demo center">
+              <a href="index.html">DEMO1</a>
+              <a href="index2.html">DEMO2</a>
+              <a href="index3.html">DEMO3</a>
+              <a href="index4.html">DEMO4</a>
+              <a href="index5.html" class="current">DEMO5</a>
+            </div>
+		</header>
+	</div>
+	<img id="background" alt="background" src="" />
+        <div id="canvasHolder">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+</body>
+</html>
