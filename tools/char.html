@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="description" content="对于一些特殊的字符，在编辑器中可能乱码或是个框框，看上去可能不爽。本页面可以把任意稀奇古怪字符转换成HTML可识别的友好表现形式。" />
+<meta name="description" content="前端小工具之特殊的字符换成HTML可识别的友好形式工具" />
+<meta name="keywords" content="css3, font-face, 前端, 字符, 编码, 工具" />
+<title>任意字符转换成HTML识别格式</title>
+<style>
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+.unicode_form,
+.unicode_show {
+	width: 1000px;
+	margin: 100px auto;
+}
+.unicode_input,
+.unicode_submit {
+	padding: 10px;
+	border: 10px solid #a0b3d6;
+	border-radius: 5px;
+	font-size: 80px;
+	font-family: 'microsoft yahei';
+	vertical-align: top;
+}
+.unicode_input {
+	height: 100px; width: 700px;
+}
+.unicode_input:focus {
+	box-shadow: inset 2px 2px 4px rgba(0,0,0,.25);
+	outline: 0;
+}
+.unicode_submit {
+	height: 140px; width: 240px;
+	background-color: #f0f3f9;
+	background-image: -webkit-linear-gradient(top, #f0f3f9, #cad5eb);
+	background-image: -moz-linear-gradient(top, #f0f3f9, #cad5eb);
+	background-image:      linear-gradient(top, #f0f3f9, #cad5eb);
+}
+.unicode_submit:active {
+	background-image: none;
+}
+.unicode_show {
+	font-size: 80px; 
+	text-align: center;
+	font-family: Monaco, monospace;
+}
+</style>
+</head>
+
+<body>
+<h1>任意字符转换成HTML识别格式</h1>
+<form id="form" class="unicode_form">
+  <input type="text" id="input" class="unicode_input" placeholder="请输入任意字符" maxlength="1" name="q" required autofocus>
+    <input type="submit" class="unicode_submit" value="转换">
+</form>
+<div id="show" class="unicode_show"></div>
+<script>
+var U = function(a, b) {
+	if (!a) return "";
+	for (var b = b || "x", c = "", d = 0, e; d < a.length; d += 1) a.charCodeAt(d) >= 55296 && a.charCodeAt(d) <= 56319 ? (e = (65536 + 1024 * (Number(a.charCodeAt(d)) - 55296) + Number(a.charCodeAt(d + 1)) - 56320).toString(16), d += 1) : e = a.charCodeAt(d).toString(16),
+	c += b + e;
+	return c.substr(b.length)
+}, $ = function(id) {
+	return document.getElementById(id);
+}
+$("form").onsubmit = function() {
+	var val = $("input").value, char = U(val);
+	$("show").innerHTML = "&#x" + char + "; → " + "&amp;#x" + char + ";";
+	return false;
+};
+</script>
+</body>
+</html>
