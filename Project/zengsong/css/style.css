@@ -36,7 +36,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 
 /** 首页顶部**/
 .top_addr {height:4rem;line-height:4rem;background:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;position:relative;padding-right:4.5rem;color:#777;}
-.top_addr .top_addr_ico {width:1.1rem;height:1.8rem;vertical-align:middle;margin-right:0.5rem;background-position:-7.5rem -2.6rem;}
+.top_addr .top_addr_ico {width:1.1rem;height:1.8rem;margin-right:0.5rem;background-position:-7.5rem -2.6rem;}
 .top_addr .top_addr_scan {width:2.1rem;height:2rem;vertical-align:middle;position:absolute;top:1rem;right:1.5rem;background-position:-9.5rem -0.5rem;}
 
 /**赠送物品详情**/
