@@ -77,7 +77,12 @@
 <script type="text/javascript" src="js/js.js"></script>
 <script>
 	$(function(){ 
-		$("img.lazy").lazyload(); 
+		$("img.lazy").lazyload({ 
+			placeholder : "images/loading.gif", 
+			effect      : "fadeIn",
+			threshold : 200,
+			failure_limit : 10 
+		}); 
 	});
 </script>
 </body>
