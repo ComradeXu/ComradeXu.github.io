@@ -48,8 +48,8 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .items .items_top .user_time {float:right;margin-top:1rem;color:#999;font-size:1.2rem;}
 .items .items_intro {margin-top:1.4rem;float:left;font-size:1.4rem;line-height:1.8rem;}
 .items .items_img {margin-top:1.5rem;float:left;}
-.items .items_img ul li {float:left;width:30%;margin-left:5%;height:7.5rem;}
-.items .items_img ul li img {border:1px solid #cecece;width:100%;}
+.items .items_img ul li {float:left;width:30%;margin-left:5%;}
+.items .items_img ul li img {border:1px solid #cecece;}
 .items .items_img ul li:first-child {margin-left:0;}
 .items .items_rep {float:right;color:#999;margin-top:1.5rem;}
 
