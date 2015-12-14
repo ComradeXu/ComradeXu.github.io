@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>详情页</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="content content1">
+<article class="items items_none">
+	<div class="items_top">
+    	<div class="user_header"><img src="images/tou.jpg"></div>
+        <div class="user_name">美好时光</div>
+        <div class="user_time">1小时前</div>
+    </div>
+    <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
+    <div class="items_img">
+    	<ul>
+        	<li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+        </ul>
+    </div>
+    <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
+</article>
+<div class="per_count p15">申请人数<span>20</span></div>
+<div class="apply_info p15">
+	<div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_choose"></div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+    </div>
+</div>
+</div>
+<footer class="share_footer">
+	<div class="p15">
+	<div class="share">
+    	<a href="javascript:void(0)" class="share_btn"><span></span></a>
+        <input type="text" placeholder="请输入理由">
+        <div class="apply_btn">申请</div>
+    </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+      debug: false,
+      appId: 'wxf8b4f85f3a794e77',
+      timestamp: 1450098294,
+      nonceStr: 'fRiz43RCuevH799x',
+      signature: '94d94f6947af96216fd4ba875610364ee793688c',
+      jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'onMenuShareQZone',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'translateVoice',
+        'startRecord',
+        'stopRecord',
+        'onVoiceRecordEnd',
+        'playVoice',
+        'onVoicePlayEnd',
+        'pauseVoice',
+        'stopVoice',
+        'uploadVoice',
+        'downloadVoice',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'openProductSpecificView',
+        'addCard',
+        'chooseCard',
+        'openCard'
+      ]
+  });
+</script>
+<script>
+var images = {
+    localId: [],
+    serverId: []
+  };
+  document.querySelector('#chooseImage').onclick = function () {
+    wx.chooseImage({
+      success: function (res) {
+        images.localId = res.localIds;
+        alert('已选择 ' + res.localIds.length + ' 张图片');
+      }
+    });
+  };
+
+  // 5.2 图片预览
+  document.querySelector('#previewImage').onclick = function () {
+    wx.previewImage({
+      current: 'http://img5.douban.com/view/photo/photo/public/p1353993776.jpg',
+      urls: [
+        'http://img3.douban.com/view/photo/photo/public/p2152117150.jpg',
+        'http://img5.douban.com/view/photo/photo/public/p1353993776.jpg',
+        'http://img3.douban.com/view/photo/photo/public/p2152134700.jpg'
+      ]
+    });
+  };
+
+  // 5.3 上传图片
+  document.querySelector('#uploadImage').onclick = function () {
+    if (images.localId.length == 0) {
+      alert('请先使用 chooseImage 接口选择图片');
+      return;
+    }
+    var i = 0, length = images.localId.length;
+    images.serverId = [];
+    function upload() {
+      wx.uploadImage({
+        localId: images.localId[i],
+        success: function (res) {
+          i++;
+          //alert('已上传：' + i + '/' + length);
+          images.serverId.push(res.serverId);
+          if (i < length) {
+            upload();
+          }
+        },
+        fail: function (res) {
+          alert(JSON.stringify(res));
+        }
+      });
+    }
+    upload();
+  };
+
+  // 5.4 下载图片
+  document.querySelector('#downloadImage').onclick = function () {
+    if (images.serverId.length === 0) {
+      alert('请先使用 uploadImage 上传图片');
+      return;
+    }
+    var i = 0, length = images.serverId.length;
+    images.localId = [];
+    function download() {
+      wx.downloadImage({
+        serverId: images.serverId[i],
+        success: function (res) {
+          i++;
+          alert('已下载：' + i + '/' + length);
+          images.localId.push(res.localId);
+          if (i < length) {
+            download();
+          }
+        }
+      });
+    }
+    download();
+  };
+</script>
+<script>
+	$(function(){ 
+		$("img").lazyload({ 
+			placeholder : "images/loading.gif",
+			effect      : "fadeIn",
+			threshold : 200
+		}); 
+	});
+</script>
+</body>
