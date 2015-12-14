@@ -22,9 +22,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img data-original="images/tu.jpg"></li>
-            <li><img data-original="images/tu.jpg"></li>
-            <li><img data-original="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg" class="lazy"></li>
+            <li><img data-original="images/tu.jpg" class="lazy"></li>
+            <li><img data-original="images/tu.jpg" class="lazy"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -38,9 +38,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img data-original="images/tu.jpg"></li>
-            <li><img data-original="images/tu.jpg"></li>
-            <li><img data-original="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg" class="lazy"></li>
+            <li><img data-original="images/tu.jpg" class="lazy"></li>
+            <li><img data-original="images/tu.jpg" class="lazy"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -54,9 +54,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img data-original="images/tu.jpg"></li>
-            <li><img data-original="images/t.jpg"></li>
-            <li><img data-original="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg" class="lazy"></li>
+            <li><img data-original="images/t.jpg" class="lazy"></li>
+            <li><img data-original="images/tu.jpg" class="lazy"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -77,7 +77,7 @@
 <script type="text/javascript" src="js/js.js"></script>
 <script>
 	$(function(){ 
-		$(".items_img img").lazyload({ 
+		$("img.lazy").lazyload({ 
 			placeholder : "images/loading.gif", 
 			effect      : "fadeIn",
 			threshold : 200,
