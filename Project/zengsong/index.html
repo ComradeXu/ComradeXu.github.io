@@ -22,9 +22,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img src="images/tu.jpg"></li>
-            <li><img src="images/tu.jpg"></li>
-            <li><img src="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -38,9 +38,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img src="images/tu.jpg"></li>
-            <li><img src="images/tu.jpg"></li>
-            <li><img src="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -54,9 +54,9 @@
     <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
     <div class="items_img">
     	<ul>
-        	<li><img src="images/tu.jpg"></li>
-            <li><img src="images/t.jpg"></li>
-            <li><img src="images/tu.jpg"></li>
+        	<li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/t.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
         </ul>
     </div>
     <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
@@ -75,4 +75,14 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
+<script>
+	$(function(){ 
+		$(".items_img img").lazyload({ 
+			placeholder : "images/loading.gif", 
+			effect      : "fadeIn",
+			threshold : 200,
+			failure_limit : 10 
+		}); 
+	});
+</script>
 </body>
