@@ -69,28 +69,7 @@ function showPosition(position){
 		}
 	});
 	
-	//google
-	var url = 'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN';
-	$.ajax({ 
-		type: "GET",
-		url: url, 
-		beforeSend: function(){
-			$("#google_geo").html('正在定位...');
-		},
-		success: function (json) { 
-			if(json.status=='OK'){
-				var results = json.results;
-				$.each(results,function(index,array){
-					if(index==0){
-					$("#google_geo").html(array['formatted_address']);
-					}
-				});
-			}
-		},
-		error: function (XMLHttpRequest, textStatus, errorThrown) { 
-			$("#google_geo").html(latlon+"地址位置获取失败"); 
-		} 
-	});
+	
 }
 
 function showError(error){
