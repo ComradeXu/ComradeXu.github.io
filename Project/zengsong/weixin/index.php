@@ -9,7 +9,6 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->valid();
 $wechatObj->responseMsg();
 
-
 class wechatCallbackapiTest
 {
 	public function valid()
@@ -65,7 +64,7 @@ class wechatCallbackapiTest
 	private function checkSignature()
 	{
         // you must define TOKEN by yourself
-        if (!defined("weixin")) {
+        if (!defined("TOKEN")) {
             throw new Exception('TOKEN is not defined!');
         }
         
