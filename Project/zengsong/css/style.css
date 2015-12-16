@@ -58,7 +58,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .items .items_status p {text-align:center;color:#ce1e1e;margin:2.5rem 0 1.5rem;}
 .items .items_status .items_status_info {position:relative;}
 .items .items_status .items_status_info em {float:left;padding-left:2rem;font-style:normal;border-bottom:0.1rem solid #cecece;padding-bottom:1.3rem;margin-bottom:1.5rem;}
-.items .items_status .items_status_info span {position:absolute;left:0;top:0;width:1.4rem;height:1.8rem;background-position:-12rem -0.5rem;} 
+.items .items_status .items_status_info span {position:absolute;left:0;top:0;width:1.4rem;height:1.9rem;background-position:-12rem -0.5rem;} 
 .items .items_status .items_status_tel {margin-top:1.5rem;}
 .items .items_status .items_status_tel span {width:2rem;height:2rem;background-position:-14rem -0.5rem;vertical-align:middle;margin-right:0.5rem;margin-top:-0.3rem;}
 
