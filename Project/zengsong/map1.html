@@ -22,7 +22,8 @@
    <div id="logo"><h1>helloweba</h1></div>
 </div>
 
-<div id="main">   
+<div id="main">
+   <h2 class="top_title"><a href="http://www.helloweba.com/view-blog-300.html">HTML5获取地理位置定位信息</a></h2>
 	<div class="demo">
 		<p>地理坐标：<span id="latlon"></span></p>
 		<div class="geo">
@@ -66,6 +67,29 @@ function showPosition(position){
 		error: function (XMLHttpRequest, textStatus, errorThrown) { 
 			$("#baidu_geo").html(latlon+"地址位置获取失败"); 
 		}
+	});
+	
+	//google
+	var url = 'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN';
+	$.ajax({ 
+		type: "GET",
+		url: url, 
+		beforeSend: function(){
+			$("#google_geo").html('正在定位...');
+		},
+		success: function (json) { 
+			if(json.status=='OK'){
+				var results = json.results;
+				$.each(results,function(index,array){
+					if(index==0){
+					$("#google_geo").html(array['formatted_address']);
+					}
+				});
+			}
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown) { 
+			$("#google_geo").html(latlon+"地址位置获取失败"); 
+		} 
 	});
 }
 
