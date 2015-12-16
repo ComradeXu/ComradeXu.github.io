@@ -79,7 +79,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .share {width:100%;display:flex;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;align-items:center;justify-content:center;}
 .share .share_btn {margin-left:1.5rem;justify-content:center;display:-webkit-box;-webkit-box-pack:center;-webkit-justify-content:center;width:3.5rem;height:3rem;background:#ababab;text-align:center;}
 .share .share_btn span {width:1.5rem;height:2rem;margin-top:0.5rem;background-position:-7.5rem -0.5rem;}
-.share input {display:-webkit-box;margin-left:1rem;height:2.8rem;padding-left:1rem;border:0.1rem solid #c5c5c5;font-size:1.4rem;flex:1;-webkit-flex:1;-webkit-box-flex:1;}
+.share input {display:-webkit-box;margin-left:1rem;height:2.9rem;padding-left:1rem;border:0.1rem solid #c5c5c5;font-size:1.4rem;flex:1;-webkit-flex:1;-webkit-box-flex:1;}
 .share .apply_btn {margin-right:1.5rem;display:-webkit-box;-webkit-box-pack:center;justify-content:center;-webkit-justify-content:center;width:6.5rem;margin-left:0.5rem;height:3rem;line-height:3.3rem;color:#fff;text-align:center;background:#ff9833;}
 
 /**发布、联系信息、搜索页面**/
@@ -111,7 +111,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .my_info .my_header p {margin-top:1.2rem;color:#666;}
 .my_info .my_item {background:#fff;border-top:0.1rem solid #dcdcdc;border-bottom:0.1rem solid #dcdcdc;margin-top:1rem;}
 .my_info .my_item .ul {width:100%;}
-.my_info .my_item .ul a {height:5rem;line-height:5rem;border-bottom:0.1rem solid #dcdcdc;position:relative;display:block;padding:0 2rem;}
+.my_info .my_item .ul a {height:5rem;line-height:5.1rem;border-bottom:0.1rem solid #dcdcdc;position:relative;display:block;padding:0 2rem;}
 .my_info .my_item .ul a span {margin-top:-0.3rem;margin-right:1rem;vertical-align:middle;}
 .my_info .my_item .ul a:first-child span {width:2rem;height:2rem;background-position:-9rem -2.5rem;margin-top:-0.5rem;}
 .my_info .my_item .ul a:nth-child(2) span {width:2rem;height:1.9rem;background-position:-12rem -2.5rem;}
