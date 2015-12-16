@@ -48,26 +48,7 @@
 				alert('failed'+this.getStatus());
 			}        
 		},{enableHighAccuracy: true})
-		var latlon = position.coords.latitude+','+position.coords.longitude;
-	
-	//baidu
-	var url = "http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
-	$.ajax({ 
-		type: "GET", 
-		dataType: "jsonp", 
-		url: url,
-		beforeSend: function(){
-			$("#baidu_position").html('正在定位...');
-		},
-		success: function (json) { 
-			if(json.status==0){
-				$("#baidu_position").html(json.result.formatted_address);
-			}
-		},
-		error: function (XMLHttpRequest, textStatus, errorThrown) { 
-			$("#baidu_position").html(latlon+"地址位置获取失败"); 
-		}
-	});
+		
 	}
 		getLocation();
 </script>
