@@ -51,7 +51,7 @@ function showPosition(position){
 	var latlon = position.coords.latitude+','+position.coords.longitude;
 	
 	//baidu
-	var url = "http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
+	var url = "http://api.map.baidu.com/geocoder/v2/?ak=C93b5178d7a8ebdb830b9b557abce78b&callback=renderReverse&location="+latlon+"&output=json&pois=0";
 	$.ajax({ 
 		type: "GET", 
 		dataType: "jsonp", 
