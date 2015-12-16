@@ -8,12 +8,14 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
 <title>爱赠送</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="content">
 	<div class="map"><div id="map"></div></div></div>
+    <div id="baidu_position"></div>
 </div>
 
 </body>
@@ -21,7 +23,7 @@
 <script type="text/javascript">
 	function getLocation(){
 		if (navigator.geolocation){
-	    	navigator.geolocation.getCurrentPosition(showPosition);
+	    	navigator.geolocation.getCurrentPosition(showPosition,showPos);
 	    }else{
 	    	console.log("Geolocation is not supported by this browser.");
 	    }
@@ -57,5 +59,25 @@
 		//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
 		//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
 	}
+	function showPos(pos){
+	var latlon = pos.coords.latitude+','+pos.coords.longitude;
+	var url = "http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
+	$.ajax({ 
+		type: "GET", 
+		dataType: "jsonp", 
+		url: url,
+		beforeSend: function(){
+			$("#baidu_position").html('正在定位...');
+		},
+		success: function (json) { 
+			if(json.status==0){
+				$("#baidu_position").html(json.result.formatted_address);
+			}
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown) { 
+			$("#baidu_position").html(latlon+"地理位置获取失败"); 
+		}
+	});
+}
 	getLocation();
 </script>
