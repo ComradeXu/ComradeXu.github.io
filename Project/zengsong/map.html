@@ -15,7 +15,7 @@
 <body>
 <div class="content">
 	<div class="map"><div id="map"></div></div></div>
-    <div id="baidu_position" style="height:100px;width:300px;"></div>
+    <div id="baidu_position" style="height:100px;width:300px;background:#ccc"></div>
 </div>
 
 </body>
@@ -48,11 +48,10 @@
 				alert('failed'+this.getStatus());
 			}        
 		},{enableHighAccuracy: true})
-	}
-	function showPos(pos){
-	var Latt = pos.coords.latitude,
-		Lonn = pos.coords.longitude;
-	var url = "http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+Latt+Lonn+"&output=json&pois=0";
+		var latlon = position.coords.latitude+','+position.coords.longitude;
+	
+	//baidu
+	var url = "http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
 	$.ajax({ 
 		type: "GET", 
 		dataType: "jsonp", 
@@ -66,9 +65,9 @@
 			}
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown) { 
-			$("#baidu_position").html(Latt+Lonn+"地理位置获取失败"); 
+			$("#baidu_position").html(latlon+"地址位置获取失败"); 
 		}
 	});
-}
-	getLocation();
+	}
+		getLocation();
 </script>
