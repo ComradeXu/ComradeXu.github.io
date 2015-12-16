@@ -63,7 +63,7 @@ class wechatCallbackapiTest
 	private function checkSignature()
 	{
         // you must define TOKEN by yourself
-        if (!defined("Hk7nLUKXDD_URQ6ZPNHjxzQCoc5ooO7wfaX4uN8XUX0-iT0pufWCL4YjZOx099y0BHlxw13fYg-4Nh1W5msKelheU6yLVNppENqnapV9wMEXLHcABANBX")) {
+        if (!defined("TOKEN")) {
             throw new Exception('TOKEN is not defined!');
         }
         
