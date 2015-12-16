@@ -31,7 +31,7 @@ header,footer,section,details,aside,menu,nav,article,hgroup,figure,figcaption,ti
 .show{display:block;}.hide{display:none;}
 /* set image and video max width to 100% */
 img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-align:middle; border:none;-webkit-touch-callout:none}
-.top_addr .top_addr_ico,.top_addr .top_addr_scan,.footerUl li em,.apply_info_choose,.share_btn span,.add_img span,.add_tel span,.add_share_tit,.add_share ul li span,.my_info .my_item .ul a span,.my_info .my_item .ul a i,.items_status_info span,.items_status_tel span {display:inline-block;background:url(../images/icon.png) no-repeat;background-size:27.5rem 13rem;}
+.top_addr .top_addr_ico,.top_addr .top_addr_scan,.footerUl li em,.apply_info_choose,.share_btn span,.add_img span,.add_tel span,.add_share_tit,.add_share ul li span,.my_info .my_item .ul a span,.my_info .my_item .ul a i,.items_status_info span,.items_status_tel span,.position span {display:inline-block;background:url(../images/icon.png) no-repeat;background-size:27.5rem 13rem;}
 .p15 {padding:0 1.5rem;}
 .h10 {height:1rem;border-bottom:0.1rem solid #ddd;}
 
@@ -123,6 +123,9 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 /**¶¨Î»**/
 .content .map {height:22rem;overflow:hidden;}
 .content .map #map {width:100%;height:24rem;overflow:hidden;}
+.content .position {height:4rem;line-height:4rem;background:#fff;}
+.content .position span {width:1.1rem;height:1.8rem;vertical-align:middle;margin:1.2rem 0.5rem 0 1.5rem;background-position:-7.5rem -2.6rem;float:left;}
+.content .position #your_position {float:left;}
 
 
 
