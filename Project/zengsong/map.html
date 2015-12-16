@@ -14,6 +14,7 @@
 <body>
 <div class="content">
 	<div class="map"><div id="map"></div></div></div>
+    <div id="baidu_geo" style="font-size:20px;"></div>
 </div>
 
 </body>
@@ -44,7 +45,24 @@
 			}
 			else {
 				alert('failed'+this.getStatus());
-			}        
+			}  
+			var url = "http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+Lat+Lon+"&output=json&pois=0";
+			$.ajax({ 
+				type: "GET", 
+				dataType: "jsonp", 
+				url: url,
+				beforeSend: function(){
+					$("#baidu_geo").html('正在定位...');
+				},
+				success: function (json) { 
+					if(json.status==0){
+						$("#baidu_geo").html(json.result.formatted_address);
+					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) { 
+					$("#baidu_geo").html(Lat+Lon+"地址位置获取失败"); 
+				}
+			});      
 		},{enableHighAccuracy: true})
 		//关于状态码
 		//BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
