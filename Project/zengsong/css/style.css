@@ -98,7 +98,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .wx_share {position:fixed;top:0;left:0;background:rgba(0,0,0,0.6);z-index:555;width:100%;height:100%;display:none;}
 .wx_share .add_share ul {width:100%;overflow:hidden;margin-top:1.2rem;}
 .wx_share .add_share ul li {width:33.33%;float:left;color:#fff;text-align:center;}
-.wx_share .add_share ul li span {width:6.6rem;height:6.6rem;}
+.wx_share .add_share ul li span {width:6.6rem;height:6.7rem;}
 .wx_share .add_share ul li:first-child span {background-position:-0.5rem -4.5rem;}
 .wx_share .add_share ul li:nth-child(2) span {background-position:-14.5rem -4.5rem;}
 .wx_share .add_share ul li:last-child span {background-position:-7.5rem -4.5rem;}
