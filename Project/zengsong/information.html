@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>详情页</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="content content1">
+<article class="items items_none">
+	<div class="items_top">
+    	<div class="user_header"><img src="images/tou.jpg"></div>
+        <div class="user_name">美好时光</div>
+        <div class="user_time">1小时前</div>
+    </div>
+    <div class="items_intro">赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍赠送介绍</div>
+    <div class="items_img">
+    	<ul>
+        	<li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+            <li><img data-original="images/tu.jpg"></li>
+        </ul>
+    </div>
+    <div class="items_rep">浏览<span>150</span>&emsp;申请<span>12</span></div>
+</article>
+<div class="per_count p15">申请人数<span>20</span></div>
+<div class="apply_info p15">
+	<div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_give"><a href="connect.html">送我</a></div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_give"><a href="connect.html">送我</a></div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_give"><a href="connect.html">送我</a></div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_give"><a href="connect.html">送我</a></div>
+    </div>
+    <div class="apply_info_dis">
+    	<div class="apply_info_header"><img src="images/tou.jpg"></div>
+        <div class="apply_info_name">用户名用户名</div>
+        <div class="apply_info_need">我要U盘，我不要U盘。</div>
+        <div class="apply_info_give"><a href="connect.html">送我</a></div>
+    </div>
+</div>
+</div>
+<footer class="share_footer">
+	<div class="share">
+    	<a href="javascript:void(0)" class="share_btn"><span></span></a>
+        <input type="text" placeholder="请输入理由">
+        <div class="apply_btn">申请</div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script>
+	$(function(){ 
+		$("img").lazyload({ 
+			placeholder : "images/loading.gif",
+			effect      : "fadeIn",
+			threshold : 200
+		}); 
+	});
+</script>
+</body>
