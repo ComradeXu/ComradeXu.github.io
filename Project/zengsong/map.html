@@ -8,14 +8,12 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
 <title>爱赠送</title>
-<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="content">
 	<div class="map"><div id="map"></div></div></div>
-    <div id="baidu_position" style="height:100px;width:300px;background:#ccc"></div>
 </div>
 
 </body>
@@ -23,14 +21,14 @@
 <script type="text/javascript">
 	function getLocation(){
 		if (navigator.geolocation){
-	    	navigator.geolocation.getCurrentPosition(showPosition,showPos);
+	    	navigator.geolocation.getCurrentPosition(showPosition);
 	    }else{
 	    	console.log("Geolocation is not supported by this browser.");
 	    }
 	}
 	function showPosition(position){
 		var Lat = position.coords.latitude,
-			Lon = position.coords.longitude;
+		Lon = position.coords.longitude;
 
 		// 百度地图API功能
 		var map = new BMap.Map("map");
@@ -48,7 +46,16 @@
 				alert('failed'+this.getStatus());
 			}        
 		},{enableHighAccuracy: true})
-		
+		//关于状态码
+		//BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+		//BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+		//BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+		//BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+		//BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+		//BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+		//BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+		//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+		//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
 	}
-		getLocation();
+	getLocation();
 </script>
