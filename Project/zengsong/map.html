@@ -14,8 +14,9 @@
 </head>
 <body>
 <div class="content">
-	<div class="map"><div id="map"></div></div></div>
-    <div id="baidu_geo" style="font-size:20px;"></div>
+	<div class="map"><div id="map"></div></div>
+    <div class="position"><span></span><div id="your_position"></div></div>
+    <div class="con_btn">确定</div>
 </div>
 
 </body>
@@ -31,12 +32,9 @@
 	function showPosition(position){
 		var Lat = position.coords.latitude,
 		Lon = position.coords.longitude;
-
-		// 百度地图API功能
 		var map = new BMap.Map("map");
 		var point = new BMap.Point(Lat,Lon);
 		map.centerAndZoom(point,12);
-
 		var geolocation = new BMap.Geolocation();
 		geolocation.getCurrentPosition(function(r){
 			if(this.getStatus() == BMAP_STATUS_SUCCESS){
@@ -54,28 +52,18 @@
 				dataType: "jsonp", 
 				url: url,
 				beforeSend: function(){
-					$("#baidu_geo").html('正在定位...');
+					$("#your_position").html('正在定位...');
 				},
 				success: function (json) { 
 					if(json.status==0){
-						$("#baidu_geo").html(json.result.formatted_address);
+						$("#your_position").html(json.result.formatted_address);
 					}
 				},
 				error: function (XMLHttpRequest, textStatus, errorThrown) { 
-					$("#baidu_geo").html(latlon+"地址位置获取失败"); 
+					$("#your_position").html(latlon+"地理位置获取失败"); 
 				}
 			});      
 		},{enableHighAccuracy: true})
-		//关于状态码
-		//BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
-		//BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
-		//BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
-		//BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
-		//BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
-		//BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
-		//BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
-		//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
-		//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
 	}
 	getLocation();
 </script>
