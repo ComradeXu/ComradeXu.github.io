@@ -120,6 +120,10 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .my_info .my_item .ul a:last-child {border:none;}
 .my_info .my_item .ul a em {position:absolute;width:1rem;height:1rem;border-radius:100%;background:#cb1f1f;right:3.3rem;top:2.1rem;}
 
+/**¶¨Î»**/
+.content .map {height:22rem;overflow:hidden;}
+.content .map #map {width:100%;height:24rem;overflow:hidden;}
+
 
 
 
