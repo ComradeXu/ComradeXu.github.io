@@ -14,7 +14,7 @@
                 padding: 5px 10px;
             }
         </style>
-        <script type="text/javascript" src="js/WeixinApi.js?v=4.3"></script>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     </head>
     <body>
         <p>这是一个测试页面！仅包含一些工具方法！</p>
@@ -39,88 +39,63 @@
             <a href="?" id="refresh">点击这里刷新！！！！</a>
         </p>
 
-        <script type="text/javascript">
-
-            // 开启Api的debug模式
-            WeixinApi.enableDebugMode();
-
-            // 给按钮增加click事件：请不要太纠结这个写法，demo而已
-            var addEvent = function(elId,listener){
-                document.getElementById(elId)
-                        .addEventListener('click',function(e){
-                            if(!window.WeixinApi || !window.WeixinJSBridge) {
-                                alert('请确认您是在微信内置浏览器中打开的，并且WeixinApi.js已正确引用');
-                                e.preventDefault();
-                                return false;
-                            }
-                            listener(this,e);
-                        },false);
-            };
-
-            // 两个Flag
-            var optionMenuOn = true;
-            var toolbarOn = true;
-
-            // optionMenu的控制
-            addEvent('optionMenu',function(el,e){
-                if(optionMenuOn) {
-                    el.innerHTML = "WeixinApi.showOptionMenu";
-                    WeixinApi.hideOptionMenu();
-                }else{
-                    el.innerHTML = "WeixinApi.hideOptionMenu";
-                    WeixinApi.showOptionMenu();
-                }
-                optionMenuOn = !optionMenuOn;
-            });
-
-            // 获取网络类型
-            addEvent('networkType',function(el,e){
-                WeixinApi.getNetworkType(function(network) {
-                    alert("当前网络类型：" + network);
-                });
-            });
-
-            // 调起客户端的图片播放组件
-            addEvent('imagePreview',function(el,e){
-                location.href = "http://www.baidufe.com/wximage?tag=%E7%BE%8E%E5%A5%B3";
-            });
-
-            // 关闭窗口
-            addEvent('closeWindow',function(el,e){
-                WeixinApi.closeWindow({
-                    success : function(resp){
-                        alert('关闭窗口成功！');
-                    },
-                    fail : function(resp){
-                        alert('关闭窗口失败');
-                    }
-                });
-            });
-
-            // 发送邮件
-            addEvent("sendEmail", function(el, e) {
-                WeixinApi.sendEmail({
-                    subject : 'Hello world！',
-                    body : '这是一封测试邮件，Demo而已，慢慢玩儿吧！'
-                });
-            });
-
-            // 刷新
-            addEvent('refresh',function(el,e){
-                e.preventDefault();
-                location.replace('?' + Math.random(),true);
-            });
-
-            // WeixinApi初始化完成后才进行下面的动作
-            WeixinApi.ready(function(Api) {
-
-                // 有可能用户是直接用微信“扫一扫”打开的，这个情况下，optionMenu是off状态
-                // 为了方便用户测试，我先来trigger show一下
-                var elOptionMenu = document.getElementById('optionMenu');
-                elOptionMenu.click(); // 先隐藏
-                elOptionMenu.click(); // 再显示
-            });
-
-        </script>
+        <script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+      debug: true,
+      appId: 'wxf8b4f85f3a794e77',
+      timestamp: 1450258617,
+      nonceStr: 'maJW6FU7JLq7yrT3',
+      signature: '20b23d378fc5be2972a2e1ac183b6263468e978d',
+      jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'onMenuShareQZone',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'translateVoice',
+        'startRecord',
+        'stopRecord',
+        'onVoiceRecordEnd',
+        'playVoice',
+        'onVoicePlayEnd',
+        'pauseVoice',
+        'stopVoice',
+        'uploadVoice',
+        'downloadVoice',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'openProductSpecificView',
+        'addCard',
+        'chooseCard',
+        'openCard'
+      ]
+  });
+</script>
     </body>
 </html>
