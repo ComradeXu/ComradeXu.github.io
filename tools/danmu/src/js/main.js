@@ -24,7 +24,7 @@
             //"top":this.options.top,
             "width": this.options.width,
             "height": this.options.height,
-            "overflow": "hidden"
+            "overflow": "visible"
         });
 
 
