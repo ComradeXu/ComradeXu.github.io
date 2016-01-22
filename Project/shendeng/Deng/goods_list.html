@@ -1,0 +1,610 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>神灯后台</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="header">
+ <div class="con">
+  <div class="floatleft">
+   <a href="#" class="logo"><img src="images/logo.png" width="171" height="60" alt=""></a>
+   <span class="h_name">神灯管理后台</span>
+   <a href="javascript:void(0)" class="fresh">刷新页面</a>
+  </div>
+  <div class="h_login"><a href="#">管理员</a><a href="#">退出</a></div> 
+ </div>
+</div>
+<div class="clear"></div>
+<div class="wrap con">
+ <div class="wrap_left">
+   <div class="Menubox">
+    <ul>
+     <li id="xytab1" onClick="setTab('xytab',1,5,'hover','client')">账户统计</li>
+     <li id="xytab2" onClick="setTab('xytab',2,5,'hover','client')">结算列表</li>
+     <li id="xytab3" class="hover" onClick="setTab('xytab',3,5,'hover','client')">商家管理</li>
+     <li id="xytab4" onClick="setTab('xytab',4,5,'hover','client')">订单管理</li>
+     <li id="xytab5" onClick="setTab('xytab',5,5,'hover','client')">相关设置</li>
+   </ul>
+   </div>
+ </div>
+ <div class="wrap_right">
+     <!-- 账户统计 -->
+     <div id="con_xytab_1" style="display:none">
+       <div class="w_right_top">
+         <ul>
+           <li id="xytabb1" class="hover" onClick="setTab('xytabb',1,2,'hover','client')"><span></span>销售统计</li>
+           <li id="xytabb2" onClick="setTab('xytabb',2,2,'hover','client')"><span></span>订单统计</li>
+         </ul>
+         <div class="w_right_top_r">
+         <form id="" name="" action="" method="post">
+           <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate"><span class="floatleft">&nbsp;—&nbsp;</span><input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+           <input type="submit" value="查询" class="search">
+         </form>
+         </div>
+       </div>
+       <div id="con_xytabb_1" style="dis play:none">
+      <div class="shangjia_info table_color">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th>时间</th>
+            <th width="15%">销售额</th>
+            <th width="15%">商家费用</th>
+            <th width="15%">酒店分红</th>
+            <th width="15%">快递费</th>
+            <th width="15%">净利润</th>
+           </tr>
+           <tr>
+            <td>日期查询总额</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+     </div>
+       <div id="con_xytabb_2" style="display:none">
+       <div class="shangjia_info table_color">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th>时间</th>
+            <th width="13%">订单量</th>
+            <th width="13%">小商品</th>
+            <th width="13%">美食</th>
+            <th width="13%">洗衣</th>
+            <th width="13%">周边游</th>
+            <th width="13%">按摩</th>
+           </tr>
+           <tr class="fs14">
+            <td>日期查询总额</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>500</td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+       </div>
+     </div>
+     <!-- 结算列表 -->
+     <div id="con_xytab_2" style="display:none">
+     	<div class="order_search">
+        	<form action="" method="post" id="form222" name="form222">
+            	<span>订单查询：</span>
+                <input type="text" name="" id="" class="input" value="请输入商家名称" onblur="if(this.value==''){this.value='请输入商家名称';this.className='input';}" onclick="if(this.value=='请输入商家名称'){this.value='';this.className='inputc';}" autocomplete="off">
+                <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+                <em>&nbsp;—&nbsp;</em>
+                <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+           		<input type="submit" value="查询" class="search" name="sub2">
+            </form>
+        </div>
+       <div class="w_right_top">
+         <ul>
+           <li id="xytabbb1" class="hover" onClick="setTab('xytabbb',1,2,'hover','client')"><span></span>收款</li>
+           <li id="xytabbb2" onClick="setTab('xytabbb',2,2,'hover','client')"><span></span>付款</li>
+         </ul>
+         <div class="w_right_top_r">
+          <form id="" name="" action="" method="post">
+           <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate"><span class="floatleft">&nbsp;—&nbsp;</span><input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+           <input type="submit" value="查询" class="search" name="sub1">
+           <input type="text" name="" id="" class="input" value="请输入商家名称" onblur="if(this.value==''){this.value='请输入商家名称';this.className='input';}" onclick="if(this.value=='请输入商家名称'){this.value='';this.className='inputc';}">
+           <input type="submit" class="sub" value="" name="sub2">
+          </form>
+         </div>
+       </div>
+       <div id="con_xytabbb_1" style="dis play:none">
+      <div class="shangjia_info">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th width="25%">商家名称</th>
+            <th width="30%">时间</th>
+            <th width="15%">结算费用</th>
+            <th>&nbsp;</th>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+     </div>
+       <div id="con_xytabbb_2" style="display:none">
+       <div class="shangjia_info">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th width="25%">商家名称</th>
+            <th width="30%">时间</th>
+            <th width="15%">结算费用</th>
+            <th>&nbsp;</th>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+           <tr>
+            <td>赛百味（上帝三街店）</td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">4000</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="javascript:void(0)" onClick="ShowDiv(5)">商家详情</a>
+             <a href="#">账单详情</a>
+             </div>
+             </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+       </div>
+     </div>
+     <!-- 商家管理 -->
+     <div id="con_xytab_3" style="dis play:none">
+       <div class="man_search" style="width:908px;">
+         <div class="add" style="margin-left:0;">
+          <a href="#" style="margin-left:12px;">添加商品</a>
+         </div>
+         <div class="pub"><a class="floatright" href="#">发布</a></div>
+       </div>
+       <div class="clear"></div>
+       <div class="shangpin_list" id="frameContent">
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a><span class="top"></span></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+         <dl>
+           <dt class="goods_img"><a href="#"><img src="images/goods.jpg" width="200" height="137" alt=""></a></dt>
+           <dd class="goods_pro">星巴克星巴克星巴克星巴克</dd>
+           <dd class="goods_pri"><span class="now_price">12元</span><span class="pri_price">15元</span><a href="javascript:void(0)" class="del" onClick="ShowDiv(6)"></a><a href="#" class="edit"></a></dd>
+         </dl>
+       </div>
+       <div id="pages" style="font-size:12px;"></div>
+     </div>
+     <!-- 订单管理 -->
+     <div id="con_xytab_4" style="display:none">
+       <div class="w_right_top">
+         <div class="w_right_top_r">
+          <form id="" name="" action="" method="post">
+           <input type="text" name="" id="" class="input" value="请输入商家名称、用户名、手机" onblur="if(this.value==''){this.value='请输入商家名称、用户名、手机';this.className='input';}" onclick="if(this.value=='请输入商家名称、用户名、手机'){this.value='';this.className='inputc';}" style="width:250px;margin-left:0;">
+           <input type="submit" class="sub" value="" name="">
+          </form>
+         </div>
+       </div>
+      <div class="lists">
+       <div class="shangjia_info shj_info1">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr>
+            <th width="15%">时间</th>
+            <th>地址</th>
+            <th width="8%">下单人</th>
+            <th width="12%">电话</th>
+            <th width="20%">商品名称</th>
+            <th width="8%">数量</th>
+            <th width="8%">价格</th>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr>
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td class="list_goods_name">
+              <div class="list_mc">天使生日蛋糕<p>15121511245</p></div>
+            </td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_goods_name">
+              <div class="list_mc">天使生日蛋糕<p>15121511245</p></div>
+            </td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">新订单</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+
+            </td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td class="list_goods_name">
+              <div class="list_mc">天使生日蛋糕<p>15121511245</p></div>
+            </td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_goods_name">
+              <div class="list_mc">天使生日蛋糕<p>15121511245</p></div>
+            </td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">新订单</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_ent" colspan="3">
+              <div class="pay_way">
+               <a href="javascript:void(0)" class="pay_esc">取消订单</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+       <div class="shangjia_info shj_info1">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr>
+            <th width="20%">店铺名称</th>
+            <th>地址</th>
+            <th width="12%">种类</th>
+            <th width="16%">咨询电话</th>
+            <th width="20%">&nbsp;</th>
+           </tr>
+           <tr>
+            <td>小豆面馆（上地店）</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>美食</td>
+            <td>15121511245</td>
+            <td class="list_ent">
+              <a href="#">进入商家后台</a>
+             </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+      </div>
+     </div>
+     <!-- 相关设置 -->
+     <div id="con_xytab_5" style="display:none">
+       <div class="set_sth">
+        <form name="" id="" action="" method="post">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th width="25%">起送价</th>
+            <th><div class="set_edit" onClick="ShowH(1)">编辑</div><div class="set_state" onClick="HideS(1)"><a href="javascript:void(0)" class="set_esc">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr class="find">
+            <td colspan="2">
+              <p><span class="color2">起送价：</span><span class="set_hide hd1">30元</span><span class="set_show sh1"><input type="text" id="" name="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" >元</span></p>
+            </td>
+           </tr>
+           <tr class="find">
+            <th>配送时间</th>
+            <th><div class="set_edit" onClick="ShowH(2)">编辑</div><div class="set_state" onClick="HideS(2)"><a href="javascript:void(0)" class="set_esc" onClick="hids()">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr class="find">
+            <td colspan="2">
+              <p><span class="color2">配送时间：</span><span class="set_hide hd2">60分钟</span><span class="set_show sh2"><input type="text" id="" name="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" >分钟</span></p>
+            </td>
+           </tr>
+           <tr>
+            <th>配送费</th>
+            <th><div class="set_edit" onClick="ShowH(3)">编辑</div><div class="set_state" onClick="HideS(3)"><a href="javascript:void(0)" class="set_esc" onClick="hids()">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr>
+            <td colspan="2">
+              <p><span class="color2">配送费：</span><span class="set_hide hd3">5元</span><span class="set_show sh3"><input type="text" id="" name="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" >元</span></p>
+              <p><span class="color2">需配送种类：</span><span class="set_hide hd3" style="margin-bottom:2px;">美食 小商品</span><span class="set_show set_kind sh3"><a href="javascript:void(0)">美食</a><a href="javascript:void(0)">小商品</a><a href="javascript:void(0)">洗衣</a><a href="javascript:void(0)">按摩</a><a href="javascript:void(0)">租车</a><a href="javascript:void(0)">周边游</a></span></p>
+            </td>
+           </tr>
+           <tr>
+            <th>打款账户</th>
+            <th><div class="set_edit" onClick="ShowH(4)">编辑</div><div class="set_state" onClick="HideS(4)"><a href="javascript:void(0)" class="set_esc" onClick="hids()">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr>
+            <td colspan="2">
+              <p><span class="color2">开户银行：</span><span class="set_hide hd4">北京市海淀区上地民生银行</span><span class="set_show sh4"><input type="text" id="" name=""></span></p>
+              <p><span class="color2">银行账号：</span><span class="set_hide hd4">13241654610321321</span><span class="set_show sh4"><input type="text" id="" name="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" ></span></p>
+              <p><span class="color2">账户名称：</span><span class="set_hide hd4">神州酒店科技有限公司</span><span class="set_show sh4"><input type="text" id="" name=""></span></p>
+              <p><span class="color2">客服电话：</span><span class="set_hide hd4">010-12345678</span><span class="set_show sh4"><input type="text" id="" name="" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" ></span></p>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </form>
+       </div>
+     </div>
+   </div>
+</div>
+<div class="clear"></div>
+<div class="all_box_z1" style="display:none;"><div class="all_box_z" style="display:none;"></div></div>
+<div class="all_box_zz" style="display:none;"><div class="all_box_zx" style="display:none;"></div></div>
+ <div class="add_sth w360" style="display:none;">
+ <div id="tc6" style="display:none;" class="w3601">
+  <div class="add_biaoti"><a href="javascript:void(0)" onclick="hidets()">×</a></div>
+ <form name="form6" id="form6" action="" method="post">
+  <div class="del_goods">
+	<div class="del_fer"><span></span>确认删除该商品吗？</div>
+    <div class="del_btn"><a class="del_esc" href="javascript:void(0)" onclick="hidets()">取消</a><a class="del_de" href="javascript:void(0)">删除</a></div>
+  </div>
+  </form>
+ </div>
+</div>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

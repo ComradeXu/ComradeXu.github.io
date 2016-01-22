@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>垫付订单</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script language="javascript" type="text/javascript" src="Date/WdatePicker.js"></script>
+<script type="text/javascript"> 
+$(function(){ $.divselect("#divselect","#inputselect"); }); 
+</script>
+</head>
+
+<body>
+<div class="header">
+ <div class="con">
+  <div class="floatleft">
+   <a href="#" class="logo"><img src="images/logo.png" width="171" height="60" alt=""></a>
+   <span class="h_name">神灯酒店管理后台</span>
+   <a href="javascript:void(0)" class="fresh">刷新页面</a>
+  </div>
+  <div class="h_login"><a href="#">管理员</a><a href="#">退出</a></div> 
+ </div>
+</div>
+<div class="clear"></div>
+<div class="wrap con">
+ <div class="wrap_left">
+   <div class="Menubox">
+    <ul>
+     <li id="xytab1" class="hover" onClick="setTab('xytab',1,4,'hover','client')">垫付订单</li>
+     <li id="xytab2" onClick="setTab('xytab',2,4,'hover','client')">账户信息</li>
+     <li id="xytab3" onClick="setTab('xytab',3,4,'hover','client')">二维码制作</li>
+     <li id="xytab4" onClick="setTab('xytab',4,4,'hover','client')">酒店信息</li>
+   </ul>
+   </div>
+ </div>
+ <div class="wrap_right">
+     <!-- 垫付订单 -->
+     <div id="con_xytab_1" style="dis play:none">
+       <div class="w_right_top">
+       <form id="" name="" action="" method="post">
+       	 <div class="pay_select">
+            <div class="select_border">
+              <div class="select_cont">
+                <select class="hotel_list" id="" name="">
+                  <option value="" selected="selected">如家酒店001</option>
+                  <option value="">如家酒店002</option>
+                  <option value="">如家酒店003</option>
+                  <option value="">如家酒店004</option>
+                  <option value="">如家酒店005</option>
+                  <option value="">如家酒店006</option>
+                  <option value="">如家酒店007</option>
+                </select>
+              </div>
+           </div>
+          </div>
+         <ul>
+           <li id="xytabb1" class="hover" onClick="setTab('xytabb',1,2,'hover','client')"><span></span>新订单</li>
+           <li id="xytabb2" onClick="setTab('xytabb',2,2,'hover','client')"><span></span>全部</li>
+         </ul>
+         <div class="w_right_top_r">
+           <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate"><span class="floatleft">&nbsp;—&nbsp;</span><input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+           <input type="submit" value="查询" class="search" name="">
+           <input type="text" name="" id="" class="input" value="请输入商家名称" onblur="if(this.value==''){this.value='请输入商家名称';this.className='input';}" onclick="if(this.value=='请输入商家名称'){this.value='';this.className='inputc';}">
+           <input type="submit" class="sub" value="" name="sub2">
+         </div>
+       </form>
+       </div>
+       <div id="con_xytabb_1" style="dis play:none">
+      <div class="shangjia_info shj_info1 pay_list">
+         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr>
+            <th width="15%">时间</th>
+            <th>地址</th>
+            <th width="8%">下单人</th>
+            <th width="12%">电话</th>
+            <th width="20%">商品名称</th>
+            <th width="8%">数量</th>
+            <th width="8%">价格</th>
+           </tr>
+          </tbody>
+         </table>
+         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr class="pay_h1">
+            <td width="15%">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+            <td width="12%">&nbsp;</td>
+            <td width="20%">&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">新订单</div>
+               <div class="list_sys"></div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+             <div class="pay_way">
+               <a href="javascript:void(0)" class="pay_esc">驳回</a>
+               <a href="javascript:void(0)" class="pay_cash">现金垫付 30</a>
+               <a href="javascript:void(0)" class="pay_online">在线垫付</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">在线支付</div>
+               <div class="list_sys">未录入系统</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+             <div class="pay_way">
+               <a href="javascript:void(0)" class="floatright">确认录入</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">现金垫付 30</div>
+               <div class="list_sys">未录入系统</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+     </div>
+       <div id="con_xytabb_2" style="display:none">
+       <div class="shangjia_info shj_info1 pay_list">
+         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr>
+            <th width="15%">时间</th>
+            <th>地址</th>
+            <th width="8%">下单人</th>
+            <th width="12%">电话</th>
+            <th width="20%">商品名称</th>
+            <th width="8%">数量</th>
+            <th width="8%">价格</th>
+           </tr>
+          </tbody>
+         </table>
+         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="list_search">
+          <tbody>
+           <tr class="pay_h1">
+            <td width="15%">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+            <td width="12%">&nbsp;</td>
+            <td width="20%">&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+            <td width="8%">&nbsp;</td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月12日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">新订单</div>
+               <div class="list_sys"></div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+             <div class="pay_way">
+               <a href="javascript:void(0)" class="pay_esc">驳回</a>
+               <a href="javascript:void(0)" class="pay_cash">现金垫付 30</a>
+               <a href="javascript:void(0)" class="pay_online">在线垫付</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">在线支付</div>
+               <div class="list_sys">未录入系统</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+             <div class="pay_way">
+               <a href="javascript:void(0)" class="floatright">确认录入</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+          <tbody>
+           <tr class="pay_bor">
+            <td>11月11日&nbsp;11:11</td>
+            <td>北京市海淀区如家酒店301号房间</td>
+            <td>王先生</td>
+            <td>15121511245</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">天使生日蛋糕</div></td>
+            <td>
+              <p class="list_num">1</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">40</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td><div class="list_goods_name">生日蛋糕2</div></td>
+            <td>
+              <p class="list_num">3</p>
+             </td>
+            <td class="color1">
+              <p class="list_pri">220</p>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="4">&nbsp;</td>
+            <td class="list_zt" colspan="3">
+             <div class="list_tj">
+              <div class="list_bor">
+               <div class="list_new">现金垫付 30</div>
+               <div class="list_sys">未录入系统</div>
+               <div class="list_total">共：<span class="color1">160</span></div>
+              </div> 
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+       </div>
+     </div>
+     <!-- 账户信息 -->
+     <div id="con_xytab_2" style="display:none">
+       <div class="w_right_top">
+        <div class="count_info">
+          <p>神灯账户信息</p>
+          <p><span class="color2">开户银行：</span><span class="set_hide">北京市海淀区上地民生银行</span></p>
+          <p><span class="color2">银行账号：</span><span class="set_hide">13241654610321321</span></p>
+          <p><span class="color2">账户名称：</span><span class="set_hide">神州酒店科技有限公司</span></p>
+          <p><span class="color2">客服电话：</span><span class="set_hide">010-12345678</span></p>
+        </div>
+       <form id="" name="" action="" method="post">
+       	 <div class="pay_select">
+            <div class="select_border">
+              <div class="select_cont">
+                <select class="hotel_list" id="" name="">
+                  <option value="" selected="selected">如家酒店001</option>
+                  <option value="">如家酒店002</option>
+                  <option value="">如家酒店003</option>
+                  <option value="">如家酒店004</option>
+                  <option value="">如家酒店005</option>
+                  <option value="">如家酒店006</option>
+                  <option value="">如家酒店007</option>
+                </select>
+              </div>
+           </div>
+          </div>
+         <ul>
+           <li id="xytabbb1" class="hover" onClick="setTab('xytabbb',1,2,'hover','client')"><span></span>销售信息</li>
+           <li id="xytabbb2" onClick="setTab('xytabbb',2,2,'hover','client')"><span></span>结算账单</li>
+         </ul>
+         <div class="w_right_top_r">
+           <input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate"><span class="floatleft">&nbsp;—&nbsp;</span><input type="text" onClick="WdatePicker()" name="" autocomplete="off" class="Wdate">
+           <input type="submit" value="查询" class="search" name="">
+         </div>
+       </form>
+       </div>
+       <div id="con_xytabbb_1" style="dis play:none">
+      <div class="shangjia_info table_color">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th>时间</th>
+            <th width="11%">销售额</th>
+            <th width="11%">现金垫付</th>
+            <th width="11%">现金垫付差价</th>
+            <th width="11%">在线垫付</th>
+            <th width="11%">神灯利润</th>
+            <th width="11%">利润分红</th>
+            <th width="14%">需要支付神灯费用</th>
+           </tr>
+           <tr>
+            <td>日期查询总额</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+           <tr>
+            <td>2015年11月11日</td>
+            <td>5000</td>
+            <td>4000</td>
+            <td>190</td>
+            <td>300</td>
+            <td>500</td>
+            <td>300</td>
+            <td>500</td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+     </div>
+       <div id="con_xytabbb_2" style="display:none">
+       <div class="shangjia_info">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <th width="25%">时间</th>
+            <th width="15%">费用支付</th>
+            <th width="10%">&nbsp;</th>
+            <th width="25%">时间</th>
+            <th width="15%">费用支付</th>
+            <th width="10%">&nbsp;</th>
+           </tr>
+           <tr>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+           </tr>
+           <tr>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+           </tr>
+           <tr>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+           </tr>
+           <tr>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+            <td>2015年11月11日-2015年11月11日</td>
+            <td class="color1">8110</td>
+            <td class="shangjia_cz">
+             <div class="xiangqing">
+             <a href="bill_info.html" target="_blank">详情</a>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
+       </div>
+     </div>
+     <!-- 二维码制作 -->
+     <div id="con_xytab_3" style="display:none">
+       <div class="erweima">
+        <form name="" id="" action="" method="post">
+         <p>房间号码</p>
+         <input type="text" value="" id="" class="ewm_input">
+         <p>房间类型</p>
+        <div id="divselect"> 
+            <cite>请选择房间类型</cite>
+            <div class="btn_xia"></div>
+            <div class="sel_edit" onClick="ShowDiv(1)">编辑</div>
+            <ul> 
+               <li><a href="javascript:void(0);" selectid="1">大房间</a></li> 
+               <li><a href="javascript:void(0);" selectid="2">标准间</a></li> 
+               <li><a href="javascript:void(0);" selectid="3">豪华间</a></li> 
+            </ul> 
+		</div> 
+		<input name="" type="hidden" value="" id="inputselect"/> 
+        <input name="" id="" type="button" class="ewm_creat" value="生成二维码" onClick="ShowDiv(2)">
+        </form>
+       </div>
+     </div>
+      <!-- 酒店信息 -->
+     <div id="con_xytab_4" style="display:none">
+      <div class="set_sth">
+        <form name="" id="" action="" method="post">
+         <table border="0" cellpadding="2" cellspacing="0" width="100%" class="hotel_info">
+          <tbody>
+           <tr>
+            <th width="25%">酒店信息</th>
+            <th><div class="set_edit" onClick="ShowH(1)">编辑</div><div class="set_state" onClick="HideS(1)"><a href="javascript:void(0)" class="set_esc" onClick="hids()">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr class="pt20">
+            <td colspan="2">
+              <p><span class="color2">名称：</span><span class="set_hide hd1">如家酒店 007</span><span class="set_show sh1"><input type="text" id="" name=""></span></p>
+              <p><span class="color2">地址：</span><span class="set_hide hd1">北京市上地七街405号商铺</span><span class="set_show sh1"><input type="text" id="" name="" ></span></p>
+              <p style="width:52px;"><span class="color2">图片：</span></p>
+                <div class="hotel_img">
+                 <div><input type="file" id="attach_1" name="attach" onchange="change1(1)" value="test"  class="file"></div>
+    			 <div class="but" id='photo_1' onclick="F_Open_dialog(1)">
+      				<img src='images/shp.jpg'>
+    			</div>
+    			 <input type="hidden" id='img_1' class="img_1" value="<?=@$v['imgurl']?>">
+                </div>
+            </td>
+           </tr>
+           <tr>
+            <th>新订单消息接收人</th>
+            <th><div class="set_edit" onClick="ShowH(2)">编辑</div><div class="set_state" onClick="HideS(2)"><a href="javascript:void(0)" class="set_esc" onClick="hids()">取消</a><a href="javascript:void(0)" class="set_save" onClick="hids()">保存</a></div></th>
+           </tr>
+           <tr class="pt20">
+            <td colspan="2">
+              <p><span class="color2">联系人电话：</span><span class="set_hide hd2">15101254124</span><span class="set_show sh2"><input type="text" id="" name=""></span></p>
+              <p class="get_code sh2"><a href="javascript:void(0)">获取验证码</a></p>
+              <p class="sh2" style="display:none"><span class="color2">输入验证码：</span><span class="set_hide"></span><span class="set_show sh2"><input type="text" id="" name="" ></span></p>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </form>
+       </div>
+     </div>
+   </div>
+   <div class="clear"></div>
+</div>
+<div class="all_box_z1" style="display:none;"><div class="all_box_z" style="display:none;"></div></div>
+ <div class="add_sth add_room" style="display:none;">
+ <div id="tc1" style="display:none;" class="w460">
+ <div class="add_biaoti">房间类型<a href="javascript:void(0)" onclick="hidets()">×</a></div>
+ <form name="form1" id="form1" action="" method="post">
+  <div class="room_type">
+    <textarea>标准间 豪华间 大房间</textarea>
+  </div>
+  <div class="room_btn">
+    <a href="javascript:void(0)" onclick="hidets()">取消</a>
+    <a href="javascript:void(0)" class="room_save" onclick="hidets()">保存</a>
+  </div>
+  </form>
+ </div>
+ <div id="tc2" style="display:none;" class="w460">
+ <div class="add_biaoti">下载二维码<a href="javascript:void(0)" onclick="hidets()">×</a></div>
+ <form name="form2" id="form2" action="" method="post">
+    <div class="ewm_info">
+      <p>如家酒店 007房间</p>
+      <img src="images/erweima.png" width="240" height="240" alt="">
+    </div>
+    <div class="ewm_down">下载二维码</div>
+  </form>
+ </div>
+</div>
+<script type="text/javascript">
+function change1(id){
+    var queryString = $('#attach_'+id).val();
+    var extend = $('#attach_'+id).val().substring($('#attach_'+id).val().lastIndexOf(".") + 1);
+    if(extend != "jpg" && extend != "png" && extend != "JPG" && extend != "PNG" && extend != "JPEG" && extend != "jpeg"){
+    alert ("请上传jpg或png格式照片");
+    return false;
+    }
+	var bar = $('.bar');
+	var percent = $('.percent');
+	var showimg = $('#photo_'+id);
+	var show = $('#img_'+id);
+	var progress = $(".progress");
+	var files = $(".files_"+id);
+	var btn = $(".btn_ span");
+	if($('#myupload'))
+	$('#attach_'+id).unwrap();
+	$('#attach_'+id).wrap("<form id='myupload_"+id+"' action='/admin/car/ed.php?action=upload' method='post' enctype='multipart/form-data'></form>");
+
+ var queryString = $('#attach_'+id).val();
+ $('#myupload_'+id).ajaxSubmit(
+ {
+			dataType:  'json',
+			beforeSend: function() {
+        		showimg.empty();
+				progress.show();
+
+    		},
+    		uploadProgress: function(event, position, total, percentComplete) {
+        		showimg.html("<img  class = 'processing_sc' src='img/processing.gif' style='height:15px;margin-top:100px'>");
+
+    		},
+			success: function(data) {
+		   if(data.error!=''){
+				if(data.error==1){
+				alert('请上传小于2M的图片');
+				return false;
+				}
+				if(data.error==3){
+				alert('请上传小于2M的图片');
+				return false;
+				}
+				if(data.error==7){
+				alert('上传出错，请核实后再上传');
+				return false;
+				}
+
+			}else{
+                        pinpaiimg = data.path;
+				        var img = data.path;
+						var imgcompare = "car/"+data.path+'.thumb.'+extend;
+						showimg.html("<img id='img_"+id+"' src='"+imgcompare+"' style='width:100%'>");
+						$(show).val(data.path);
+			}
+
+
+			},
+			error:function(xhr){
+				btn.html("上传失败");
+				bar.width('0')
+				files.html(xhr.responseText);
+			}
+		});
+
+
+}
+        function F_Open_dialog(id)
+{
+         $('#attach_'+id).click();
+
+}
+function delimg(id){
+
+		var showimg = $('#photo_'+id);
+		showimg.empty();
+		if(id==1)
+		var img='../image/baby.png';
+		if(id==2)
+		var img='../image/fother.png';
+		if(id==3)
+		var img='../image/mother.png';
+
+	   showimg.html("<img  src='"+img+"'>");
+}
+</script>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

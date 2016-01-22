@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>请选择商家</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="w120">
+	<div class="bill_detail">
+    	<p class="chose_seller">请选择商家</p>
+        <ul class="seller_list">
+        	<li><i>如家酒店</i><span>（酒店）地址：北京市海淀区上地南路</span></li>
+            <li><i>如家酒店</i><span>（酒店）地址：北京市海淀区上地南路</span></li>
+            <li><i>如家酒店</i><span>（酒店）地址：北京市海淀区上地南路</span></li>
+            <li><i>如家酒店</i><span>（酒店）地址：北京市海淀区上地南路</span></li>
+        </ul>
+        <div class="seller_ent"><a href="javascript:void(0)">确定</a></div>
+    </div>
+</div>
+<script>
+$(function(){
+	$('.seller_list li i').click(function(){
+		if($(this).parent().hasClass('cur')){
+			$(this).parent().removeClass('cur')	
+		}else{
+			$(this).parent().addClass('cur');
+			$(this).parent().siblings().removeClass('cur');
+		}
+	});	
+})
+</script>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

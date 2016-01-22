@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>头条推送</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="kindeditor/themes/default/default.css">
+<script type="text/javascript" src="kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="kindeditor/lang/zh-CN.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#kindeditor');
+        });
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="con">
+			<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+			<div class="top_nav">
+				<ul>
+					<li id="jytab1" onClick="setTab('jytab',1,4,'hover','cur')"><a href="user_con.html">用户管理</a></li>
+					<li id="jytab2" onClick="setTab('jytab',2,4,'hover','cur')"><a href="pro_man.html">项目管理</a></li>
+					<li id="jytab3" class="hover" onClick="setTab('jytab',3,4,'hover','cur')"><a href="topline.html">头条推送</a></li>
+					<li id="jytab4" onClick="setTab('jytab',4,4,'hover','cur')"><a href="opera.html">操作记录</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<a href="javascript:void(0)">管理员</a> 丨 <a href="javascript:void(0)" onClick="TanB(14)">退出</a>
+			</div>
+		</div>
+	</div>
+    <div id="con_jytab_1" style="display:none">
+    	<div class="con">
+    		用户管理
+    	</div>
+    </div>
+    <div id="con_jytab_2" style="display:none">
+    	<div class="con">
+    		项目管理
+    	</div>
+    </div>
+    <div id="con_jytab_3">
+    	<div class="con">
+    		<div class="top_line_add">
+            	<form id="" name="" method="post" action="">          
+                    <p>标题</p>
+                    <input type="text" value="" name="" id="" class="top_line_input">
+                    <p>封面</p>
+                    <div class="top_line_img">
+                     <div><input type="file" id="attach_1" name="attach" onchange="change1(1)" value="test"  class="file"></div>
+                     <div class="but" id='photo_1' onclick="F_Open_dialog(1)">
+                        <img src='images/shp.jpg'>
+                    </div>
+                     <input type="hidden" id='img_1' class="img_1" value="<?=@$v['imgurl']?>">
+                    </div>
+                    <p>正文</p>
+                    <textarea class="top_line_text" id="kindeditor" style="width:700px;"></textarea>
+                    <div class="top_btn_save"><a href="javascript:void(0)" class="top_btn_esc">取消</a><a href="javascript:void(0)">保存</a></div>
+                 </form>
+            </div>
+    	</div>
+    </div>
+    <div id="con_jytab_4" style="display:none">
+    	<div class="con">
+    		操作记录
+    	</div>
+    </div>
+<div class="clear"></div>
+<div class="tan_box_z" style="display:none;"><div class="tan_box_z1" style="display:none;"></div></div>
+<div class="tan_box">
+	<!-- 删除头条 -->
+	<div id="tanbox12" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form12" id="form12" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer"><span class="pro_del"></span>确认删除该头条吗？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">删除</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 确认退出？ -->
+    <div id="tanbox14" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form14" id="form14" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认退出当前账号？</div>
+			<div class="set_btn"><a href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee()">确定</a></div>
+		  </div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript">
+function change1(id){
+    var queryString = $('#attach_'+id).val();
+    var extend = $('#attach_'+id).val().substring($('#attach_'+id).val().lastIndexOf(".") + 1);
+    if(extend != "jpg" && extend != "png" && extend != "JPG" && extend != "PNG" && extend != "JPEG" && extend != "jpeg"){
+    alert ("请上传jpg或png格式照片");
+    return false;
+    }
+	var bar = $('.bar');
+	var percent = $('.percent');
+	var showimg = $('#photo_'+id);
+	var show = $('#img_'+id);
+	var progress = $(".progress");
+	var files = $(".files_"+id);
+	var btn = $(".btn_ span");
+	if($('#myupload'))
+	$('#attach_'+id).unwrap();
+	$('#attach_'+id).wrap("<form id='myupload_"+id+"' action='/admin/car/ed.php?action=upload' method='post' enctype='multipart/form-data'></form>");
+
+ var queryString = $('#attach_'+id).val();
+ $('#myupload_'+id).ajaxSubmit(
+ {
+			dataType:  'json',
+			beforeSend: function() {
+        		showimg.empty();
+				progress.show();
+
+    		},
+    		uploadProgress: function(event, position, total, percentComplete) {
+        		showimg.html("<img  class = 'processing_sc' src='img/processing.gif' style='height:15px;margin-top:100px'>");
+
+    		},
+			success: function(data) {
+		   if(data.error!=''){
+				if(data.error==1){
+				alert('请上传小于2M的图片');
+				return false;
+				}
+				if(data.error==3){
+				alert('请上传小于2M的图片');
+				return false;
+				}
+				if(data.error==7){
+				alert('上传出错，请核实后再上传');
+				return false;
+				}
+
+			}else{
+                        pinpaiimg = data.path;
+				        var img = data.path;
+						var imgcompare = "car/"+data.path+'.thumb.'+extend;
+						showimg.html("<img id='img_"+id+"' src='"+imgcompare+"' style='width:100%'>");
+						$(show).val(data.path);
+			}
+
+
+			},
+			error:function(xhr){
+				btn.html("上传失败");
+				bar.width('0')
+				files.html(xhr.responseText);
+			}
+		});
+
+
+}
+        function F_Open_dialog(id)
+{
+         $('#attach_'+id).click();
+
+}
+function delimg(id){
+
+		var showimg = $('#photo_'+id);
+		showimg.empty();
+		if(id==1)
+		var img='../image/baby.png';
+		if(id==2)
+		var img='../image/fother.png';
+		if(id==3)
+		var img='../image/mother.png';
+
+	   showimg.html("<img  src='"+img+"'>");
+}
+</script>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<link type="text/css" href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/set.js"></script>
+<title>下单</title>
+<script type="text/javascript">
+$(function(){
+	$("label[lab='chec']").click(function(){
+		var radioId = $(this).attr('name')
+		$("label[lab='chec']").removeAttr('class') && $(this).attr('class','checked');
+		$('.pay_sel').removeAttr('checked') && $('#' + radioId).attr('checked','checked')
+	});
+	
+});
+</script>
+</head>
+<body>
+	<div class="buy_cart">
+    	<div class="buy_tit">收货信息：</div>
+        <a href="erweima.html" target="_blank">
+		<div class="own_info">
+			<div class="own_addr">地址：<p>上地南路如家酒店101</p><span></span></div>
+		</div>
+        </a>
+        <a href="cart_add_info.html" target="_blank">
+		<div class="own_info">
+			<div class="own_addr">收件人信息：<p>王先生 <em>15101212101</em></p><span></span></div>
+		</div>
+        </a>
+	</div>
+    <div class="h10"></div>
+    <div class="pay_way">
+    	<div class="pay_tit">选择支付方式：</div>
+		<div class="pay_total">¥ 365</div>
+		<input type="radio" id="wechat" checked="checked"  name="pay_way" class="pay_sel">
+		<label for="wechat" class="checked" name="wechat" lab="chec"><div class="pay_wechat"><span></span>微信支付</div></label>
+		<div class="bor1"></div>
+		<input type="radio" id="account" name="pay_way" class="pay_sel">
+		<label for="account" class="label" name="account" lab="chec"><div class="pay_acc"><span></span>记账支付<em>（可用：<em class="colo1">100</em>元）</em><a class="pay_doubt" href="cart_jz.html" target="_blank"></a></div></label>
+    </div>
+	<div class="clear"></div>
+	<div class="h50"></div>
+	<div class="tel_ask"><a href="javascript:void(0)" class="pay_now">立即支付</a></div>
+    <div class="clear"></div>
+    <div class="xieyi">
+      <div class="xieyi1">
+    	<input type="checkbox" id="agument" name="" class="xieyi_input" checked><label for="agument" class="checked" name="agument"></label>
+		<span>我已阅读并同意<a href="xieyi.html" target="_blank">《用户使用协议》</a></span>
+      </div>
+    </div>
+    <div class="h50"></div>
+	<div class="h50"></div>
+	<footer class="footernav">
+		<ul class="footerUl">
+			<li><a class="a1" href="index.html"><em></em>神灯</a></li>
+			<li class="cur"><a class="a2" href="cart.html"><em></em>购物车</a></li>
+			<li><a class="a3" href="order.html"><em></em>订单</a></li>
+		</ul>
+	</footer>
+    <div class="pay_suc">
+		<p class="duihao"></p>
+		<div class="add_suc">下单成功</div>
+	</div>
+    <div class="pay_no_suc">
+		<div class="add_suc">同意协议后方可下单</div>
+	</div>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

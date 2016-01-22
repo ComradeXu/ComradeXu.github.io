@@ -1,0 +1,750 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户管理</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="con">
+			<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+			<div class="top_nav">
+				<ul>
+					<li id="jytab1" class="hover" onClick="setTab('jytab',1,4,'hover','cur')"><a href="user_con.html">用户管理</a></li>
+					<li id="jytab2" onClick="setTab('jytab',2,4,'hover','cur')"><a href="pro_man.html">项目管理</a></li>
+					<li id="jytab3" onClick="setTab('jytab',3,4,'hover','cur')"><a href="topline.html">头条推送</a></li>
+					<li id="jytab4" onClick="setTab('jytab',4,4,'hover','cur')"><a href="opera.html">操作记录</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<a href="javascript:void(0)">管理员</a> 丨 <a href="javascript:void(0)" onClick="TanB(14)">退出</a>
+			</div>
+		</div>
+	</div>
+    <div id="con_jytab_1">
+    <form method="post" action="">
+	<div class="little_nav">
+		<div class="con">
+			<div class="Menubox">
+				<ul>
+				 <li id="xytab1" class="hover" onClick="setTab('xytab',1,3,'hover','cur')">全部信息</li>
+				 <li id="xytab2" onClick="setTab('xytab',2,3,'hover','cur')">普通</li>
+				 <li id="xytab3" onClick="setTab('xytab',3,3,'hover','cur')">VIP</li>
+			   </ul>
+			 </div>
+			 <div class="search">
+					<input type="text" name="" value="输入姓名或手机号" onblur="if(this.value==''){this.value='输入姓名或手机号';this.className='input1';}" onclick="if(this.value=='输入姓名或手机号'){this.value='';this.className='inputc';}"  id="" class="input1">
+					<input type="submit" value="搜索" name="" id="" class="input2">
+                    <a href="javascript:void(0)" class="mb_down">用户模板下载</a>
+			 </div>
+		</div>
+	</div>
+	<div class="con">
+			<div class="user_list" id="con_xytab_1">
+            	<div class="rev_sth">
+                    <div class="edit_user">
+                    	<a href="javascript:void(0)">导入用户</a>
+                    	<form><input type="file" name="" value="" class="lead_in_btn"></form>
+                    	<a href="javascript:void(0)" class="rev_clas">修改用户等级</a>
+                    	<a href="javascript:void(0)" class="send_clas">发送邀请码</a>
+                    </div>
+                    <div class="check_btn">
+                    	<a href="javascript:void(0)" class="check_next">下一步</a>
+                    	<a href="javascript:void(0)" class="check_esc">取消</a>
+                    </div>
+                    <div class="check_btn1">
+                    	<a href="javascript:void(0)" onClick="TanB(6)" class="">下一步</a>
+                        <a href="javascript:void(0)" class="check_esc">取消</a>
+                    </div>
+             	</div>
+				<div class="use_tab">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="100%">
+                      <tbody>
+                        <tr>
+                            <th width="12%">头像</th>
+                            <th width="6%">姓名</th>
+                            <th width="6%">性别</th>
+                            <th width="20%">邮箱</th>
+                            <th width="11%">手机号</th>
+                            <th width="15%">所在机构</th>
+                            <th width="10%">职位</th>
+                            <th width="6%">等级</th>
+                            <th><label for="chkall" class="chkall"><input name="chkall" type="checkbox" id="chkall" value="" />全选</label></th>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/touxiang.jpg"></td>
+                          <td>王天风</td>
+                          <td>男</td>
+                          <td>wangtianfeng@sina.com</td>
+                          <td>15112345678</td>
+                          <td>红杉资本</td>
+                          <td>投资顾问</td>
+                          <td>VIP</td>
+                          <td class="do_sth">
+                            <div class="black">
+                                <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                                <a href="javascript:void(0)" class="blacklist"></a>
+                                <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                            </div>
+                            <div class="checkbox"><input type="checkbox" id="" name="userclass" ></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+				<div class="pages">
+        			<div>
+						<a class="prev" href="#">上一页</a>  
+						<a class="current">1</a>
+						<a class="num" href="">2</a>
+						<a class="num" href="">3</a>
+						<a class="num" href="">4</a>
+						<a class="num" href="">5</a> 
+						<a class="next" href="">下一页</a> 
+					</div>
+				</div>
+			</div>
+			<div class="user_list" id="con_xytab_2" style="display:none;">
+            	<div class="rev_sth">
+                    <div class="edit_user">
+                    	<a href="#">导入用户</a>
+                    	<a href="#">修改用户等级</a>
+                    	<a href="#">发送邀请码</a>
+                    </div>
+             	</div>
+				<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
+				  <tbody>
+					<tr>
+						<th width="12%">头像</th>
+						<th width="6%">姓名</th>
+						<th width="6%">性别</th>
+						<th width="20%">邮箱</th>
+						<th width="11%">手机号</th>
+						<th width="15%">所在机构</th>
+						<th width="10%">职位</th>
+						<th width="6%">等级</th>
+						<th><label for="chkall_common" class="chkall"><input name="chkall_common" type="checkbox" id="chkall_common" value="" />全选</label></th>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+				<div class="pages">
+        			<div>
+						<a class="prev" href="#">上一页</a>  
+						<a class="current">1</a>
+						<a class="num" href="">2</a>
+						<a class="num" href="">3</a>
+						<a class="num" href="">4</a>
+						<a class="num" href="">5</a> 
+						<a class="next" href="">下一页</a> 
+					</div>
+				</div>
+			</div>
+			<div class="user_list" id="con_xytab_3" style="display:none;">
+            	<div class="rev_sth">
+                    <div class="edit_user">
+                    	<a href="#">导入用户</a>
+                    	<a href="#">修改用户等级</a>
+                    	<a href="#">发送邀请码</a>
+                    </div>
+             	</div>
+				<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
+				  <tbody>
+					<tr>
+						<th width="12%">头像</th>
+						<th width="6%">姓名</th>
+						<th width="6%">性别</th>
+						<th width="20%">邮箱</th>
+						<th width="11%">手机号</th>
+						<th width="15%">所在机构</th>
+						<th width="10%">职位</th>
+						<th width="6%">等级</th>
+						<th><label for="chkall_common" class="chkall"><input name="chkall_common" type="checkbox" id="chkall_common" value="" />全选</label></th>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>普通</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <a href="javascript:void(0)" onClick="TanB(1)" class="add_blacklist">拉黑</a>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+                      	<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">解除拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+					<tr>
+					  <td><img src="images/touxiang.jpg"></td>
+					  <td>王天风</td>
+					  <td>男</td>
+					  <td>wangtianfeng@sina.com</td>
+					  <td>15112345678</td>
+					  <td>红杉资本</td>
+					  <td>投资顾问</td>
+					  <td>VIP</td>
+					  <td class="do_sth">
+						<div class="black">
+                            <a href="javascript:void(0)" onClick="TanB(2)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="blacklist"></a>
+                            <div class="add_blacklist">
+                            	<a href="javascript:void(0)" onClick="TanB(1)" class="">拉黑</a>
+                                <a href="javascript:void(0)" onClick="TanB(18)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" id="" name="userclass_common" ></div>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+				<div class="pages">
+        			<div>
+						<a class="prev" href="#">上一页</a>  
+						<a class="current">1</a>
+						<a class="num" href="">2</a>
+						<a class="num" href="">3</a>
+						<a class="num" href="">4</a>
+						<a class="num" href="">5</a> 
+						<a class="next" href="">下一页</a> 
+					</div>
+				</div>
+			</div>
+	</div>
+    </form>
+    </div>
+    <div id="con_jytab_2" style="display:none">
+    	<div class="con">
+    		项目管理
+    	</div>
+    </div>
+    <div id="con_jytab_3" style="display:none">
+    	<div class="con">
+    		头条推送
+    	</div>
+    </div>
+    <div id="con_jytab_4" style="display:none">
+    	<div class="con">
+    		操作记录
+    	</div>
+    </div>
+<div class="clear"></div>
+<div class="tan_box_z" style="display:none;"><div class="tan_box_z1" style="display:none;"></div></div>
+<div class="tan_box">
+	<!-- 拉黑 -->
+	<div id="tanbox1" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认拉黑此用户？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">拉黑</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 用户信息 -->
+	<div id="tanbox2" class="box_con user_info">
+		<div class="tan_tit">用户信息<a href="javascript:void(0)" onclick="closee()">关闭</a></div>
+		<form name="form2" id="form2" action="" method="post">
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" class="user_table">
+				  <tbody>
+					<tr>
+						<td>用户昵称</td>
+						<td>风和日历</td>
+					</tr>
+					<tr>
+						<td>所属行业</td>
+						<td>金融</td>
+					</tr>
+					<tr>
+						<td>投资阶段</td>
+						<td>天使、VC</td>
+					</tr>
+					<tr>
+						<td>投资规律</td>
+						<td>300万到5000万、5000万到一亿</td>
+					</tr>
+					<tr>
+						<td>关注项目类别</td>
+						<td>国内一级、海外投资</td>
+					</tr>
+					<tr>
+						<td>所在城市</td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>工作地点</td>
+						<td>北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路</td>
+					</tr>
+					<tr>
+						<td>核心资源</td>
+						<td>资金。人脉</td>
+					</tr>
+					<tr>
+						<td>教育经历</td>
+						<td>
+							<p>2008.07—2011.09 北京政法大学大学 本科</p>
+							<p>2008.07—2011.09 北京政法大学大学 本科</p>
+						</td>
+					</tr>
+					<tr>
+						<td>工作经历</td>
+						<td>2011.08—2012.05 58同城 技术总监</td>
+					</tr>
+					<tr>
+						<td>微博</td>
+						<td>随心所欲</td>
+					</tr>
+					<tr>
+						<td>微信</td>
+						<td>sajglakjdflkajlg</td>
+					</tr>
+					<tr>
+						<td>QQ</td>
+						<td>123456789</td>
+					</tr>
+                  </tbody>
+            </table>
+		</form>
+	</div>
+    <!-- excel解析中 -->
+    <div id="tanbox3" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="lead_in">
+			<div class="lead_icon"></div>
+			<div class="lead_fon">Excel解析中</div>
+		  </div>
+		</form>
+	</div>
+    <!-- 导入完成 -->
+    <div id="tanbox4" class="box_con con_del lead_in_suc">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="lead_in">
+			<div class="lead_fon"><i></i>您已成功导入<span>123</span>个联系人，失败<span>21</span>个。</div>
+            <div class="lead_in_ent"><a onClick="closee()" href="javascript:void(0)">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 修改等级弹窗 -->
+    <div id="tanbox5" class="box_con rev_class">
+		<div class="tan_tit">选择修改等级<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form5" id="form5" action="" method="post">
+		  <div class="set_class">
+			<div class="two_class"><a href="javascript:void(0)" class="ori_class">普通等级</a><a href="javascript:void(0)" class="hover">VIP用户</a></div>
+			<div class="class_btn"><a class="class_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="class_save" href="javascript:void(0)">保存</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 修改等级-没有选择用户时弹窗 -->
+    <div id="none_user" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form111" id="form111" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">请选择需要修改等级的用户！</div>
+			<div class="set_btn"><a class="class_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee()">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 确认退出？ -->
+    <div id="tanbox14" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form14" id="form14" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认退出当前账号？</div>
+			<div class="set_btn"><a href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee()">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 删除 -->
+	<div id="tanbox18" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form18" id="form18" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认删除此用户？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 未选择用户 -->
+    <div id="tanbox15" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form15" id="form15" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">请选择在线用户或添加已储存用户！</div>
+			<div class="set_btn"><a href="javascript:void(0)" class="user_tel_esc" onclick="closee()">取消</a><a class="set_de user_con" href="javascript:void(0)">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送邀请码 -->
+    <div id="tanbox6" class="box_con user_tel_box">
+		<div class="tan_tit">未注册用户的手机<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form6" id="form6" action="" method="post">
+		  <div class="user_tel">
+			<div class="user_tel_div"><textarea id="receiveMobileNo" class="user_tel_text" onblur="if(this.value==''){this.value='请输入手机号，以空格区分';this.className='user_tel_text';}" onclick="if(this.value=='请输入手机号，以空格区分'){this.value='';this.className='user_tel_text1';}">请输入手机号，以空格区分</textarea></div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="closee()" class="user_tel_reback">返回</a><a class="user_tel_next" href="javascript:void(0)">下一步</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 设置邀请码 -->
+    <div id="tanbox7" class="box_con set_code_box">
+		<div class="tan_tit">设置邀请码<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form7" id="form7" action="" method="post">
+		  <div class="user_input">
+			<div class="user_code_input">
+            	<div class="user_code_num">
+                	<span class="user_num_left">数 &nbsp;&nbsp; 量：</span>
+            		<input type="text" name="" id="" class="use_num" value="5" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：条</span>
+                </div>
+                <div class="user_code_num mt15">
+                	<span class="user_num_left">有效期：</span>
+            		<input type="text" name="" id="" value="30" class="use_tim" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：天</span>
+                </div>
+            </div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="TanB(6)" class="user_tel_reback">返回</a><a class="user_send" href="javascript:void(0)">确认发送</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送成功 -->
+    <div id="tanbox8" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="lead_in">
+			<div class="lead_icon code_icon"></div>
+			<div class="lead_fon">邀请码发送成功</div>
+		  </div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>

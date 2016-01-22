@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<link type="text/css" href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/set.js"></script>
+<title>订单</title>
+</head>
+<body>
+	<div class="order_top">
+		<ul>
+			<li onclick="setab(this,'qb')" class="hover">全部</li>
+			<li onclick="setab(this,'ywc')">已完成</li>
+			<li onclick="setab(this,'jzd')">记账单</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<div class="h10"></div>
+	<div class="order_box">
+		<div class="con" id="qb" style="display:block;">
+          <div class="order">
+			<div class="order_total"><div class="order_time">11月11日11:11</div><div class="order_mon">酒店垫付：<span>¥365</span></div></div>
+			<div class="order_info">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				  <tbody>
+				    <tr>
+				      <td width="50%" valign="top">商品名称商品名称商品名称商品名称</td>
+					  <td width="20%" valign="top">1</td>
+					  <td width="30%" valign="top">5元/份</td>
+				    </tr>
+					<tr>
+				      <td valign="top">商品名称商品名称</td>
+					  <td valign="top">1</td>
+					  <td valign="top">5元/份</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			<div class="order_state">
+				<div class="state_bg">
+					<ul>
+						<li class="step_one step_done"><span></span><i></i><em>下单成功</em></li>
+						<li class="step_two step_done"><span></span><i></i><em>酒店确认</em></li>
+						<li class="step_three"><span></span><i></i><em>商家确认</em></li>
+						<li class="step_four"><span></span><i></i><em>配送中</em></li>
+						<li class="step_five"><span></span><i></i><em>完成</em></li>
+					</ul>
+				</div>
+			</div>
+            <div class="clear"></div>
+			<div class="order_btn"><span></span><a href="javascript:void(0)" class="cancel_order">取消订单</a><a href="javascript:void(0)">确认收货</a></div>
+			<div class="clear"></div>
+          </div>
+		  <div class="h15"></div>
+          <div class="order">
+			<div class="order_total"><div class="order_time">11月11日11:11</div><div class="order_mon">已付款：<span>¥365</span></div></div>
+			<div class="order_info">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				  <tbody>
+				    <tr>
+				      <td width="50%" valign="top">商品名称商品名称商品名称商品名称</td>
+					  <td width="20%" valign="top">1</td>
+					  <td width="30%" valign="top">5元/份</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+            <div class="order_btn"><span>订单已取消</span></div>
+			<div class="clear"></div>
+          </div>
+		  <div class="cancel_box">
+			<div class="cancel_hui"></div>
+			<div class="cancel_tips">
+				<p>商户已接单，如需取消订单请点击下方<span>“电话咨询”</span>，联系神灯官方客服人员。</p>
+				<div class="cancel_btn">
+					<a href="tel://12345678">电话咨询</a>
+					<a href="javascript:void(0)" class="cancel_cancel">取消</a>
+				</div>
+			</div>
+		  </div>
+		</div>
+        <div class="con" id="ywc" style="display:none;">
+			<div class="order">
+				<div class="order_total"><div class="order_time">11月11日11:11</div><div class="order_mon">已支付：<span>¥365</span></div></div>
+				<div class="order_info">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					 <tbody>
+						 <tr>
+							<td width="50%" valign="top">商品名称商品名称商品名称商品名称</td>
+							 <td width="20%" valign="top">1</td>
+							 <td width="30%" valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+					 </tbody>
+					</table>
+				</div>
+				<div class="clear"></div>
+				<div class="order_btn"><span>已完成</span></div>
+			</div>
+		</div>
+		<div class="con" id="jzd" style="display:none;">
+			<div class="order">
+				<div class="order_total"><div class="order_time">11月11日11:11</div><div class="order_mon">已支付：<span>¥365</span></div></div>
+				<div class="order_info">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					 <tbody>
+						 <tr>
+							<td width="50%" valign="top">商品名称商品名称商品名称商品名称</td>
+							 <td width="20%" valign="top">1</td>
+							 <td width="30%" valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+					 </tbody>
+					</table>
+				</div>
+				<div class="clear"></div>
+				<div class="order_btn"><span>已完成</span></div>
+			</div>
+			<div class="h10"></div>
+			<div class="order">
+				<div class="order_total"><div class="order_time">11月11日11:11</div><div class="order_mon">酒店垫付：<span>¥365</span></div></div>
+				<div class="order_info">
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					 <tbody>
+						 <tr>
+							<td width="50%" valign="top">商品名称商品名称商品名称商品名称</td>
+							 <td width="20%" valign="top">1</td>
+							 <td width="30%" valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+						 <tr>
+							 <td valign="top">商品名称商品名称</td>
+							 <td valign="top">1</td>
+							 <td valign="top">5元/份</td>
+						 </tr>
+					 </tbody>
+					</table>
+				</div>
+				<div class="clear"></div>
+				<div class="order_btn"><span>已完成</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="h100"></div>
+	<footer class="footernav">
+		<ul class="footerUl">d
+			<li><a class="a1" href="index.html"><em></em>神灯</a></li>
+			<li><a class="a2" href="cart.html"><em></em>购物车</a></li>
+			<li class="cur"><a class="a3" href="order.html"><em></em>订单</a></li>
+		</ul>
+	</footer>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>
+<script type="text/javascript">
+function setab(obj,id){
+	$('.con').hide();
+	$('#'+id).show();
+}
+$(function(){
+	var list = $('.order_top ul li')
+	list.click(function(){
+		$(this).addClass('hover');
+		$(this).siblings().removeClass('hover');
+	});
+});
+</script>

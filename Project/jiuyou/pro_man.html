@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>项目管理</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="con">
+			<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+			<div class="top_nav">
+				<ul>
+					<li id="jytab1" onClick="setTab('jytab',1,4,'hover','cur')"><a href="user_con.html">用户管理</a></li>
+					<li id="jytab2" class="hover" onClick="setTab('jytab',2,4,'hover','cur')"><a href="pro_man.html">项目管理</a></li>
+					<li id="jytab3" onClick="setTab('jytab',3,4,'hover','cur')"><a href="topline.html">头条推送</a></li>
+					<li id="jytab4" onClick="setTab('jytab',4,4,'hover','cur')"><a href="opera.html">操作记录</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<a href="javascript:void(0)">管理员</a> 丨 <a href="javascript:void(0)" onClick="TanB(14)">退出</a>
+			</div>
+		</div>
+	</div>
+    <div id="con_jytab_1" style="display:none">
+        <div class="con">
+            用户管理
+        </div>
+    </div>
+    <div id="con_jytab_2" style="dis play:none">
+    	<div class="little_nav">
+		<div class="con">
+			 <div class="search search_ml0">
+					<input type="text" name="" value="输入姓名或手机号" onblur="if(this.value==''){this.value='输入姓名或手机号';this.className='input1';}" onclick="if(this.value=='输入姓名或手机号'){this.value='';this.className='inputc';}"  id="" class="input1">
+					<input type="submit" value="搜索" name="" id="" class="input2">
+			 </div>
+		</div>
+	</div>
+    	<div class="con" style="position:relative;">
+        	<div class="del_more">
+            	<a href="javascript:void(0)" class="del_btn">批量删除</a>
+                <div class="del_btn_next">
+                    <a class="del_next" href="javascript:void(0)">下一步</a>
+                    <a class="del_esc" href="javascript:void(0)">取消</a>
+                </div>
+            </div>
+    		<div class="user_list pro_user_list">
+            	<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
+				  <tbody>
+					<tr>
+						<th width="10%">发布人姓名</th>
+						<th width="12%">手机</th>
+						<th width="17%">项目名称</th>
+						<th width="23%">项目介绍</th>
+						<th width="16%">发布时间</th>
+						<th><label class="chkal" for="chkal"><input type="checkbox" value="" id="chkal" name="chkal">全选</label></th>
+					</tr>
+					<tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问</td>
+					  <td class="tal">红杉资本投资顾问红杉资本投资</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
+					  <td class="tal">红杉资本投资顾问红杉资本</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
+					  <td class="tal">红杉资本投资顾问红杉资本</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
+					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
+					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+                    <tr>
+					  <td>王天风</td>
+					  <td>15101234567</td>
+					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
+					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
+					  <td>11月11日 11:11</td>
+					  <td class="do_sth">
+                      	<div class="pro_do">
+                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
+                            <a href="javascript:void(0)" class="pro_do_more"></a>
+                            <div class="pro_doo">
+                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
+                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
+                            </div>
+                        </div>
+                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+                <div class="pages">
+        			<div>
+						<a class="prev" href="#">上一页</a>  
+						<a class="current">1</a>
+						<a class="num" href="">2</a>
+						<a class="num" href="">3</a>
+						<a class="num" href="">4</a>
+						<a class="num" href="">5</a> 
+						<a class="next" href="">下一页</a> 
+					</div>
+				</div>
+            </div>
+    	</div>
+    </div>
+    <div id="con_jytab_3" style="display:none">
+    	<div class="con">
+    		头条推送
+    	</div>
+    </div>
+    <div id="con_jytab_4" style="display:none">
+    	<div class="con">
+    		操作记录
+    	</div>
+    </div>
+<div class="clear"></div>
+<div class="tan_box_z" style="display:none;"><div class="tan_box_z1" style="display:none;"></div></div>
+<div class="tan_box">
+	<!-- 拉黑 -->
+	<div id="tanbox1" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form1" id="form1" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认拉黑此用户？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">拉黑</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 用户信息 -->
+	<div id="tanbox2" class="box_con user_info">
+		<div class="tan_tit">用户信息<a href="javascript:void(0)" onclick="closee()">关闭</a></div>
+		<form name="form2" id="form2" action="" method="post">
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" class="user_table">
+				  <tbody>
+					<tr>
+						<td>用户昵称</td>
+						<td>风和日历</td>
+					</tr>
+					<tr>
+						<td>所属行业</td>
+						<td>金融</td>
+					</tr>
+					<tr>
+						<td>投资阶段</td>
+						<td>天使、VC</td>
+					</tr>
+					<tr>
+						<td>投资规律</td>
+						<td>300万到5000万、5000万到一亿</td>
+					</tr>
+					<tr>
+						<td>关注项目类别</td>
+						<td>国内一级、海外投资</td>
+					</tr>
+					<tr>
+						<td>所在城市</td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>工作地点</td>
+						<td>北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路北京市海淀区上地南路</td>
+					</tr>
+					<tr>
+						<td>核心资源</td>
+						<td>资金。人脉</td>
+					</tr>
+					<tr>
+						<td>教育经历</td>
+						<td>
+							<p>2008.07—2011.09 北京政法大学大学 本科</p>
+							<p>2008.07—2011.09 北京政法大学大学 本科</p>
+						</td>
+					</tr>
+					<tr>
+						<td>工作经历</td>
+						<td>2011.08—2012.05 58同城 技术总监</td>
+					</tr>
+					<tr>
+						<td>微博</td>
+						<td>随心所欲</td>
+					</tr>
+					<tr>
+						<td>微信</td>
+						<td>sajglakjdflkajlg</td>
+					</tr>
+					<tr>
+						<td>QQ</td>
+						<td>123456789</td>
+					</tr>
+                  </tbody>
+            </table>
+		</form>
+	</div>
+    <!-- 修改等级弹窗 -->
+    <div id="tanbox5" class="box_con rev_class">
+		<div class="tan_tit">选择修改等级<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form5" id="form5" action="" method="post">
+		  <div class="set_class">
+			<div class="two_class"><a href="javascript:void(0)" class="ori_class">普通等级</a><a href="javascript:void(0)" class="hover">VIP用户</a></div>
+			<div class="class_btn"><a class="class_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="class_save" href="javascript:void(0)">保存</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送邀请码 -->
+    <div id="tanbox6" class="box_con user_tel_box">
+		<div class="tan_tit">未注册用户的手机<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form6" id="form6" action="" method="post">
+		  <div class="user_tel">
+			<div class="user_tel_div"><textarea class="user_tel_text" onblur="if(this.value==''){this.value='请输入手机号，以空格区分';this.className='user_tel_text';}" onclick="if(this.value=='请输入手机号，以空格区分'){this.value='';this.className='user_tel_text1';}" >请输入手机号，以空格区分</textarea></div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="closee()" class="user_tel_reback">返回</a><a class="user_tel_next" href="javascript:void(0)" onClick="TanB(7)">下一步</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 设置邀请码 -->
+    <div id="tanbox7" class="box_con set_code_box">
+		<div class="tan_tit">设置邀请码<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form7" id="form7" action="" method="post">
+		  <div class="user_input">
+			<div class="user_code_input">
+            	<div class="user_code_num">
+                	<span class="user_num_left">数 &nbsp;&nbsp; 量：</span>
+            		<input type="text" name="" id="" value="5" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：条</span>
+                </div>
+                <div class="user_code_num mt15">
+                	<span class="user_num_left">有效期：</span>
+            		<input type="text" name="" id="" value="30" onblur="this.v();" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)">
+                    <span class="user_num_right">单位：天</span>
+                </div>
+            </div>
+			<div class="user_tel_btn"><a class="user_tel_esc" href="javascript:void(0)" onclick="closee()">取消</a><a href="javascript:void(0)" onclick="TanB(6)" class="user_tel_reback">返回</a><a class="user_send" href="javascript:void(0)">确认发送</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 发送成功 -->
+    <div id="tanbox8" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form8" id="form8" action="" method="post">
+		  <div class="lead_in">
+			<div class="lead_icon code_icon"></div>
+			<div class="lead_fon">邀请码发送成功</div>
+		  </div>
+		</form>
+	</div>
+    <!-- 项目信息 -->
+	<div id="tanbox9" class="box_con user_info pro_user_info">
+		<div class="tan_tit">项目信息<a href="javascript:void(0)" onclick="closee()">关闭</a></div>
+		<form name="form9" id="form9" action="" method="post">
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" class="user_table">
+				  <tbody>
+					<tr>
+						<td>项目名称</td>
+						<td>美容O2O项目</td>
+					</tr>
+					<tr>
+						<td>项目详情</td>
+						<td>孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云</td>
+					</tr>
+					<tr>
+						<td>项目类别</td>
+						<td>国内一级</td>
+					</tr>
+					<tr>
+						<td>所属行业</td>
+						<td>网络信息安全</td>
+					</tr>
+					<tr>
+						<td>项目阶段</td>
+						<td>已有Demo/样品</td>
+					</tr>
+                    <tr>
+						<td>融资阶段</td>
+						<td>Pre一A轮</td>
+					</tr>
+					<tr>
+						<td>融资规模</td>
+						<td>100万到3000万</td>
+					</tr>
+					<tr>
+						<td>项目所在地</td>
+						<td>北京市</td>
+					</tr>
+					<tr>
+						<td>所缺资源</td>
+						<td>法务咨询 法务咨询 法务咨询 法务咨询 法务咨询 法务咨询 法务咨询 法务咨询 法务咨询 </td>
+					</tr>
+					<tr>
+						<td>合作模式</td>
+						<td>融资方的费用标准</td>
+					</tr>
+                  </tbody>
+            </table>
+		</form>
+	</div>
+    <!-- 项目信息编辑 -->
+	<div id="tanbox10" class="box_con user_info pro_user_info">
+		<div class="tan_tit">项目信息<a href="javascript:void(0)" onclick="closee()">关闭</a></div>
+		<form name="form10" id="form10" action="" method="post">
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" class="user_table">
+				  <tbody>
+					<tr>
+						<td>项目名称</td>
+						<td><input type="text" name="" id="" value="美容O2O项目" autofocus></td>
+					</tr>
+					<tr>
+						<td>项目详情</td>
+						<td><textarea>孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云孙清云</textarea></td>
+					</tr>
+					<tr>
+						<td>项目类别</td>
+						<td style="position:relative;z-index:10;">
+                            <div class="tab_sel divselect"> 
+                                <cite>项目类别</cite>
+                                <div class="btn_xia"></div>
+                                <ul> 
+                                   <li><a href="javascript:void(0);" selectid="股权">股权</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="债权">债权</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="壳资源">壳资源</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="新三板">新三板</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="定增">定增</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="并购重组">并购重组</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="海外">海外</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="其他">其他</a></li> 
+                                </ul> 
+                            </div> 
+        					<input name="" type="hidden" value="" class="inputselect"/>
+                        </td>
+					</tr>
+					<tr>
+						<td>所属行业</td>
+						<td style="position:relative;z-index:9;">
+                       		 <div class="tab_sel divselect1"> 
+                                <cite>所属行业</cite>
+                                <div class="btn_xia"></div>
+                                <ul class="dddd"> 
+                                   <li><a href="javascript:void(0);" selectid="能源矿产">能源矿产</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="医药医疗保健">医药医疗保健</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="消费服务">消费服务</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="金融">金融</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="文化教育">文化教育</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="传媒娱乐">传媒娱乐</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="体育旅游">体育旅游</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="新能源与环保">新能源与环保</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="地产基建">地产基建</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="农林牧渔">农林牧渔</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="互联网与信息技术">互联网与信息技术</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="先进制造">先进制造</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="交通物流运输">交通物流运输</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="其他">其他</a></li> 
+                                   <li><a href="javascript:void(0);" onClick="TanB(31)" class="tan_zdy1" selectid="自定义">自定义</a></li> 
+                                </ul> 
+                            </div> 
+        					<input name="" type="hidden" value="" class="inputselect1"/>
+                        </td>
+					</tr>
+					<tr>
+						<td>项目阶段</td>
+						<td style="position:relative;z-index:8;">
+                            <div class="tab_sel divselect2"> 
+                                <cite>项目阶段</cite>
+                                <div class="btn_xia"></div>
+                                <ul> 
+                                   <li><a href="javascript:void(0);" selectid="种子">种子</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="天使">天使</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="VC">VC</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="PE">PE</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="并购">并购</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="其他">其他</a></li> 
+                                </ul> 
+                            </div> 
+        					<input name="" type="hidden" value="" class="inputselect2"/>
+                        </td>
+					</tr>
+                    <tr>
+						<td>融资阶段</td>
+						<td style="position:relative;z-index:7;">
+                            <div class="tab_sel divselect3"> 
+                                <cite>融资阶段</cite>
+                                <div class="btn_xia"></div>
+                                <ul> 
+                                   <li><a href="javascript:void(0);" selectid="天使轮">天使轮</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="Pre—A轮">Pre—A轮</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="A轮">A轮</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="B轮">B轮</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="C轮">C轮</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="D轮及以上">D轮及以上</a></li> 
+                                </ul> 
+                            </div> 
+        					<input name="" type="hidden" value="" class="inputselect3"/>
+                        </td>
+					</tr>
+					<tr>
+						<td>项目所在地</td>
+						<td>
+                        	<div class="city_chose">
+                                <input autocomplete="off" value="中文/拼音" id="homecity_name" name="homecity_name" mod="address|notice" mod_address_source="hotel" mod_address_suggest="" mod_address_reference="cityid" mod_notice_tip="中文/拼音" type="text">
+                                <input id="cityid" name="cityid" value="{$cityid}" type="hidden">
+                            </div>
+                        </td>
+					</tr>
+					<tr>
+						<td>融资规模</td>
+						<td>
+                        	<input type="text" name="" id="" value="100万到3000万">
+                        </td>
+					</tr>
+					<tr>
+						<td>欠缺资源</td>
+						<td><textarea class="tab_text" onClick="TanB(30)">欠缺资源</textarea></td>
+					</tr>
+					<tr>
+						<td>合作模式</td>
+						<td style="position:relative;z-index:6;">
+                            <div class="tab_sel divselect4"> 
+                                <cite>融资阶段</cite>
+                                <div class="btn_xia"></div>
+                                <ul> 
+                                   <li><a href="javascript:void(0);" selectid="融资方的费用标准">融资方的费用标准</a></li> 
+                                   <li><a href="javascript:void(0);" selectid="收益提成模式">收益提成模式</a></li> 
+                                </ul> 
+                            </div> 
+        					<input name="" type="hidden" value="" class="inputselect4"/>
+                        </td>
+					</tr>                   
+                  </tbody>
+            </table>
+            <div class="pro_user_btn"><a href="javascript:void(0)" onClick="closee()">取消</a><a href="javascript:void(0)" class="pro_user_save">保存</a></div>
+		</form>
+	</div>
+    <!-- 删除项目信息 -->
+	<div id="tanbox11" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form11" id="form11" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer"><span class="pro_del"></span>确认删除该项目信息吗？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">删除</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 确认退出？ -->
+    <div id="tanbox14" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form14" id="form14" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer">确认退出当前账号？</div>
+			<div class="set_btn"><a href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee()">确定</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 所缺资源 -->
+    <div id="tanbox30" class="box_con user_info tan_mini">
+		<div class="tan_tit">所缺资源<a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form30" id="form30" action="" method="post">
+		  <div class="tan_min">
+          	<ul>
+            	<li>资金</li>
+                <li>法务咨询</li>
+                <li>财务咨询</li>
+                <li>人力资源</li>
+                <li>运营</li>
+                <li onClick="TanB(32)" class="tan_zdy">自定义</li>
+            </ul>
+          </div>
+          <div class="tan_btn"><a href="javascript:void(0)" onclick="closee1()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee1()">确定</a></div>
+		</form>
+	</div>
+    <!-- 编辑行业 -->
+    <div id="tanbox31" class="box_con user_info tan_mini">
+		<div class="tan_tit">编辑行业<a href="javascript:void(0)" onclick="closee()">×</a></div>
+        <div class="tan_edit">
+		<form name="form31" id="form31" action="" method="post">
+		  <textarea class="user_tel_text" onblur="if(this.value==''){this.value='请输入自定义行业';this.className='user_tel_text';}" onclick="if(this.value=='请输入自定义行业'){this.value='';this.className='user_tel_text1';}"  maxlength="12" onkeyup="return ismaxlength(this)">请输入自定义行业</textarea>
+          <div class="tan_btn"><a href="javascript:void(0)" onclick="closee3()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee3()">确定</a></div> 
+		</form>
+        </div>
+	</div>
+    <!-- 编辑资源 -->
+    <div id="tanbox32" class="box_con user_info tan_mini">
+		<div class="tan_tit">编辑资源<a href="javascript:void(0)" onclick="closee()">×</a></div>
+        <div class="tan_edit">
+		<form name="form32" id="form32" action="" method="post">
+		  <textarea class="user_tel_text" onblur="if(this.value==''){this.value='请输入自定义资源，最多六个字';this.className='user_tel_text';}" onclick="if(this.value=='请输入自定义资源，最多六个字'){this.value='';this.className='user_tel_text1';}"  maxlength="6" onkeyup="return ismaxlength(this)">请输入自定义资源，最多六个字</textarea>
+          <div class="tan_btn"><a href="javascript:void(0)" onclick="closee2()">取消</a><a class="set_de" href="javascript:void(0)" onclick="closee2()">确定</a></div> 
+		</form>
+        </div>
+	</div>
+    <!-- 批量删除项目信息 -->
+	<div id="tanbox33" class="box_con con_del">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form33" id="form33" action="" method="post">
+		  <div class="set_black">
+			<div class="set_fer"><span class="pro_del"></span>确认删除该项目信息吗？</div>
+			<div class="set_btn"><a class="set_esc" href="javascript:void(0)" onclick="closee()">取消</a><a class="set_de" href="javascript:void(0)">删除</a></div>
+		  </div>
+		</form>
+	</div>
+    <!-- 批量删除项目信息为空 -->
+	<div class="box_con con_del" id="tanbox34">
+		<div class="tan_tit"><a href="javascript:void(0)" onclick="closee()">×</a></div>
+		<form name="form34" id="form34" action="" method="post">
+			<div class="set_black">
+				<div class="set_fer">请选择需要删除的项目！</div>
+				<div class="set_btn"><a href="javascript:void(0)" class="set_de del_pro" onClick="closee()" style="margin-left:0;">确定</a></div>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript"> 
+$(function(){ 
+	$.divselect(".divselect",".inputselect"); 
+	$.divselect(".divselect1",".inputselect1"); 
+	$.divselect(".divselect2",".inputselect2"); 
+	$.divselect(".divselect3",".inputselect3");
+	$.divselect(".divselect4",".inputselect4");
+}); 
+</script>
+<script type="text/javascript" src="js/fixdiv.js"></script>
+<script type="text/javascript" src="js/address.js"></script>
+<div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>
