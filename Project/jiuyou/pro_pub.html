@@ -27,266 +27,134 @@
             用户管理
         </div>
     </div>
-    <div id="con_jytab_2" style="dis play:none">
-    	<div class="little_nav">
-		<div class="con">
-			 <div class="search search_ml0">
-					<input type="text" name="" value="输入姓名或手机号" onblur="if(this.value==''){this.value='输入姓名或手机号';this.className='input1';}" onclick="if(this.value=='输入姓名或手机号'){this.value='';this.className='inputc';}"  id="" class="input1">
-					<input type="submit" value="搜索" name="" id="" class="input2">
-                    <a href="javascript:void(0)" class="high_search">高级搜索<span class="span1"></span></a>
-                    <div class="del_more">
-                    	<a href="pro_pub.html" class="pub_btn">发布项目</a>
-            			<a href="javascript:void(0)" class="del_btn">批量删除</a>
-                        <div class="del_btn_next">
-                            <a class="del_next" href="javascript:void(0)">下一步</a>
-                            <a class="del_esc" href="javascript:void(0)">取消</a>
-                        </div>
-           		 	</div>
-			 </div>
-		</div>
-	</div>
-    <div class="con">
-                <div class="high_search_con high_search_con1">
-                	<p class="high_tit pt10">项目信息&emsp;&emsp;&emsp;&emsp;<span class="clear_info">清空</span></p>
-                    <div class="high_con">
-                          <div class="tab_sel divselect5" style="position:relative;z-index:10;"> 
-                          <cite>项目类别</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                              	 <li><a href="javascript:void(0);" selectid="股权">股权</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="债权">债权</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="壳资源">壳资源</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="新三板">新三板</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="定增">定增</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="并购重组">并购重组</a></li>
-                                 <li><a href="javascript:void(0);" selectid="海外">海外</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect5"/>
-                          <div class="tab_sel divselect6" style="position:relative;z-index:9;"> 
-                          <cite>所属行业</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                                 <li><a href="javascript:void(0);" selectid="能源矿产">能源矿产</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="医药医疗保健">医药医疗保健</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="消费服务">消费服务</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="金融">金融</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="文化教育">文化教育</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="传媒娱乐">传媒娱乐</a></li>
-                                 <li><a href="javascript:void(0);" selectid="体育旅游">体育旅游</a></li>
-                                 <li><a href="javascript:void(0);" selectid="新能源与环保">新能源与环保</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="地产基建">地产基建</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="农林牧渔">农林牧渔</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="互联网与信息技术">互联网与信息技术</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="先进制造">先进制造</a></li>
-                                 <li><a href="javascript:void(0);" selectid="交通物流运输">交通物流运输</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect6"/>
-                          <div class="tab_sel divselect7" style="position:relative;z-index:8;"> 
-                          <cite>项目阶段</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                                 <li><a href="javascript:void(0);" selectid="种子">种子</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="天使">天使</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="VC">VC</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="PE">PE</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="并购">并购</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect7"/>
-                          <div class="tab_sel divselect8" style="position:relative;z-index:7;"> 
-                          <cite>融资阶段</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                                 <li><a href="javascript:void(0);" selectid="天使轮">天使轮</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="Pre—A轮">Pre—A轮</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="A轮">A轮</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="B轮">B轮</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="C轮">C轮</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="D轮及以上">D轮及以上</a></li>
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li> 
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect8"/>
-                          <div class="city_sel">
-                              <input autocomplete="off" value="所在城市" id="project" name="project" mod="address|notice" mod_address_source="hotel" mod_address_reference="projectid" mod_notice_tip="所在城市" type="text">
-                              <input id="projectid" name="projectid" value="{$projectid}" type="hidden"> 
-                          </div>
-                          <div class="tab_sel divselect10 mt10" style="position:relative;z-index:6;"> 
-                          <cite>欠缺资源</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                                 <li><a href="javascript:void(0);" selectid="资金">资金</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="项目">项目</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="运营">运营</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="法务咨询">法务咨询</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="财务咨询">财务咨询</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="人力资源">人力资源</a></li>
-                                 <li><a href="javascript:void(0);" selectid="市场推广">市场推广</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li> 
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect10"/>
-                          <div class="tab_sel divselect11 mt10" style="position:relative;z-index:5;"> 
-                          <cite>合作模式</cite>
-                          <div class="btn_xia"></div>
-                              <ul> 
-                                 <li><a href="javascript:void(0);" selectid="融资方的费用标准">融资方的费用标准</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="收益提成模式">收益提成模式</a></li> 
-                                 <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
-                              </ul> 
-                          </div> 
-                          <input name="" type="hidden" value="" class="inputselect11"/>
+    <div id="con_jytab_2" style="dis play:none">                
+    	<div class="con conbg">
+        	<div class="pub_pro">
+            	<h2>项目信息</h2>
+                <div class="high_con">
+                    <div class="tab_sel divselect12" style="position:relative;z-index:10;"> 
+                    <div class="xing"></div>
+                    <cite>项目类别</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="股权">股权</a></li> 
+                           <li><a href="javascript:void(0);" selectid="债权">债权</a></li> 
+                           <li><a href="javascript:void(0);" selectid="壳资源">壳资源</a></li> 
+                           <li><a href="javascript:void(0);" selectid="新三板">新三板</a></li> 
+                           <li><a href="javascript:void(0);" selectid="定增">定增</a></li> 
+                           <li><a href="javascript:void(0);" selectid="并购重组">并购重组</a></li>
+                           <li><a href="javascript:void(0);" selectid="海外">海外</a></li> 
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect12"/>
+                    <div class="tab_sel divselect13" style="position:relative;z-index:9;"> 
+                    <div class="xing"></div>
+                    <cite>所属行业</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="能源矿产">能源矿产</a></li> 
+                           <li><a href="javascript:void(0);" selectid="医药医疗保健">医药医疗保健</a></li> 
+                           <li><a href="javascript:void(0);" selectid="消费服务">消费服务</a></li> 
+                           <li><a href="javascript:void(0);" selectid="金融">金融</a></li> 
+                           <li><a href="javascript:void(0);" selectid="文化教育">文化教育</a></li> 
+                           <li><a href="javascript:void(0);" selectid="传媒娱乐">传媒娱乐</a></li>
+                           <li><a href="javascript:void(0);" selectid="体育旅游">体育旅游</a></li>
+                           <li><a href="javascript:void(0);" selectid="新能源与环保">新能源与环保</a></li> 
+                           <li><a href="javascript:void(0);" selectid="地产基建">地产基建</a></li> 
+                           <li><a href="javascript:void(0);" selectid="农林牧渔">农林牧渔</a></li> 
+                           <li><a href="javascript:void(0);" selectid="互联网与信息技术">互联网与信息技术</a></li> 
+                           <li><a href="javascript:void(0);" selectid="先进制造">先进制造</a></li>
+                           <li><a href="javascript:void(0);" selectid="交通物流运输">交通物流运输</a></li> 
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect13"/>
+                    <div class="tab_sel divselect14" style="position:relative;z-index:8;"> 
+                    <div class="xing"></div>
+                    <cite>项目阶段</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="种子">种子</a></li> 
+                           <li><a href="javascript:void(0);" selectid="天使">天使</a></li> 
+                           <li><a href="javascript:void(0);" selectid="VC">VC</a></li> 
+                           <li><a href="javascript:void(0);" selectid="PE">PE</a></li> 
+                           <li><a href="javascript:void(0);" selectid="并购">并购</a></li> 
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect14"/>
+                    <div class="tab_sel divselect15" style="position:relative;z-index:7;"> 
+                    <div class="xing"></div>
+                    <cite>融资阶段</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="天使轮">天使轮</a></li> 
+                           <li><a href="javascript:void(0);" selectid="Pre—A轮">Pre—A轮</a></li> 
+                           <li><a href="javascript:void(0);" selectid="A轮">A轮</a></li> 
+                           <li><a href="javascript:void(0);" selectid="B轮">B轮</a></li> 
+                           <li><a href="javascript:void(0);" selectid="C轮">C轮</a></li> 
+                           <li><a href="javascript:void(0);" selectid="D轮及以上">D轮及以上</a></li>
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li> 
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect15"/>
+                    <div class="city_sel">
+                        <input autocomplete="off" value="所在城市" id="project" name="project" mod="address|notice" mod_address_source="hotel" mod_address_reference="pub_project" mod_notice_tip="所在城市" type="text">
+                        <input id="pub_project" name="pub_project" value="{$pub_project}" type="hidden"> 
                     </div>
-                    <p class="high_tit">发布时间&emsp;&emsp;&emsp;&emsp;<span>清空</span></p>
-                    <div class="high_con">
-                    	<ul class="high_input">
-                        	<li class="mr7"><input type="text" name="" id="" class="att_hy Wdate" onClick="WdatePicker()" autocomplete="off"><i>—</i></li>
-                            <li><input type="text" name="" id="" class="att_hy Wdate" onClick="WdatePicker()" autocomplete="off"></li>
-                        </ul>
-                    </div>
-                    <div class="high_btn"><a href="javascript:void(0)">筛选</a></div>
+                    <div class="tab_sel divselect16 mt10" style="position:relative;z-index:6;"> 
+                    <cite>欠缺资源</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="资金">资金</a></li> 
+                           <li><a href="javascript:void(0);" selectid="项目">项目</a></li> 
+                           <li><a href="javascript:void(0);" selectid="运营">运营</a></li> 
+                           <li><a href="javascript:void(0);" selectid="法务咨询">法务咨询</a></li> 
+                           <li><a href="javascript:void(0);" selectid="财务咨询">财务咨询</a></li> 
+                           <li><a href="javascript:void(0);" selectid="人力资源">人力资源</a></li>
+                           <li><a href="javascript:void(0);" selectid="市场推广">市场推广</a></li> 
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li> 
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect16"/>
+                    <div class="tab_sel divselect17 mt10" style="position:relative;z-index:5;"> 
+                    <cite>合作模式</cite>
+                    <div class="btn_xia"></div>
+                        <ul> 
+                           <li><a href="javascript:void(0);" selectid="融资方的费用标准">融资方的费用标准</a></li> 
+                           <li><a href="javascript:void(0);" selectid="收益提成模式">收益提成模式</a></li> 
+                           <li><a href="javascript:void(0);" selectid="不限">不限</a></li>
+                        </ul> 
+                    </div> 
+                    <input name="" type="hidden" value="" class="inputselect17"/>
+              </div>
+              	<div class="clear"></div>
+              	<h2 class="h2">标题</h2>
+                <div class="pro_tit">
+                <input type="text" value="请输入项目名称" class="input" onblur="if(this.value==''){this.value='请输入项目名称';this.className='input';}" onclick="if(this.value=='请输入项目名称'){this.value='';this.className='input1';}">
+                </div>
+                <h2 class="h2">详情</h2>
+                <div class="pro_tit">
+                <textarea type="text" value="请输入项目详情" class="input" onblur="if(this.value==''){this.value='请输入项目详情';this.className='input';}" onclick="if(this.value=='请输入项目详情'){this.value='';this.className='input1';}">请输入项目详情</textarea>
+                </div>
+                <h2 class="h2">绑定用户：<span class="pro_bd"></span></h2>
+                <div class="pro_tit pro_name">
+                <input type="text" value="请输入用户名称" class="input" onblur="if(this.value==''){this.value='请输入用户名称';this.className='input';}" onclick="if(this.value=='请输入用户名称'){this.value='';this.className='input1';}">
+                <div class="pro_name_list">
+                	<ul>
+                    	<li>刘二</li>
+                        <li>刘二1</li>
+                        <li>刘二2</li>
+                    </ul>
                 </div>
                 </div>
-    	<div class="con" style="position:relative;">
-    		<div class="user_list pro_user_list">
-            	<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
-				  <tbody>
-					<tr>
-						<th width="10%">发布人姓名</th>
-						<th width="12%">手机</th>
-						<th width="17%">项目名称</th>
-						<th width="23%">项目介绍</th>
-						<th width="16%">发布时间</th>
-						<th><label class="chkal" for="chkal"><input type="checkbox" value="" id="chkal" name="chkal">全选</label></th>
-					</tr>
-					<tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问</td>
-					  <td class="tal">红杉资本投资顾问红杉资本投资</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-                    <tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
-					  <td class="tal">红杉资本投资顾问红杉资本</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-                    <tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
-					  <td class="tal">红杉资本投资顾问红杉资本</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-                    <tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
-					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-                    <tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
-					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-                    <tr>
-					  <td>王天风</td>
-					  <td>15101234567</td>
-					  <td class="tal p20">红杉资本投资顾问 投资顾问 投资</td>
-					  <td class="tal">红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问红杉资本投资顾问</td>
-					  <td>11月11日 11:11</td>
-					  <td class="do_sth">
-                      	<div class="pro_do">
-                            <a href="javascript:void(0)" onClick="TanB(9)" class="see_more">查看更多</a>
-                            <a href="javascript:void(0)" class="pro_do_more"></a>
-                            <div class="pro_doo">
-                            	<a href="javascript:void(0)" onClick="TanB(10)" class="">编辑</a>
-                            	<a href="javascript:void(0)" onClick="TanB(11)" class="">删除</a>
-                            </div>
-                        </div>
-                        <div class="checkbox"><input type="checkbox" name="usersel" id=""></div>
-					  </td>
-					</tr>
-				  </tbody>
-				</table>
-                <div class="pages">
-        			<div>
-						<a class="prev" href="#">上一页</a>  
-						<a class="current">1</a>
-						<a class="num" href="">2</a>
-						<a class="num" href="">3</a>
-						<a class="num" href="">4</a>
-						<a class="num" href="">5</a> 
-						<a class="next" href="">下一页</a> 
-					</div>
-				</div>
+                <div class="pro_btn">
+                	<a href="javascript:void(0)">取消</a>
+                    <a href="javascript:void(0)" class="pro_pub">发布</a>
+                </div>
             </div>
-    	</div>
+        </div>
     </div>
     <div id="con_jytab_3" style="display:none">
     	<div class="con">

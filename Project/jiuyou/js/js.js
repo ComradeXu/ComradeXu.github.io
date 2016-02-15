@@ -301,24 +301,30 @@ function ismaxlength(obj){
 	if (obj.getAttribute && obj.value.length>mlength)
 	obj.value=obj.value.substring(0,mlength)
 }
-
+$(function(){
+	for(var i=0;i<=20;i++){
+	$.divselect(".divselect"+i,".inputselect"+i);
+	}
+});
 
 $(function(){
 	$('.del_btn').click(function(){
 		var $rThis = $(this).parent('.del_more');
-		var $rThisP = $rThis.next('.user_list');
+		var $rThisP = $rThis.parents('.little_nav').nextAll('.con').children('.pro_user_list');
 		$(this).next('.del_btn_next').show();
 		$(this).hide();
-		$rThisP.find('.chkal').show();	
+		$(this).prev('.pub_btn').hide();
+		$rThisP.find('.chkal').show();
 		$rThisP.find('.pro_do').hide();
 		$rThisP.find('.checkbox').show();
-	});	
+	});
 	$('.del_esc').click(function(){
 		var $cThis = $(this).parent('.del_btn_next');
-		var $cThisP = $cThis.parent('.del_more').next('.user_list');
+		var $cThisP = $cThis.parents('.little_nav').nextAll('.con').children('.pro_user_list');
 		$cThis.hide();
 		$cThis.prev('.del_btn').show();
-		$cThisP.find('.chkal').hide();	
+		$cThis.prevAll('.pub_btn').show();
+		$cThisP.find('.chkal').hide();
 		$cThisP.find('.pro_do').show();
 		$cThisP.find('.checkbox').hide();
 	});
@@ -333,7 +339,7 @@ $(function(){
 			$(".tan_box_z1").show();
 			$(".tan_box").show();
 			$("#tanbox33").show();
-		}	
+		}
 	});
 	//全选
 	$("#chkal").click(function() {
@@ -343,5 +349,67 @@ $(function(){
 		var $usercla = $("input[name='usersel']");
 		$("#chkal").prop("checked" , $usercla.length == $usercla.filter(":checked").length ? true :false);
 	});
+});
+$(function(){
+	$('.high_search').click(function(){
+		if($('.high_search_con').is(':hidden')){
+			$('.high_search_con').slideDown(300);
+			$('.span1').addClass('span2');
+		}else{
+			$('.high_search_con').slideUp(300);
+			$('.span1').removeClass('span2');
+			}
+	})	
+	$('p.high_tit span').click(function(){
+		var clear = $(this).parent('.high_tit').next('.high_con').find('input')
+		clear.val('');
+	});
+	$('.tan_box .tan_min ul li').click(function(){
+		$(this).toggleClass('cur');
+	});
+})
+$(function(){
+	$('.clear_info').click(function(){
+		$('.divselect5 cite').html('项目类别');
+		$('.divselect6 cite').html('所属行业');
+		$('.divselect7 cite').html('项目阶段');
+		$('.divselect8 cite').html('融资阶段');
+		$('.divselect10 cite').html('欠缺资源');
+		$('.divselect11 cite').html('合作模式');
+		$('.city_sel input').val('所在城市');
+	});
+	$('.clear_info1').click(function(){
+		$('.info_hy').val('关注行业');
+		$('.info_jd').val('关注阶段');
+		$('.info_lb').val('关注类别');
+	});
+});
+$(function(){
+	$('.pro_name input').click(function(){
+		$('.pro_name_list ul').show();
+	});
+	$('.pro_name_list ul li').click(function(){
+		var txt = $(this).text();
+		$('.pro_name input').val(txt);
+		$('.pro_bd').html(txt);
+		$('.pro_name_list ul').hide();
+	});	
+});
+$(function(){
+	$('.pro_pub').click(function(){
+		if($('.divselect12 cite').text()=='项目类别'){
+			$('.divselect12 cite').css({"color":"#f00"});
+		}
+		if($('.divselect13 cite').text()=='所属行业'){
+			$('.divselect13 cite').css({"color":"#f00"});
+		}
+		if($('.divselect14 cite').text()=='项目阶段'){
+			$('.divselect14 cite').css({"color":"#f00"});
+		}
+		if($('.city_sel input').val()=='所在城市'){
+			$('.city_sel input').css({"color":"#f00"});
+			return false;
+		}
+	});	
 });
 

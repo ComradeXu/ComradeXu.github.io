@@ -721,7 +721,7 @@ anjiehotel.module.notice = function(a) {
         this.enabled = !0;
         this.tip = a.getAttribute("mod_notice_tip") || "";
         this.check = function() {
-            if (a.module.notice.enabled) with(a) isNull() ? (style.color = "gray", value = module.notice.tip) : style.color = ""
+            if (a.module.notice.enabled) with(a) isNull() ? (style.color = "#333", value = module.notice.tip) : style.color = ""
         };
         this.isNull = a.isNull = function() {
             return a.value.trim() == "" || a.value == a.module.notice.tip
