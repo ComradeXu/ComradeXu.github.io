@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 876581792@qq.com
 description: "前端初学者一只"
 keyword: "老徐,ComradeXu,Comrade_Xu,第陆毋思,无常方便面"
-url: "http://comradexu.com"              # your host, for absolute URL
+url: "http://comradexu.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
