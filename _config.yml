@@ -69,9 +69,6 @@ sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "一只野生的初级前端。"
 sidebar-avatar: /img/header_small.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
-#mini-about-me
-QQ:'876581792'
-
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
