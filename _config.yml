@@ -2,7 +2,7 @@
 title: ComradeXu Blog
 SEOTitle: 老徐的博客 | ComradeXu Blog
 header-img: img/home-bg.jpg
-email: 876581792@qq.com
+email: ComradeXu@foxmail.com
 description: "前端初学者一只"
 keyword: "老徐,ComradeXu,Comrade_Xu,第陆毋思,无常方便面"
 url: "http://comradexu.github.io/"              # your host, for absolute URL
@@ -79,7 +79,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
+        # title: "前端外刊评论",
+        # href: "http://qianduan.guru/"
     }
 ]
