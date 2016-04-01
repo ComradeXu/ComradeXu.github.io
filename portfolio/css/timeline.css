@@ -190,7 +190,7 @@ body{
 	background: #fafafa;
 }
 header{
-	background:url(/images/post-bg-alitrip.jpg) no-repeat;
+	background:url(../images/post-bg-alitrip.jpg) no-repeat;
 	text-align: center;
 	height: 620px;
 	min-width: 100%;
