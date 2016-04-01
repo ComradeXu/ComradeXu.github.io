@@ -66,7 +66,7 @@ ba_track_id: 3Fe21692200bce7a07448dabb995750ab3
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "一只野生的初级前端。"
+sidebar-about-description: "知识那么多，我要去学学！"
 sidebar-avatar: /img/header_small.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

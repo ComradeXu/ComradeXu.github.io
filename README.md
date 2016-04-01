@@ -1,2 +1,3 @@
 # ComradeXu.github.io
-This is my test files!
+Hello my friends!
+Welcome!
