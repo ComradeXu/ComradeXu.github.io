@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5201314</title>
+<link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon" />
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+<div id="mainDiv">
+	<div id="content">
+		 <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">* 我们,是通过游戏认识的!,</span><br />
+            <span class="space"/><span class="comments">* 能走在一起,非常不容易,所以,我用这样的方式来纪念这一年的520.</span><br />
+            <span class="space"/><span class="comments">*/</span><br />
+            Boy i = <span class="keyword">new</span> Boy(<span class="string">"刘印"</span>);<br />
+            Girl u = <span class="keyword">new</span> Girl(<span class="string">"霞妹"</span>);<br />
+            <span class="comments">// 2015年1月23号,还记得这一天么?, 我们是从这一天开始的. </span><br />
+            从那一天起.I love(u);<br />
+            <span class="comments">// 我很幸运, 能够遇到这么好的一个你,并且能让你来到我身边.</span><br />
+            I hope, forever!();<br />
+            <span class="comments">//从那一天起,心里无时不刻都在想你!</span><br />
+            i.miss(u);<br />
+            <span class="comments">// 我希望我可以照顾你,爱护你.</span><br />
+            i.takeCareOf(u); <br />
+            <span class="comments">// 你说,你不会那么容易嫁给我.</span><br />
+            <span class="comments">// 我相信,经过我的努力,我有信心,你会愿意嫁给我.</span><br />
+            <span class="keyword">如果</span> 你还是 = <span class="keyword">犹豫</span>;<br />
+            <span class="keyword">不管怎么样</span> (我会等你!) {<br />
+            <span class="placeholder"/>i.waitFor(u);<br />
+            <span class="placeholder"/><span class="comments">// 我觉得,这是一个非常重要的决定.</span><br />
+            <span class="placeholder"/><span class="comments">// 你是应该慎重考虑.</span><br />
+            <span class="placeholder"/>isHesitate = u.thinkOver();<br />
+            }<br />
+            <span class="comments">// 一场浪漫的婚礼后, 我们会幸福,而快乐的生活在一起.</span><br />
+            // if you say i.marry(u);<br />
+            // i.liveHappilyWith(u);<br />
+        </div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 李先生</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<audio src="js/liuzaiwoshenbian.mp3" autoplay="true" loop>
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 2, 28);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
