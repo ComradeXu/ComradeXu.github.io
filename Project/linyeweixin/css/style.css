@@ -42,17 +42,17 @@ header h1 {font-size:1.6rem; font-weight:normal; text-align:center; color:#555;}
 
 .content {box-sizing:border-box;width:100%;padding:0 3rem; padding-top:2rem;background:#fff;}
 .content h2,.mark h2 { font-weight:normal;font-size:1.4rem; margin-bottom:1.5rem; color:#555;}
-.content h2 i,.mark h2 i { width:1.3rem; height:1.5rem; margin-top:-0.3rem;}
+.content h2 i,.mark h2 i { width:1.3rem; height:1.5rem; margin-top:-0.4rem;}
 .content p,.mark p {font-size:1.2rem; margin:0.5rem 0; color:#999;}
 .content .btn a{ display:inline-block;color:#fff;width:100%; height:4rem;line-height:4rem;background:#ff7f00; font-size:1.5rem; text-align:center;border-radius:0.5rem; margin:3.5rem 0 5rem;}
 .content .select {  width:50%; padding:0.3rem 0.6rem; font-size:1.4rem;color:#555;font-family:"microsoft yahei",Helvetica;border-radius:0.5rem;border-color:#ccc;}
 .content h2 span {color:#71C527;}
-.content h2 i.i1 {background-position:-7.75rem -0.26rem; width:1.35rem; height:1.45rem; margin-right:0.4rem;}
-.content h2 i.i2 {background-position:-9.5rem -0.26rem; width:1.35rem; height:1.5rem; margin-right:0.6rem;}
-.content h2 i.i3 {background-position:-0.25rem -0.26rem; width:1.5rem; height:1.5rem; margin-right:0.4rem;}
-.content h2 i.i4 {background-position:-2rem -0.26rem; width:1.8rem; height:1.4rem; margin-right:0.4rem;}
-.content h2 i.i7 {background-position:-4.25rem -0.26rem; width:1.4rem; height:1.8rem; margin-right:0.4rem;}
-.mark h2 i.i6 {background-position:-6rem -0.26rem; width:1.4rem; height:1.3rem; margin-right:0.4rem;}
+.content h2 i.i1 {background-position:-7.75rem -0.3rem; width:1.4rem; height:1.5rem; margin-right:0.4rem;}
+.content h2 i.i2 {background-position:-9.5rem -0.3rem; width:1.4rem; height:1.5rem; margin-right:0.6rem;}
+.content h2 i.i3 {background-position:-0.25rem -0.3rem; width:1.5rem; height:1.5rem; margin-right:0.4rem;}
+.content h2 i.i4 {background-position:-2rem -0.3rem; width:1.8rem; height:1.4rem; margin-right:0.4rem;}
+.content h2 i.i7 {background-position:-4.25rem -0.3rem; width:1.4rem; height:1.8rem; margin-right:0.4rem;}
+.mark h2 i.i6 {background-position:-6rem -0.3rem; width:1.4rem; height:1.3rem; margin-right:0.4rem;}
 
 .content .photo p {color:#555; float:left; width:100%;border-bottom:1px solid #ccc; padding:2rem 0; margin:0;}
 .content .photo p:first-child {padding-top:0; margin-top:0.5rem;}
