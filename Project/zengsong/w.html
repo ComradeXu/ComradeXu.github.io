@@ -7,8 +7,12 @@
 <body>
 <p id="demo">点击这个按钮，获得您的位置：</p>
 <button onclick="getLocation()">试一下</button>
-<div id="map"></div>
-<div id="your_position"></div>
+<div class="content">
+    <div class="map"><div id="map"></div></div>
+    <div class="position"><span></span><div id="your_position"></div></div>
+    <div class="con_btn">确定</div>
+</div>
+
 
 <script type="text/javascript">
     function getLocation(){
