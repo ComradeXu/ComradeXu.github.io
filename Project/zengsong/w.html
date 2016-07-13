@@ -3,45 +3,53 @@
 <body>
 <p id="demo">点击这个按钮，获得您的位置：</p>
 <button onclick="getLocation()">试一下</button>
-<div id="mapholder"></div>
+<div id="your_position"></div>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx"></script>
-<script>
-    var x=document.getElementById("demo");
-    function getLocation()
-    {
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(showPosition,showError);
-        }
-        else{x.innerHTML="Geolocation is not supported by this browser.";}
-    }
-
-    function showPosition(position)
-    {
-        var latlon=position.coords.latitude+","+position.coords.longitude;
-
-        var img_url="http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
-        document.getElementById("mapholder").innerHTML="<img src='"+img_url+"' />";
-    }
-
-    function showError(error)
-    {
-        switch(error.code)
-        {
-            case error.PERMISSION_DENIED:
-                x.innerHTML="User denied the request for Geolocation."
-                break;
-            case error.POSITION_UNAVAILABLE:
-                x.innerHTML="Location information is unavailable."
-                break;
-            case error.TIMEOUT:
-                x.innerHTML="The request to get user location timed out."
-                break;
-            case error.UNKNOWN_ERROR:
-                x.innerHTML="An unknown error occurred."
-                break;
+<script type="text/javascript">
+    function getLocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            console.log("Geolocation is not supported by this browser.");
         }
     }
+    function showPosition(position){
+        var Lat = position.coords.latitude,
+                Lon = position.coords.longitude;
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(Lat,Lon);
+        map.centerAndZoom(point,12);
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                var mk = new BMap.Marker(r.point);
+                map.addOverlay(mk);
+                map.panTo(r.point);
+            }
+            else {
+                alert('failed'+this.getStatus());
+            }
+            var latlon = position.coords.latitude+','+position.coords.longitude;
+            var url = "http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
+            $.ajax({
+                type: "GET",
+                dataType: "jsonp",
+                url: url,
+                beforeSend: function(){
+                    $("#your_position").html('正在定位...');
+                },
+                success: function (json) {
+                    if(json.status==0){
+                        $("#your_position").html(json.result.formatted_address);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $("#your_position").html(latlon+"地理位置获取失败");
+                }
+            });
+        },{enableHighAccuracy: true})
+    }
+
 </script>
 </body>
 </html>
