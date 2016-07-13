@@ -3,7 +3,7 @@
 <body>
 <p id="demo">点击这个按钮，获得您的位置：</p>
 <button onclick="getLocation()">试一下</button>
-<div id="your_position"></div>
+<div id="mapholder"></div>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BM8N0DetTqzDZu7NLaduHQXx"></script>
 <script type="text/javascript">
     function getLocation(){
@@ -49,7 +49,7 @@
             });
         },{enableHighAccuracy: true})
     }
-
+    getLocation();
 </script>
 </body>
 </html>
