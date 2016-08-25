@@ -21,26 +21,26 @@ tags:
 [**酒店后台**](http://comradexu.github.io/Project/shendeng/Hotel/)
 [**店铺后台**](http://comradexu.github.io/Project/shendeng/Shop/)
 
-<p></p>
+
 #### 久友科技
 
 **项目描述：**这个项目主要是投资商通过网站和手机APP交流、查看项目等。
 
-[**项目链接：**](http://comradexu.github.io/Project/jiuyou/)
+[**项目链接**](http://comradexu.github.io/Project/jiuyou/)
 
-<p></p>
+
 #### 爱分享
 
 **项目描述：**这个项目主要是把一些闲置的物品分享给他人使用。
 
-[**项目链接：**](http://comradexu.github.io/Project/zengsong/)
+[**项目链接**](http://comradexu.github.io/Project/zengsong/)
 
-<p></p>
+
 #### 五彩官网
 
-[**项目链接：**](http://comradexu.github.io/Project/wucai/)
+[**项目链接**](http://comradexu.github.io/Project/wucai/)
 
-<p></p>
+
 #### 以下是本人保留的几个比较有特色的页面(非本人原创)
 
 [**HTML5 canvas粒子生成人物面部轮廓**](http://comradexu.github.io/tools/createimg/)
