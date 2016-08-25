@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>五彩联合</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/MSClass1.65.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="head"><div class="con">欢迎您来到五彩联合网！</div></div>
+<div class="top con">
+    <a href="#"><img src="images/logo.png" alt="" class="logo"></a>
+    <div class="search">
+        <input type="text" placeholder="请输入关键字">
+        <a href="#" class="sch"><img src="images/sousuo.png" alt=""></a>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="nav">
+    <ul class="con">
+        <li class="hover"><a href="#">首页</a></li>
+        <li><a href="#">公司简介</a></li>
+        <li><a href="#">业务范围</a></li>
+        <li><a href="#">成功案例</a></li>
+        <li><a href="#">苗木信息</a></li>
+        <li><a href="#">苗木计算器</a></li>
+    </ul>
+</div>
+<div class="banner"><img src="images/banner.jpg" alt=""></div>
+<div class="content">
+    <div class="gray">
+        <div class="con">
+            <div class="con_tit"><i></i>业务板块</div>
+            <div class="con_nr">
+                <ul>
+                    <li class="bor_none"><a href="#"><i class="i1"></i><img src="images/dong.png" alt=""><p>信用服务</p></a></li>
+                    <li><a href="#"><i class="i2"></i><img src="images/dong.png" alt=""><p>金融服务</p></a></li>
+                    <li><a href="#"><i class="i3"></i><img src="images/dong.png" alt=""><p>资产评估</p></a></li>
+                    <li><a href="#"><i class="i4"></i><img src="images/dong.png" alt=""><p>商业保理</p></a></li>
+                    <li><a href="#"><i class="i5"></i><img src="images/dong.png" alt=""><p>会计师审计</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dongtai con">
+        <div class="dt_left">
+            <div class="dt_tab">
+                <ul>
+                    <li id="dttab1" onclick="setTab('dttab',1,3,'hover')" class="hover"><a href="javascript:void(0)">中心动态</a></li>
+                    <li id="dttab2" onclick="setTab('dttab',2,3,'hover')"><a href="javascript:void(0)">政策法规</a></li>
+                    <li id="dttab3" onclick="setTab('dttab',3,3,'hover')"><a href="javascript:void(0)">行业动态</a></li>
+                </ul>
+            </div>
+            <div class="dt_con">
+                <div id="con_dttab_1">
+                    <img src="images/tu.jpg" alt="">
+                    <ul>
+                        <li><i></i><a href="#">1的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                    </ul>
+                </div>
+                <div id="con_dttab_2" style="display:none;">
+                    <img src="images/tu.jpg" alt="">
+                    <ul>
+                        <li><i></i><a href="#">2的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                    </ul>
+                </div>
+                <div id="con_dttab_3" style="display:none;">
+                    <img src="images/tu.jpg" alt="">
+                    <ul>
+                        <li><i></i><a href="#">3的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                        <li><i></i><a href="#">的说法是打发</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dt_mid">
+            <div class="con_tit"><i></i>苗木造价信息</div>
+            <div class="mm_xx">
+                <form action="" method="get">
+                    <div class="mm_top">
+                        地区
+                        <select name="" id="">
+                            <option value="">全部</option>
+                            <option value="">123</option>
+                            <option value="">12314</option>
+                        </select>
+                        年月
+                        <select name="" id="" class="mm_y">
+                            <option value="">2016</option>
+                            <option value="">2015</option>
+                            <option value="">2014</option>
+                        </select>
+                        <select name="" id="" class="mm_m">
+                            <option value="">01</option>
+                            <option value="">02</option>
+                            <option value="">03</option>
+                            <option value="">04</option>
+                            <option value="">05</option>
+                            <option value="">06</option>
+                            <option value="">07</option>
+                            <option value="">08</option>
+                            <option value="">09</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        品种
+                        <select name="" id="">
+                            <option value="">全部</option>
+                            <option value="">123</option>
+                            <option value="">12314</option>
+                        </select>
+                        规格
+                        <select name="" id="">
+                            <option value="">全部</option>
+                            <option value="">123</option>
+                            <option value="">12314</option>
+                        </select>
+                        <a href="#">筛选</a>
+                    </div>
+                    <div class="mm_bot">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <th width="19%">品种</th>
+                                    <th width="19%">单位</th>
+                                    <th width="19%">规格</th>
+                                    <th>市场价格</th>
+                                    <th width="19%">涨幅率</th>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                                <tr>
+                                    <td>雪松</td>
+                                    <td>株</td>
+                                    <td>高5-6m</td>
+                                    <td>11111</td>
+                                    <td class="mm_bf">1.02%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="dt_right">
+            <div class="con_tit"><i></i>快速通道</div>
+            <div class="dr_rc">
+                <ul>
+                    <li><a href="#"><i class="i1"></i><p>客服在线</p></a></li>
+                    <li><a href="#"><i class="i2"></i><p>后台系统登录</p></a></li>
+                    <li><a href="#"><i class="i3"></i><p>经营状况调查登录</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gray">
+        <div class="con con_ms">
+            <div class="con_tit"><i></i>“苗木+”融资模式</div>
+            <div class="img">
+                <a href="#"><img src="images/pic1.png" alt="" class="img_big img1"></a>
+                <a href="#"><img src="images/pic2.png" alt="" class="img_big img2"></a>
+                <a href="#"><img src="images/pic3.png" alt="" class="img_big img3"></a>
+                <a href="#"><img src="images/pic4.png" alt="" class="img_big img4"></a>
+                <a href="#"><img src="images/pic5.png" alt="" class="img_big img5"></a>
+                <a href="#"><img src="images/pic6.png" alt="" class="img_big img6"></a>
+                <a href="#"><img src="images/pic7.png" alt="" class="img_big img7"></a>
+                <a href="#"><img src="images/pic8.png" alt="" class="img_big img8"></a>
+                <a href="#"><img src="images/pic9.png" alt="" class="img_big img9"></a>
+                <a href="#"><img src="images/pic10.png" alt="" class="img_big img10"></a>
+            </div>
+            <!--<img src="images/img1.png" alt="" usemap="#Map">
+            <map name="Map">
+              <area shape="poly" coords="67,50,5,164,73,281,199,279,264,163,203,51" href="#">
+              <area shape="poly" coords="230,81,276,159,361,161,410,82,363,6,273,6" href="#">
+              <area shape="poly" coords="276,319,364,325,408,245,365,170,273,169,231,242" href="#">
+              <area shape="poly" coords="415,86,373,165,413,239,502,239,545,162,506,87" href="#">
+              <area shape="poly" coords="559,6,514,84,558,158,647,157,688,83,647,5" href="#">
+              <area shape="poly" coords="513,246,552,172,643,169,687,246,645,320,555,321" href="#">
+              <area shape="poly" coords="654,169,696,94,787,92,828,168,788,244,696,246" href="#">
+              <area shape="poly" coords="799,88,840,17,931,12,970,87,929,166,842,167" href="#">
+              <area shape="poly" coords="796,249,839,175,930,175,970,249,927,327,841,326" href="#">
+              <area shape="poly" coords="938,170,1006,55,1134,55,1191,168,1137,281,1004,285" href="#">
+            </map>-->
+        </div>
+    </div>
+    <div class="con con_fw">
+        <div class="con_tit"><i></i>评估服务</div>
+        <div class="fw_con">
+            <div class="fw_left">
+                <h2>轻松评估</h2>
+                <img src="images/xian.png" alt="" class="fw_xian">
+                <p>为您的理财安全保驾护航</p>
+                <img src="images/img3.png" alt="" class="fw_img">
+            </div>
+            <div class="fw_right">
+                <h2>我们的优势</h2>
+                <ul>
+                    <li><i class="i1"></i><p>数据来源</p></li>
+                    <li><i class="i2"></i><p>估值精度高</p></li>
+                    <li><i class="i3"></i><p>城市覆盖广</p></li>
+                    <li><i class="i4"></i><p>更新频率快</p></li>
+                    <li><i class="i5"></i><p>服务模式多</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con con_fw con_fw1">
+        <div class="con_tit"><i></i>保理服务</div>
+        <div class="fw_con">
+            <div class="fw_left">
+                <h2>放心保理</h2>
+                <img src="images/xian.png" alt="" class="fw_xian">
+                <p>在您身边，为您服务</p>
+                <img src="images/img4.png" alt="" class="fw_img">
+            </div>
+            <div class="fw_right">
+                <img src="images/img2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="gray">
+        <div class="con con_hz">
+            <div class="con_tit">合作伙伴</div>
+                <div id="marquee">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td><a href="#"><img src="images/hz1.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz2.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz3.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz4.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz5.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz6.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz4.png" alt=""></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><img src="images/hz7.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz8.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz9.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz10.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz11.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz12.png" alt=""></a></td>
+                            <td><a href="#"><img src="images/hz4.png" alt=""></a></td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="con">
+        <div class="foot_left">
+            <p><i></i> 友情链接</p>
+            <ul>
+                <li><a href="#">北京林业科技管理有限公司</a></li>
+                <li><a href="#">北京兰园绿色工程有限公司</a></li>
+                <li><a href="#">北京兰园绿色工程有限公司</a></li>
+                <li><a href="#">北京碧海怡景园林绿化有限公司</a></li>
+                <li><a href="#">北京安盛绿化工程有限公司</a></li>
+                <li><a href="#">北京乾建绿化工程有限公司</a></li>
+                <li><a href="#">北京乾建绿化工程有限公司</a></li>
+                <li><a href="#">北京福森园林绿化工程有限公司</a></li>
+            </ul>
+        </div>
+        <div class="foot_mid">
+            <img src="images/img5.png" alt="">
+        </div>
+        <div class="foot_left foot_right">
+            <p><i></i> 联系方式</p>
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td width="40%">电话：010-68703989</td>
+                    <td width="60%">E-mail：wucailianhewang@163.com</td>
+                </tr>
+                <tr>
+                    <td>联系人：叶文英 </td>
+                    <td>网址：<a href="http://bys.bcactc.com/xh" target="_blank">http://bys.bcactc.com/xh</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2">手机：18510072875</td>
+                </tr>
+                <tr>
+                    <td colspan="2">地址：北京市海淀区西三环紫竹桥东北角广源大厦10层</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script >
+    new Marquee("marquee",2,1,1200,200,0,0,0,52)
+</script>
+</body>
+</html>
