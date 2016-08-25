@@ -5,7 +5,7 @@ subtitle:   "只有几个小项目，并不是全部的"
 date:       2016-08-01
 author:     "ComradeXu"
 header-img: "img/post-bg-ios9-web.jpg"
-header-mask: 3
+
 catalog:    true
 tags:
     
