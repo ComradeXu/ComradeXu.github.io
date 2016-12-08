@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模拟滚动条插件demo</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 style="text-align:center; padding:10px 0px; color:#f00; background:#eee;">请仔细区分三者差别，便于更加深刻理解此插件</h1>
+
+<div id="JQ-scoll-left" style="width:300px; border:solid 1px #ddd;height:330px; overflow:hidden;position:absolute; left:20px; top:60px;">
+	<div class="JQ-scroll-content" style="position:relative; height:350px;">
+        <p style="position:absolute; left:0px; top:0px;">---------开始---</p>
+        <p style="position:absolute; left:0px; top:30px;font-size:18px; color:#f00;">---------没有上下按钮---</p>
+        <p style="position:absolute; left:0px; bottom:0px;">-------结束----</p>
+    </div>
+</div>
+
+<div id="JQ-scoll-center" style="width:200px; background:#e3e3e3; height:450px; overflow:hidden;position:absolute; left:400px; top:60px;">
+	<div class="JQ-scroll-content" style="position:relative; height:450px;">
+        <p style="position:absolute; left:0px; top:0px;">---------开始---</p>
+        <p style="position:absolute; left:0px; top:30px; font-size:18px;color:#f00;">---------内容区域高度小于等于最大高度，不会出现滚动条---</p>
+        <p style="position:absolute; left:0px; bottom:0px;">-------结束----</p>
+    </div>
+</div>
+
+<div id="JQ-scoll-right" style="width:400px; background:#eee; height:400px; overflow:hidden;position:absolute; right:20px; top:60px;">
+	<div class="JQ-scroll-content" style="position:relative; height:1000px;">
+        <p style="position:absolute; left:0px; top:0px;">---------开始---</p>
+        <p style="position:absolute; left:0px; top:30px;font-size:18px;color:#f00;">---------有上下按钮---</p>
+        <p style="position:absolute; left:0px; bottom:0px;">-------结束----</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="js/bsteel.base.js"></script> 
+<script>
+/*
+ * @class scrollBar version 2.1.0
+ * Depends jquery 1.4+
+ * @description 模拟滚动条插件，滑块高度根据内容高度自适应，自定义选择上下按钮，超出区域最大高度后出现滚动条 兼容IE7+所有浏览器
+ * @author Jerry(http://www.cnblogs.com/webdesign-Jerry/)
+ * @email jerry_webdesign@msn.cn
+ * @date 2013/08/01
+ * @namespace $.fn
+ * @parm{Int} scrollDraggerWidth                        滑块区域宽度 （默认3）
+ * @parm{String} scrollDraggerBackgroundColor           滑块区域背景颜色 （默认#d0d0d0）
+ * @parm{String} scrollDraggerBackgroundColorHover      滑块区域滑过背景颜色 （默认#aaaaaa）
+ * @parm{Int} scrollDraggerMarginLeft                   滑块区域左边距 （默认10）
+ * @parm{Int} scrollDraggerMarginRight                  滑块区域右边距 （默认10）
+ * @parm{Int} scrollDraggerMarginTop                    滑块区域上边距 （默认10）
+ * @parm{Int} scrollDraggerMarginBottom                 滑块区域下边距 （默认10）
+ * @parm{Int} scrollBarWidth                            滑块自身宽度 （默认7）
+ * @parm{String} scrollBarBackgroundColor               滑块自身背景颜色 （默认#999999）
+ * @parm{String} scrollBarBackgroundColorHover          滑块自身滑过背景颜色 （默认#666666）
+ * @parm{String} scrollBarBackgroundColorDown           滑块自身按下背景颜色 （默认#333333）
+ * @parm{Int} scrollMaxHeight                           内容显示最大区域高度，超出即出现滚动条 （默认null）
+ * @parm{Int} animateSpeed                              内容缓冲速度 （默认300）
+ * @parm{Int} mouseWheelSpeed                           鼠标滑轮转动速度 （默认30）
+ * @parm{Int} autoScrollTop                             滑块初始位置 （默认0）
+ * @parm{Boolean} defaultClickBtn                       是否添加上下按钮 默认false
+ * @parm{Float} clickScrollSpeed                        点击上下按钮移动速度 （默认0.1代表10%）
+ * @parm{object} scrollClickBtn:{                       上下按钮样式
+		@parm{array} scrollUpBtn:[src,w,h,mb],          向上按钮样式 [string按钮背景地址,按钮宽度int,按钮高度int,按钮下边距int] 默认['images/scrollTopBtn.png',13,10,5]
+		@parm{array} scrollDownBtn:[src,w,h,mt]         向下按钮样式 [string按钮背景地址,按钮宽度int,按钮高度int,按钮上边距int] 默认['images/scrollBottomBtn.png',13,10,5]
+   }                        
+ * @parm{Function} callback                             每次滚动之后执行回调函数 
+ */
+
+window.onload=function(){
+	$('#JQ-scoll-left').scrollBar({
+		scrollDraggerWidth:1,
+		scrollDraggerBackgroundColor:'#aaa',
+		scrollDraggerBackgroundColorHover:'#333',
+		scrollDraggerMarginLeft:10,
+		scrollDraggerMarginRight:10,
+		scrollDraggerMarginTop:10,
+		scrollDraggerMarginBottom:10,
+		scrollBarWidth:5,
+		scrollBarBackgroundColor:'#87acce',
+		scrollBarBackgroundColorHover:'#4d8fcb',
+		scrollBarBackgroundColorDown:'#055197',
+		scrollMaxHeight:330
+	});	
+	$('#JQ-scoll-center').scrollBar();	
+	$('#JQ-scoll-right').scrollBar({
+		defaultClickBtn:true,
+		callback:function(){
+			//console.log('滚动结束');	
+		}
+	});	
+};
+
+</script>
+
+</body>
+</html>

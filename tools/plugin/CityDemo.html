@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>省市县城市选择</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h1 style="text-align:center; padding:10px 0px; color:#f00; background:#eee;">全国省市县城市联动下拉选择插件，<span style="text-decoration:underline;">此插件涵盖<em style="color:#09f;">模拟滚动条插件</em>和<em style="color:#09f;">模拟下拉菜单</em>插件</span></h1>
+
+<div class="JQ-city-select-panel" style="position:absolute; left:100px; top:100px;">
+	<div class="JQ-select-panel JQ-select-panel-province">
+    	<div class="JQ-select-panel-head radus-s">请选择</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul></ul>
+        </div>
+        <input type="hidden" name="" value="-1" />
+    </div>
+    <div class="JQ-select-panel JQ-select-panel-city">
+    	<div class="JQ-select-panel-head radus-s JQ-select-panel-head-disabled">请选择</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            </ul>
+        </div>
+        <input type="hidden" name="" value="-1" />
+    </div>
+    <div class="JQ-select-panel JQ-select-panel-county">
+    	<div class="JQ-select-panel-head radus-s JQ-select-panel-head-disabled">请选择</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            </ul>
+        </div>
+        <input type="hidden" name="" value="-1" />
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="js/bsteel.base.js"></script> 
+<script>
+/*
+ * @class citySelect version 1.1.0
+ * Depends jquery 1.4+
+ * @description 全国省市县城市三级联动 兼容IE7+所有浏览器
+ * @author Jerry(http://www.cnblogs.com/webdesign-Jerry/)
+ * @email jerry_webdesign@msn.cn
+ * @date 2013/08/04
+ * @namespace $.fn
+ * @parm{String} headClassName           下拉按钮className
+ * @parm{String} bodyClassName           下拉菜单className
+ * @parm{String} disClassName            禁止选择className
+ * @parm{String} dataURL                 所有城市数据地址
+ * @parm{Function} callback(obj,index)   选择最下级城市完成后触发回调函数
+ */
+ 
+window.onload=function(){
+	$('.JQ-city-select-panel').citySelect({
+		callback:function(obj,index){
+			console.log(obj.text()+':'+index);
+		}	
+	});	
+};
+</script>
+
+</body>
+</html>

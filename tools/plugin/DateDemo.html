@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>日历插件demo</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<style>
+body{ background:#fff;}
+#main{ padding:30px;}
+.box{background:#eee; padding:10px;width:270px; margin:20px 10px; box-shadow:0px 0px 5px #333; border-radius:5px; float:left;}
+.text-shadow{ text-align:center; color:#f60;}
+.box li{ margin:5px 0px; position:relative;}
+.box input{ width:200px; height:24px; line-height:24px; border:solid 1px #ddd; padding:0px 3px;color:#777; cursor:pointer;}
+.box input:focus{border:solid 1px #59a5d9;box-shadow:0px 0px 3px #59a5d9;}
+.box li span{ color:#999; position:absolute; left:175px; top:1px;}
+
+.J-version{ padding:10px; border:solid 1px #ddd; margin:10px;}
+.J-version h1{ color:#f00; font-size:18px; font-family:微软雅黑;}
+.J-version p{ font-size:14px;}
+
+.JQ-calendar-item{background:url(images/calendar/piel.png) repeat; position:absolute; z-index:999; padding:0px 2px 2px 0px;}
+.JQ-calendar-main{position:relative; border:solid 1px #ddd; background:#fff; margin:-2px 0px 0px -2px; float:left;}
+.JQ-calendar-month-btn{ position:absolute; width:6px; height:11px; cursor:pointer;background:url(images/calendar/JQ-calendar-bg-3.gif) no-repeat; top:17px; z-index:4;}
+.JQ-calendar-month-prev{ background-position:0px -3px; left:18px;}
+.JQ-calendar-month-next{ background-position:-13px -3px; right:18px;}
+.JQ-calendar-month-prev:hover{ background-position:0px -21px;}
+.JQ-calendar-month-next:hover{ background-position:-13px -21px;}
+.JQ-calendar-month-prev-disabled,.JQ-calendar-month-next-disabled{ display:none;}
+.JQ-calendar-container{ position:relative; min-width:203px; height:227px;}
+.JQ-calendar-group{ width:203px; float:left;padding:5px 0px 10px; position:relative; z-index:2;}
+.JQ-calendar-head{ height:32px; line-height:32px; text-align:center; font-size:14px;font-family:微软雅黑; color:#666;}
+.JQ-getMoreMonth-btn{ cursor:pointer;}
+.JQ-getMoreMonth-btn:hover{ color:#347BC7;}
+.JQ-calendar-head em{ font-weight:bold; font-family:Verdana,arial; margin-right:2px;}
+.JQ-calendar-body{ border-left:solid 1px #ddd; margin-left:-1px; padding:0px 11px 0px 10px;}
+.JQ-calendar-week{ height:24px; line-height:24px;}
+.JQ-calendar-week span{ display:block; float:left; width:26px; text-align:center; font-family:微软雅黑;}
+.JQ-calendar-week span.normal{color:#999;}
+.JQ-calendar-week span.weekend{color:#f90;}
+.JQ-calendar-day{ position:relative;}
+.JQ-calendar-day ul{ height:156px; position:relative; z-index:3;}
+.JQ-calendar-day ul li{ float:left; display:block; width:24px; height:24px; text-align:center; margin:1px;}
+.JQ-calendar-day ul li.change,.JM-calendar-select ul li.actived{cursor:pointer; color:#666;}
+.JQ-calendar-day ul li.change:hover{background:url(images/calendar/JQ-calendar-bg-2.gif) no-repeat; color:#4b89cd;}
+.JQ-calendar-day ul li.weekend{ color:#f60;}
+.JQ-calendar-day ul li.current{ color:#f00; font-weight:bold;}
+.JQ-calendar-day ul li.selected,.JQ-calendar-day ul li.selected:hover{background:url(images/calendar/JQ-calendar-bg-0.gif) no-repeat; color:#f60; cursor:pointer;}
+.JM-calendar-select ul li.actived:hover{ color:#4b89cd; background:url(images/calendar/JQ-calendar-bg-4.gif) no-repeat;}
+.JM-calendar-select ul li.selected,.JM-calendar-select ul li.selected:hover{color:#f60; background:url(images/calendar/JQ-calendar-bg-5.gif) no-repeat; cursor:pointer;}
+.JQ-calendar-day ul li.disabled,.JM-calendar-select ul li.disabled{ color:#ddd; cursor:default;}
+.JQ-calendar-day ul li.selectDisabled{background:url(images/calendar/JQ-calendar-bg-1.gif) no-repeat;color:#ddd;cursor:default;}
+.JQ-calendar-month{ position:absolute; left:0px;*left:12px; top:-10px; font-family:Georgia; width:100%; height:100%; line-height:156px; color:#f5f5f5; text-align:center;font-size: 130px; z-index:2; font-style:italic;}
+.JM-calendar-select{ background:#fff; position:absolute; width:100%; height:190px; top:0px; left:0px; z-index:10; opacity:0; filter:alpha(opacity=0);}
+.JM-calendar-select-main{width:180px; margin:5px auto 0px; overflow:hidden; height:176px; position:relative; z-index:11;}
+.JM-calendar-select-content{ width:200%;height:100%; margin-left:0px;}
+.JM-calendar-select ul{ width:180px; float:left;height:100%;}
+.JM-calendar-select ul li{  margin:2px 10px; font-size:15px; height:40px; line-height:40px; text-align:center; width:40px; float:left; font-family:微软雅黑;-moz-transition:-moz-transform 0.5s ease 0s;-webkit-transition:all 0.5s ease 0s;-o-transition:-o-transform 0.5s ease 0s;transition:transform 0.5s ease 0s; }
+.JQ-calendar-cooprate{ height:24px; clear:both;margin:0px 5px 5px; padding-top:5px; border-top:solid 1px #eee;}
+.JQ-calendar-cooprate span{ display:block; height:22px; border:solid 1px #ccc; line-height:22px; padding:0px 10px; float:right; margin-left:5px; cursor:pointer;}
+.JQ-calendar-cooprate span:hover{ border:solid 1px #4b89cd; color:#4b89cd;}
+</style>
+</head>
+
+<body>
+
+<div class="J-version">
+	<h1>新版日历控件特性</h1>
+	<p>1,支持日历数量自定义控制</p>
+    <p>2,支持快速选择今天、清空已选日期功能</p>
+    <p>3,支持区间控制，用户只能在这个区间内选择日期</p>
+    <p>4,支持是否自动添加结束日期</p>
+    <p>5,支持回调功能，选择日期之后执行回调函数</p>
+    <p>6,支持日期格式控制，包括4种格式供选择</p>
+    <p>7,支持是否添加默认日期，如果需要，可以自定义控制默认日期距离当前日期相隔的天数，也可以自定义设定一个默认值</p>
+    <p style="color:#4b89cd;">8,快速选择月份、年份，此功能还在开发中，对于选择出生日期比较合适</p>
+    <p style="color:#999; font-size:12px; padding-left:100px;">————此版本为2.0版本，新功能陆续开发中</p>
+</div>
+
+
+<div id="main">
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo1</p>
+        <ul id="A-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo2</p>
+        <ul id="B-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo3</p>
+        <ul id="C-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo4</p>
+        <ul id="D-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo5</p>
+        <ul id="E-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo6</p>
+        <ul id="F-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo7</p>
+        <ul id="G-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo8</p>
+        <ul id="H-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo9</p>
+        <ul id="I-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo10</p>
+        <ul id="J-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo11</p>
+        <ul id="K-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo12</p>
+        <ul id="L-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <p class="text-shadow">日历选择控件demo13</p>
+        <ul id="M-calender">
+            <li>开始日期：<input type="text" name="" class="J-checkInDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+            <li>结束日期：<input type="text" name="" class="J-checkOutDate" readonly="readonly"/><span class="J-calendar-weekend"></span></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/bsteel.base-2.1.js"></script>
+<script>
+window.onload=function(){
+	$('#A-calender').BcalendarControl();
+	$('#B-calender').BcalendarControl({
+		autoAdded:false,	//默认自动加入日期
+		dateFormate:1, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoClearDateBtn:true//快速清空按钮  
+	});
+	$('#C-calender').BcalendarControl({
+		fastChange:true,//快速选择 针对出生日期
+		autoAdded:false,	//默认自动加入日期
+		autoCompleteStop:false,//是否默认添加结束日期
+		//autoCompleteDate:['2013/07/28'], //指定日期[2012-09-09,2013-03-04] 
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			//date:'2013/04/27' //限定具体日期
+		}, 
+		dateFormate:2, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoCurrentDateBtn:true,//快速定位到今天按钮
+		autoClearDateBtn:true//快速清空按钮 
+	});
+	$('#D-calender').BcalendarControl({
+		number:2, //联动日历数量
+		autoStartDays:3,//默认开始日期距离当前日期间隔天数
+		autoStopDays:2,//默认结束日期距离开始日期间隔天数
+		dateFormate:3, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoCurrentDateBtn:true//快速定位到今天按钮  
+	});
+	$('#E-calender').BcalendarControl({
+		number:2 //联动日历数量
+	});
+	$('#F-calender').BcalendarControl({
+		number:2, //联动日历数量
+		changeMonthNumber:2, //切换2个月
+		dateFormate:4 //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101 
+	});
+	
+	$('#G-calender').BcalendarControl({
+		number:2, //联动日历数量
+		dateFormate:2, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoCompleteDate:['2013/07/28','2014/01/12'] //指定日期[2012-09-09,2013-03-04] 
+	});
+	
+	$('#H-calender').BcalendarControl({
+		number:3, //联动日历数量
+		dateFormate:3, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoCompleteDate:['2013/07/28','2014/01/12'], //指定日期[2012-09-09,2013-03-04] 
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			staus:false //是否限定
+		} 
+	});
+	
+	$('#I-calender').BcalendarControl({
+		number:2, //联动日历数量
+		dateFormate:2, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101
+		autoCompleteDate:['2013/07/28','2014/01/12'], //指定日期[2012-09-09,2013-03-04] 
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			date:'2013/04/27' //限定具体日期
+		} 
+	});
+	
+	$('#J-calender').BcalendarControl({
+		autoAdded:false, //默认自动加入日期
+		number:2,
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			staus:false //是否限定
+		}, 
+		maxDate:'current',//限定选择最大日期,默认没有限定,date为指定日期
+		callback:function(date){
+			//alert('您当前选择的日期对象是:'+date);	
+		}	
+	});
+	
+	$('#K-calender').BcalendarControl({
+		number:2,
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			date:'2013-09-27' //限定具体日期
+		}, 
+		maxDate:'current',//限定选择最大日期,默认没有限定,date为指定日期
+		callback:function(date){
+			alert('您当前选择的日期对象是:'+date);	
+		}	
+	});
+	
+	$('#L-calender').BcalendarControl({
+		number:2,
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			date:'2013-04-27' //限定具体日期
+		}, 
+		maxDate:'2013-11-05',//限定选择最大日期,默认没有限定,date为指定日期
+		callback:function(date){
+			alert('您当前选择的日期对象是:'+date);	
+		}	
+	});
+	
+	$('#M-calender').BcalendarControl({
+		number:2,
+		maxDate:'2013-11-05',//限定选择最大日期,默认没有限定,date为指定日期
+		callback:function(date){
+			alert('您当前选择的日期对象是:'+date);	
+		}	
+	});
+	
+	$('#NN-calender').BcalendarControl({
+		startDateClass:'J-checkInDate', //起始日期className
+		stopDateClass:'J-checkOutDate', //结束日期className
+		number:1, //联动日历数量
+		changeMonthNumber:1, //切换1个月
+		autoAdded:true, //默认自动加入日期
+		autoStartDays:1,//默认开始日期距离当前日期间隔天数
+		autoStopDays:1,//默认结束日期距离开始日期间隔天数
+		autoCompleteStop:true,//是否默认根据开始日期添加结束日期
+		dateFormate:1, //日期格式  1代表2013-01-01 2代表2013/01/01 3代表2013年01月01日 4代表20130101 
+		autoCompleteDate:[null,null], //指定日期[2012-09-09,2013-03-04]
+		minDate:{//限定选择最小日期,默认是今天以前禁止选择,date为指定日期
+			staus:true, //是否限定
+			date:null //限定具体日期 如果staus=false  这里限定了也无效
+		}, 
+		maxDate:null,//限定选择最大日期,默认没有限定,为指定日期 '2013-11-04'
+		autoCurrentDateBtn:false,//快速定位到今天按钮
+		autoClearDateBtn:false,//快速清空按钮
+		callback:function(date,o){}//每次选择日期之后执行回调
+	});
+};
+</script>
+
+</body>
+</html>

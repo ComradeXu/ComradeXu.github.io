@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模拟下拉菜单</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h1 style="text-align:center; padding:10px 0px; color:#f00; background:#eee;">请仔细区分两者差别，便于更加深刻理解此插件</h1>
+<div class="JQ-a" style="position:absolute; left:100px; top:100px;height:200px;">
+	<div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">待付款</li>
+                <li data-code="3">生效</li>
+                <li data-code="4">完成</li>
+                <li data-code="5">违约结算中</li>
+                <li data-code="6">违约终止</li>
+                <li data-code="7">作废</li>
+                <li data-code="8">待付款</li>
+                <li data-code="9">付款中</li>
+                <li data-code="10">已付款</li>
+                <li data-code="11">退款申请中</li>
+                <li data-code="12">退款处理中</li>
+                <li data-code="13">已退款</li>
+            </ul>
+            <input type="hidden" name="" value="3" />
+        </div>
+    </div>
+    <div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">近一月合同</li>
+                <li data-code="3">近两月合同</li>
+                <li data-code="4">近三月合同</li>
+            </ul>
+            <input type="hidden" name="" value="4" />
+        </div>
+    </div>
+    <div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">直接支付</li>
+                <li data-code="3">在线支付</li>
+            </ul>
+            <input type="hidden" name="" value="3" />
+        </div>
+    </div>
+</div>
+
+<div class="JQ-b" style="position:absolute; right:100px; top:100px;">
+	<div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">待付款</li>
+                <li data-code="3">生效</li>
+                <li data-code="4">完成</li>
+                <li data-code="5">违约结算中</li>
+                <li data-code="6">违约终止</li>
+                <li data-code="7">作废</li>
+                <li data-code="8">待付款</li>
+                <li data-code="9">付款中</li>
+                <li data-code="10">已付款</li>
+                <li data-code="11">退款申请中</li>
+                <li data-code="12">退款处理中</li>
+                <li data-code="13">已退款</li>
+            </ul>
+            <input type="hidden" name="" value="3" />
+        </div>
+    </div>
+    <div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">近一月合同</li>
+                <li data-code="3">近两月合同</li>
+                <li data-code="4">近三月合同</li>
+            </ul>
+            <input type="hidden" name="" value="4" />
+        </div>
+    </div>
+    <div class="JQ-select-panel">
+    	<div class="JQ-select-panel-head radus-s">全部</div>
+        <div class="JQ-select-panel-body radus-s">
+        	<ul>
+            	<li data-code="1">全部</li>
+                <li data-code="2">直接支付</li>
+                <li data-code="3">在线支付</li>
+            </ul>
+            <input type="hidden" name="" value="3" />
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="js/bsteel.base.js"></script> 
+<script>
+/*
+ * @class selectChosen version 1.1.3
+ * Depends jquery 1.4+
+ * @description 模拟下拉菜单，自适应下拉内容高度超出最大高度出现滚动条 兼容IE7+所有浏览器
+ * @author Jerry(http://www.cnblogs.com/webdesign-Jerry/)
+ * @email jerry_webdesign@msn.cn
+ * @date 2013/08/04
+ * @namespace $.fn
+ * @parm{String} headClassName           下拉按钮className
+ * @parm{String} bodyClassName           下拉菜单className
+ * @parm{Boolean} isDefault              是否默认展现已选择的内容（默认true）
+ * @parm{Function} callback(obj,index)   单击下拉菜单内容选择完成后触发回调函数
+ */
+
+window.onload=function(){
+	$('.JQ-a .JQ-select-panel').selectChosen();//第一个模拟下拉	
+	$('.JQ-b .JQ-select-panel').selectChosen({//第二个模拟下拉	
+		isDefault:false,
+		callback:function(obj){
+			alert('当前点击下拉对象索引值'+obj.parent().index()+'\n单击下拉菜单内容选择完成后触发回调函数');	
+		}
+	});	
+};
+</script>
+
+</body>
+</html>

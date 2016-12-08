@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>各种验证demo</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="validate-item">
+	<form action="" method="post" id="validate-form">
+        <ul>
+            <li>
+                <label>非空</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="required"/>
+            </li>
+            <li>
+                <label>仅ACSII字符</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="ACSII"/>
+            </li>
+            <li>
+                <label>纯数字</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="number"/>
+            </li>
+            <li>
+                <label>正负整数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="integer"/>
+            </li>
+            <li>
+                <label>负整数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="negativeInteger"/>
+            </li>
+            <li>
+                <label>正整数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="positiveInteger"/>
+            </li>
+             <li>
+                <label>正负浮点数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="float"/>
+            </li>
+            <li>
+                <label>负浮点数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="negativeFloat"/>
+            </li>
+            <li>
+                <label>正浮点数</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="positiveFloat"/>
+            </li>
+            <li>
+                <label>大小写字母</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="alphabet"/>
+            </li>
+            <li>
+                <label>大写字母</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="LETTER"/>
+            </li>
+            <li>
+                <label>小写字母</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="letter"/>
+            </li>
+            <li>
+                <label>仅中文</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="chinese"/>
+            </li>
+            <li>
+                <label>16进制色值</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="color"/>
+            </li>
+            <li>
+                <label>日期格式</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="date"/>
+            </li>
+            <li>
+                <label title="用户名可由大小写字母、数字、下划线、中横线和中文组成">用户名</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="username"/>
+            </li>
+            <li>
+                <label title="数字、大小写字母、下划线和中横线组成">6-18位密码</label>
+                <input type="password" name="" id="" class="v-text w2" valtype="password"/>
+            </li>
+            <li>
+                <label title="真实姓名可由中文英文和数字组成">真实姓名</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="trueName"/>
+            </li>
+            <li>
+                <label>手机号码</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="tellphone" valNeedCache="true"/>
+            </li>
+            <li>
+                <label title="包括验证国内区号">电话号码</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="phoneNumber"/>
+            </li>
+            <li>
+                <label>Email</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="email"/>
+            </li>
+            <li>
+                <label>QQ</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="QQ"/>
+            </li>
+            <li>
+                <label>身份证</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="IDcard"/>
+            </li>
+            <li>
+                <label>IP地址</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="IP"/>
+            </li>
+            <li>
+                <label>邮政编码</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="postCode"/>
+            </li>
+            <li>
+                <label>判断图片</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="img"/>
+            </li>
+            <li>
+                <label>判断压缩文件</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="file"/>
+            </li>
+            <li>
+                <label>网址</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="site"/>
+            </li>
+            <li>
+                <label>FTP地址</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="ftp"/>
+            </li>
+            <li>
+                <label>护照号码</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="passport"/>
+            </li>
+            <li>
+                <label>CCV</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="ccv"/>
+            </li>
+             <li>
+                <label>中国信用卡</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="creditCard"/>
+            </li>
+            <li>
+                <label>美国信用卡</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="usaCreditCard"/>
+            </li>
+            <li>
+                <label>美国邮政编码</label>
+                <input type="text" name="" id="" class="v-text w2" valtype="usaPostCard"/>
+            </li>
+        </ul>
+        <div class="validate-submit">
+            <input type="reset" id="validate-reset" value="重 置" />
+            <input type="button"  id="validate-button" value="提 交" />
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="js/bsteel.base.js"></script> 
+<script>
+window.onload=function(){
+	$('#validate-button').bind('click',function(){
+		var flag=true;
+		$('.validate-item input.v-text').each(function(){
+			var s=$(this).Bvalidate({
+				positiveFloatReg:/^([1-9]\d+|\d)(\.\d{1,2})?$/
+				
+			});
+			flag=flag&&s;
+		});	
+		if(flag){
+			//console.log(1);
+		};	
+	});
+};
+</script>
+
+
+
+</body>
+</html>
