@@ -53,3 +53,10 @@ tags:
 
 [**表白专用**](http://comradexu.github.io/ForYou/520/)
 
+#### 一些插件Demo
+
+[**各种正则验证**](http://comradexu.github.io/tools/plugin/ValidateDemo.html)
+[**模糊搜索**](http://comradexu.github.io/tools/plugin/SearchDemo.html)
+[**模拟滚动条**](http://comradexu.github.io/tools/plugin/ScrollDemo.html)
+[**模拟下拉菜单**](http://comradexu.github.io/tools/plugin/SelectDemo.html)
+[**日历**](http://comradexu.github.io/tools/plugin/DateDemo.html)
