@@ -1,34 +1,21 @@
 ---
 layout:     post
 title:      "神奇的CSS"
-subtitle:   "This is my tests Pages"
-date:       2016-04-01
+subtitle:   "一些很好用却不常见的CSS"
+date:       2016-07-04
 author:     "ComradeXu"
 header-img: "img/post-bg-alitrip.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
- - css
     
 ---
 
 **概述：**你是否用到过这些css呢...？
 
 #### Selectors
-
 Root
-
 ```scss
-// Pages/PageA.scss
-#PageA {
-    .pagelet-name {
-        .pagelet-descendent-name {}
-    }
-    .ComponentName{ /* override */ }
-}
+:root { }
 ```
 
-```javascript
-// Pages/index.js
-require('./PageA.scss');
-```
