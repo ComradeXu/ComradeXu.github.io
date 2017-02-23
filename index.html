@@ -73,18 +73,6 @@ description: "Hello! My Friends!"
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-{* for post in site.posts *}
-    {* if post.stickie != true *}
-        {* continue *}
-    {* endif *}
-    <div>置顶文章细节</div>
-{* endfor *}
 
-{* for post in site.posts *}
-    {* if post.stickie == true *}
-        {* continue *}
-    {* endif *}
-    <div>普通文章细节</div>
-{* endfor *}
 
 {% endif %}
