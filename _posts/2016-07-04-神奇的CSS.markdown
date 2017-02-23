@@ -65,7 +65,7 @@ Root
 ul li:not(.active) {}
 ```
 该方式对于添加导航元素相当方便，看看下面的例子，你就知道。
-<img src="img/gif4.gif" />
+<img src="/img/gif4.gif" />
 <center>使用:not() 选择所有列出的元素，不使用active</center>
 
 #### Combinators
@@ -87,7 +87,7 @@ span + span
 blockquote + p { font-weight: bold; }
 ```
 第二段元素就会加粗。
-<img src="img/gif5.gif" />
+<img src="/img/gif5.gif" />
 <center>引用元素后面使用相邻选择符</center>
 
 #### General Sibling Combinator
