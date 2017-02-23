@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "神奇的CSS"
-subtitle:   "一些很好用却不常见的CSS"
+subtitle:   "一些不常见却很好用的CSS"
 date:       2016-07-04
 author:     "ComradeXu"
 header-img: "img/post-bg-alitrip.jpg"
@@ -18,4 +18,8 @@ Root
 ```scss
 :root { }
 ```
+使用root可以让你在DOM中选择最高级父元素。如果你在写HTML,那么html元素永远是最高的。
+
+因为对于一个目标元素伪类选择器有更高特性，你可以用:root重写<html>元素。
+<img src="img/gif1.gif" />
 
