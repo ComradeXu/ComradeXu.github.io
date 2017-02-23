@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "神奇的CSS"
-subtitle:   "一些不常见却很好用的CSS"
+title:      "神奇的CSS选择符"
+subtitle:   "一些不常见却很好用的CSS选择符"
 date:       2016-07-04
 author:     "ComradeXu"
 header-img: "img/post-bg-alitrip.jpg"
@@ -32,7 +32,7 @@ Root
 ::first-line 选择器可以让你选择段落第一行，当然，还有其他选择器让你可以选择第一段，但是使用这个方式，可以设计第一行样式，有更大的设计空间。
 
 更令让惊喜的功能，该选择器可以重写。相当棒的，不是吗。
-<img src="img/gif2.gif" />
+<img src="/img/gif2.gif" />
 <center>改变段落第一行元素</center>
 
 #### First Letter
@@ -42,7 +42,7 @@ Root
 ```
 和上面个的很相似，该选择器可以让我们选择块级元素的第一个字母。这让我们在设计首字下沉是非常方便快捷。
 
-<img src="img/gif3.gif" />
+<img src="/img/gif3.gif" />
 <center>::first-letter首字下沉效果</center>
 
 #### Not Selector
@@ -52,5 +52,51 @@ Root
 ```
 :not(x)选择器在你没有指定时选择目标元素，下面的例子将为你详细说明。
 
-<img src="img/gif3.gif" />
-<center>::first-letter首字下沉效果</center>
+```scss
+<ul>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li class="active">List Item</li>
+    <li>List Item</li>
+</ul>
+```
+不使用"active",也可以选择所有项目，只需要下面的代码：
+```scss
+ul li:not(.active) {}
+```
+该方式对于添加导航元素相当方便，看看下面的例子，你就知道。
+<img src="img/gif4.gif" />
+<center>使用:not() 选择所有列出的元素，不使用active</center>
+
+#### Combinators
+
+```scss
+span + span
+```
+技术上来说，这不是一个选择器，但可以把两个选择器放在一起。使用"+"，可以直接选择元素，把另外一个放在后面。下面是例子：
+
+```scss
+<section>
+    <blockquote>Lorem ipsum blah blah blah</blockquote>
+    <p>Lorem ipsum blah blah blah</p>
+    <p>Lorem ipsum blah blah blah</p>
+</section>
+```
+使用下面CSS：
+```scss
+blockquote + p { font-weight: bold; }
+```
+第二段元素就会加粗。
+<img src="img/gif5.gif" />
+<center>引用元素后面使用相邻选择符</center>
+
+#### General Sibling Combinator
+
+普通相邻选择符
+```scss
+figure ~ p {}
+```
+使用你设计的页面层次结构，就是他了。例如，使用上面的代码，只影响图形元素后的段落元素。
+
+<img src="/img/gif6.gif" />
+<center>使用普通相邻选择符选择所有段落</center>
