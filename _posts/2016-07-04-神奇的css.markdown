@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "神奇的CSS"
-subtitle:   "This is my tests Pages"
+title:      "sdaf"
+subtitle:   "dsg"
 date:       2016-07-04
 author:     "ComradeXu"
-header-img: "img/post-bg-alitrip.jpg"
+header-img: "img/post-bg-ios9-web.jpg"
 header-mask: 0.3
 catalog:    true
 tags:css3
