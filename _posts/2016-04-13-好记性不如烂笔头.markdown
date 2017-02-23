@@ -7,9 +7,25 @@ author:     "ComradeXu"
 header-img: "img/post-bg-js-module.jpg"
 header-mask: 0.3
 catalog:    true
+stickie: true
 tags:
+
     
 ---
+
+{* for post in site.posts *}
+    {* if post.stickie != true *}
+        {* continue *}
+    {* endif *}
+    <div>置顶文章细节</div>
+{* endfor *}
+
+{* for post in site.posts *}
+    {* if post.stickie == true *}
+        {* continue *}
+    {* endif *}
+    <div>普通文章细节</div>
+{* endfor *}
 
 刚接触git不久，整理了一些git笔记，Mark一下
 
