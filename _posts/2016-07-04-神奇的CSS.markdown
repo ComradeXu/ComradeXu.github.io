@@ -11,7 +11,7 @@ tags:
     
 ---
 
-**概述：**你是否用到过这些css呢...？
+**概述：**你是否用到过这些css呢!Selectors、First Line、First Letter、Not Selector、Combinators。
 
 #### Selectors
 Root

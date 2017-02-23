@@ -1,0 +1,145 @@
+---
+layout:     post
+title:      "好记性不如烂笔头（一些git笔记）"
+subtitle:   "The palest ink is better than the best memory."
+date:       2016-04-13
+author:     "ComradeXu"
+header-img: "img/post-bg-js-module.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    
+---
+
+刚接触git不久，整理了一些git笔记，Mark一下
+
+#### git bash登录
+git config --global user.name "yourname"
+git config --blobal user.email "youremail"
+cd ComradeXu.github.io
+<i>tip:C盘/user/用户名下配置name和Email，这样就可以不用每次都输入name和Email了，方法在下面</i>
+
+#### 几个简单的命令
+pwd  pwd命令用于显示当前目录
+git init  git init命令把这个目录变成Git可以管理的仓库
+git add readme.txt  git add告诉Git，把文件添加到仓库：
+git commit -m "wrote a readme file"  git commit告诉Git，把文件提交到仓库
+
+简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。
+
+嫌麻烦不想输入-m "xxx"行不行？确实有办法可以这么干，但是强烈不建议你这么干，因为输入说明对自己对别人阅读都很重要。
+
+git commit命令执行成功后会告诉你，1个文件被改动（我们新添加的readme.txt文件），插入了两行内容（readme.txt有两行内容）。
+
+为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
+
+git add file1.txt
+git add file2.txt file3.txt
+git commit -m "add 3 files."
+最简单的add方法是 git add .(这样就会把你所有的改动add了)
+
+git clone https://github.com/ComradeXu/ComradeXu.github.io.git （我的git地址）
+
+git status命令可以让我们时刻掌握仓库当前的状态
+git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到
+git log命令显示从最近到最远的提交日志
+git log --pretty=oneline 一行显示
+git reset --hard HEAD^
+cat readme.txt
+git reset --hard 3628164
+git reflog用来记录你的每一次命令
+git checkout -- file可以丢弃工作区的修改
+git reset HEAD file可以把暂存区的修改撤销掉
+rm test.txt rm命令删了
+
+生成秘钥
+ssh-keygen -t rsa -C "youremail"
+提交修改git push origin master
+
+git checkout -b dev  git checkout命令加上-b参数表示创建并切换，相当于以下两条命令 git branch dev;git checkout dev;Switched to branch 'dev'
+git branch 命令查看当前分支
+git branch <name> 创建分支
+git checkout <name>  切换分支
+git merge <name>  合并某分支到当前分支
+git branch -d dev  删除dev分支
+
+git log --graph命令可以看到分支合并图。
+git log --graph --pretty=oneline --abbrev-commit
+git merge --no-ff -m "merge with no-ff" dev  --no-ff参数，表示禁用Fast forward
+在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。
+
+#### 简写
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.last 'log -1'
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+cat ~/.gitconfig查看当前缩写配置文件内容
+.gitconfig C盘/user/用户名下
+```scss
+[alias]
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+[user]
+    name = Your Name
+    email = your@email.com
+```
+
+#### 修改git库在本地的默认位置
+Git安装位置\etc\profile
+
+```scss
+unset MAYBE_FIRST_START
+
+# set Project Path
+
+proj="D:\Github"
+
+cd $proj
+```
+
+:d
+mkdir .gitignore
+
+#### 删除文件夹
+rm 文件夹 rm -rf 文件夹 强制删除 不建议  rm -r 文件夹
+git rm -r --cached 文件夹 清除缓存
+commit push
+
+rm -f .git/index.lock 
+
+使用Jekyll模板
+
+#### 配置github
+
+1、本地生成公钥
+在git bash中输入
+```scss
+ssh-keygen -t rsa -C "your_email@youremail.com"
+```
+输入密码等信息后会在C盘/user/用户名下生成一个.ssh文件夹，里面有一个id_rsa文件和一个id_rsa.pub文件，说明ssh私钥匙、和公钥已经生成
+2、将ssh公钥添加到github
+
+在github上头像下拉框找到Settings>SSH and GPG keys>New SSH key,将id_rsa.pub中的内容粘贴到key一栏，点击Add SSH key 按钮。
+
+在git bash中输入一下代码测试：
+```scss
+ssh -T git@github.com
+```
+如果你看到了以下结果，说明成功了：
+
+```scss
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+#### 创建自己的github page
+登录https://github.com/yourname， New repository 创建新的仓库，注意，Repository name一定要设置为yourname.github.io，其他选项默认，点确认
+然后在这个仓库的页面https://github.com/yourname/yourname.github.io的右边栏点Settings
+往下拉找到Github Pages > Automatic Page generator,一路next即可
+等几分钟，访问http://yourname.github.io 就能看到你创建的页面了。
+
