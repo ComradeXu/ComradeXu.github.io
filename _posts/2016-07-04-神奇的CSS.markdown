@@ -21,5 +21,36 @@ Root
 使用root可以让你在DOM中选择最高级父元素。如果你在写HTML,那么html元素永远是最高的。
 
 因为对于一个目标元素伪类选择器有更高特性，你可以用:root重写<html>元素。
-<img src="img/gif1.gif" />
+<img src="/img/gif1.gif" />
+<center>使用:root改变背景颜色</center>
 
+#### First Line
+
+```scss
+::first-line
+```
+::first-line 选择器可以让你选择段落第一行，当然，还有其他选择器让你可以选择第一段，但是使用这个方式，可以设计第一行样式，有更大的设计空间。
+
+更令让惊喜的功能，该选择器可以重写。相当棒的，不是吗。
+<img src="img/gif2.gif" />
+<center>改变段落第一行元素</center>
+
+#### First Letter
+
+```scss
+::first-letter
+```
+和上面个的很相似，该选择器可以让我们选择块级元素的第一个字母。这让我们在设计首字下沉是非常方便快捷。
+
+<img src="img/gif3.gif" />
+<center>::first-letter首字下沉效果</center>
+
+#### Not Selector
+
+```scss
+:not(x)
+```
+:not(x)选择器在你没有指定时选择目标元素，下面的例子将为你详细说明。
+
+<img src="img/gif3.gif" />
+<center>::first-letter首字下沉效果</center>
