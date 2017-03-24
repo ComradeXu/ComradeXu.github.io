@@ -1,0 +1,162 @@
+---
+layout:     post
+title:      "我这有个布局要向你谈谈"
+subtitle:   "几个比较常用的布局"
+date:       2016-06-24
+author:     "ComradeXu"
+header-img: "img/post-bg-alitrip.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    
+---
+
+**概述：**来不及解释了，直接上代码
+
+## 两列右侧自适应布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <p>左侧定宽</p>
+    </div>
+    <div class="right">
+        <div class="right_inner">
+            <p>右侧自适应</p>
+        </div>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {margin:0 0 10px;}
+.left {position:relative;float:left;width:190px;margin-right:-190px;}
+.right {float:right;width:100%;}
+.right_inner {margin-left:200px;}
+```
+
+
+## 两列左侧自适应布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <div class="left_inner">
+            <p>左侧自适应</p>
+        </div>
+    </div>
+    <div class="right">
+        <p>右侧定宽</p>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {margin:0 0 10px;}
+.right {position:relative;float:right;width:230px;margin-left:-230px}
+.left {float:left;width:100%;;}
+.left_inner {margin-right:240px;}
+```
+
+## 两列定宽布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <p>左侧定宽</p>
+    </div>
+    <div class="right">
+        <p>右侧定宽</p>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {width:950px;margin:0 auto;}
+.left {float:left;width:230px;}
+.right {float:left;width:710px;}
+```
+
+## 三列中间自适应布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <p>左侧定宽</p>
+    </div>
+    <div class="mid">
+        <div class="mid_inner">
+            <p>中间自适应</p>
+        </div>
+    </div>
+    <div class="right">
+        <p>右侧定宽</p>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {margin:0 0 10px;}
+.left,.right {position:relative;float:left;width:230px;margin:0 -230px 0 0;}
+.right {float:right;width:190px;margin:0 0 0 -190px;}
+.mid {float:left;width:100%;}
+.mid_inner {margin:0 200px 0 240px;}
+```
+
+## 三列左侧自适应布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <div class="left_inner">
+            <p>左侧自适应</p>
+        </div>
+    </div>
+    <div class="mid">
+        <p>中间定宽</p>
+    </div>
+    <div class="right">
+        <p>右侧定宽</p>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {margin:0 0 10px;}
+.mid,.right {position:relative;float:right;width:190px;}
+.mid {width:230px;margin-left:10px;}
+.left {float:left;width:100%;margin-right:-430px;}
+.left_inner {margin-right:440px;}
+```
+
+## 三列右侧自适应布局
+
+HTML
+```scss
+<div class="wrap">
+    <div class="left">
+        <p>左侧定宽</p>
+    </div>
+    <div class="mid">
+        <p>中间定宽</p>
+    </div>
+    <div class="right">
+        <div class="right_inner">
+            <p>右侧自适应</p>
+        </div>
+    </div>
+</div>
+```
+CSS
+```scss
+.wrap {margin:0 0 10px;}
+.left,.mid {position:relative;float:left;width:230px;}
+.left {width:190px;margin-right:10px;}
+.right {float:right;width:100%;margin-left:-430px;}
+.right_inner {margin-left:440px;}
+```
