@@ -67,4 +67,3 @@ tags:
 [**模拟下拉菜单**](http://comradexu.github.io/tools/plugin/SelectDemo.html)
 [**日历**](http://comradexu.github.io/tools/plugin/DateDemo.html)
 
-https://github.com/oneclick/rubyinstaller/downloads/
