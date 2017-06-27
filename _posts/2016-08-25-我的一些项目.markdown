@@ -42,6 +42,8 @@ tags:
 
 [**emba**](http://comradexu.github.io/Project/zhuanti/emba/)
 
+[**embabaokao**](http://comradexu.github.io/Project/zhuanti/embabaokao/)
+
 #### css3+jquery响应式全屏页面切换
 
 [**项目链接**](http://comradexu.github.io/Project/response/)

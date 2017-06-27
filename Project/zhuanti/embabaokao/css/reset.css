@@ -1,0 +1,18 @@
+﻿/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+input,textarea{outline: none;}
+body,html{width: 100%;height: 100%;}
+body{font:12px "PingFang SC","Arial","Microsoft yahei";color: #333;}
+a{text-decoration:none;outline: none;}
+a:hover{text-decoration:none;}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+input,textarea {outline: none;-webkit-appearance: none;}
+input,select,textarea {font-size: 100%;}
+
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:""; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.clearfix{zoom:1;}
