@@ -1,5 +1,6 @@
 $(function(){
 	$('.icon-menu').click(function(){
+		alert('d');
 		if($('.menu-ul').css('display')=='none'){
 			$('.menu-ul').slideDown();
 		}else{
