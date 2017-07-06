@@ -1,15 +1,12 @@
 $(function(){
 	$('.icon-menu').click(function(){
 		if($('.menu-ul').css('display')=='none'){
-			$('.menu-ul').slideDown();
+			$('.menu-ul').show();
 		}else{
-			$('.menu-ul').slideUp();
+			$('.menu-ul').hide();
 		}
 	});
 	$('.menu-ul ul li a').click(function(){
 		$(this).parents('.menu-ul').slideUp('fast')
 	});
-	$('.ddd').click(function(){
-		$('.aaa').show();
-	})
 })
