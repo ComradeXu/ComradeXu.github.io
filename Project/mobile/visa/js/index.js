@@ -1,9 +1,9 @@
 $(function(){
 	$('.icon-menu').click(function(){
 		if($('.menu-ul').css('display')=='none'){
-			$('.menu-ul').show();
+			$('.menu-ul').slideDown();
 		}else{
-			$('.menu-ul').hide();
+			$('.menu-ul').slideUp();
 		}
 	});
 	$('.menu-ul ul li a').click(function(){
