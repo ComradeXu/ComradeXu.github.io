@@ -27,7 +27,7 @@ header .logo {width: 3.64rem;font-size: 0;margin-left: .2rem;}
 header .right-ul {font-size: .46rem;line-height: .46rem;margin-right: .3rem;margin-top: .2rem;}
 header .icon-info {display: inline-block;width: .46rem;height: .46rem;margin-right: .2rem;background: url(../images/wap01.png) no-repeat;background-size: 100%;}
 header .icon-menu {display: inline-block;width: .46rem;height: .46rem;background: url(../images/wap02.png) no-repeat;background-size: 100%;}
-header .menu-ul {display: none;position: fixed;width: 100%;right: 0;left:0;top:.8rem;text-align: center;font-size: .28rem;background:#151515;max-width: 768px;margin: 0 auto;z-index: 9999;}
+header .menu-ul {disp lay: none;position: fixed;width: 100%;right: 0;left:0;top:.8rem;text-align: center;font-size: .28rem;background:#151515;max-width: 768px;margin: 0 auto;z-index: 9999;}
 header .menu-ul li {border-bottom: 1px solid #2b2b2b;}
 header .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: block;}
 
