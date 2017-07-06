@@ -47,7 +47,7 @@ header .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: bloc
 .nav ul li {width: 50%;float: left;box-sizing: border-box;padding:.3rem 0 .3rem .7rem;}
 .nav ul li a {box-sizing: border-box;float: left;width: 100%;}
 .nav ul li:first-child a {border-right: 1px solid #eaeaea;}
-.nav ul li a h4 {font-size: .34rem;color: #f00;}
+.nav ul li a h4 {font-size: .34rem;color: #333;}
 .nav ul li p {color: #999;font-size: .2rem;}
 
 /** 签证指南 **/
@@ -55,7 +55,7 @@ header .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: bloc
 .sec-tit {height: .8rem;line-height: .85rem;font-size: .3rem;padding-left: .1rem;position: relative;border-bottom: 1px solid #eaeaea;}
 .sec-tit:before {content: '';border-left: 2px solid #709f2b;height: .3rem;width: 0;border-radius: 3px;position: absolute;left: 0;top: .24rem;}
 .sec-tit .more {float: right;position: relative;padding-right: .2rem;color: #777;}
-.sec-tit .more:after {content: '';background: url(../images/jiantou.png) no-repeat;background-size: 100%;width: .2rem;height: .3rem;display: inline-block;vertical-align: middle;}
+.sec-tit .more:after {content: '';background: url(../images/jiantou.png) no-repeat;background-size: 100%;width: .2rem;height: .3rem;display: inline-block;vertical-align: middle;margin-top: -.08rem;}
 .sec-con ul {font-size: 0;padding-top: .25rem;}
 .visa-tips .sec-con ul li {float: left;width: 25%;text-align: center;margin-bottom: .25rem;}
 .visa-tips .sec-con ul li a {font-size: .24rem;color: #666;width: 100%;float: left;}
@@ -106,7 +106,7 @@ header .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: bloc
 .visa-data ul {padding-top: 0;}
 .visa-data ul li {float: left;width: 20%;font-size: .24rem;text-align: center;border-right: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;box-sizing: border-box;padding: .2rem 0;}
 .visa-data ul li a {display: block;color: #666;}
-.visa-data ul li a:before {content: '';width: .38rem;height: .45rem;background-size: 100%;display: block;margin: 0 auto;}
+.visa-data ul li a:before {content: '';height: .45rem;background-size: 100%;display: block;margin: 0 auto;}
 .visa-data ul li:nth-child(1) a:before {width: .38rem;background: url(../images/wap13.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(2) a:before {width: .38rem;background: url(../images/wap14.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(3) a:before {width: .52rem;background: url(../images/wap15.png) no-repeat center center;background-size: 100%;}
@@ -120,7 +120,7 @@ header .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: bloc
 .visa-data ul li:nth-child(11) a:before {width: .38rem;background: url(../images/wap22.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(12) a:before {width: .38rem;background: url(../images/wap23.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(13) a:before {width: .34rem;background: url(../images/wap24.png) no-repeat center center;background-size: 100%;}
-.visa-data ul li:nth-child(14) a:before {width: .28rem;background: url(../images/wap25.png) no-repeat center center;background-size: 100%;}
+.visa-data ul li:nth-child(14) a:before {width: .38rem;background: url(../images/wap25.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(15) a:before {width: .33rem;background: url(../images/wap26.png) no-repeat center center;background-size: 100%;}
 .visa-data ul li:nth-child(5),.visa-data ul li:nth-child(10),.visa-data ul li:nth-child(15) {border-right:none;}
 
