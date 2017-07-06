@@ -22,7 +22,7 @@ img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-alig
 .wrapper {max-width: 768px;margin:0 auto;overflow: hidden;}
 
 /** header **/
-header {position: fixed;top:0;right: 0;background: #fff;z-index: 999;}
+header {position: fixed;top:0;right: 0;left:0;background: #fff;z-index: 999;max-width: 768px;margin:0 auto;overflow: hidden;}
 header .logo {width: 50%;font-size: 0;margin-left: .2rem;}
 header .right-ul {font-size: .46rem;line-height: .46rem;margin-right: .3rem;margin-top: .2rem;}
 header .icon-info {display: inline-block;width: .46rem;height: .46rem;margin-right: .2rem;background: url(../images/wap01.png) no-repeat;background-size: 100%;}
