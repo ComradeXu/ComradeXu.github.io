@@ -52,9 +52,9 @@ header .icon-menu {display: inline-block;width: .46rem;height: .46rem;background
 
 /** 签证指南 **/
 .section {background: #fff;border-radius: 3px;margin-bottom: .1rem;}
-.sec-tit {height: .8rem;line-height: .85rem;font-size: .3rem;padding-left: .1rem;position: relative;border-bottom: 1px solid #eaeaea;}
+.sec-tit {height: .8rem;line-height: .85rem;font-size: .3rem;padding-left: .1rem;position: relative;border-bottom: 1px solid #eaeaea;font-weight: bold;}
 .sec-tit:before {content: '';border-left: 2px solid #709f2b;height: .3rem;width: 0;border-radius: 3px;position: absolute;left: 0;top: .24rem;}
-.sec-tit .more {float: right;position: relative;padding-right: .2rem;color: #777;}
+.sec-tit .more {float: right;position: relative;padding-right: .2rem;color: #777;font-weight: normal;}
 .sec-tit .more:after {content: '';background: url(../images/jiantou.png) no-repeat;background-size: 100%;width: .2rem;height: .3rem;display: inline-block;vertical-align: middle;margin-top: -.04rem;}
 .sec-con ul {font-size: 0;padding-top: .25rem;}
 .visa-tips .sec-con ul li {float: left;width: 25%;text-align: center;margin-bottom: .25rem;}
