@@ -48,7 +48,7 @@ header .icon-menu {display: inline-block;width: .46rem;height: .46rem;background
 .nav ul li a h4 {font-size: .34rem;color: #333;}
 .nav ul li a h4.icon-mall:before {display:inline-block;content:'';width: .64rem;height: .64rem;margin-right: .06rem;margin-top: .08em;background: url(../images/wap03.png) no-repeat;background-size: 100%;vertical-align: top;}
 .nav ul li a h4.icon-visa:before {display:inline-block;content:'';width: .64rem;height: .64rem;margin-right: .06rem;margin-top: .08em;background: url(../images/wap04.png) no-repeat;background-size: 100%;vertical-align: top;}
-.nav ul li p {color: #999;font-size: .2rem;position: absolute;left: 50%;top:.4rem;margin-left: -.3rem;}
+.nav ul li p {color: #999;font-size: .2rem;position: absolute;left: 50%;top:.46rem;margin-left: -.3rem;}
 
 /** 签证指南 **/
 .section {background: #fff;border-radius: 3px;margin-bottom: .2rem;}
