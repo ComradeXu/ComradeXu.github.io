@@ -32,12 +32,13 @@ header .icon-menu {display: inline-block;width: .46rem;height: .46rem;background
 .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: block;width: 100%;}
 
 /** banner **/
-.banner {margin-top: .8rem;position:relative; overflow:hidden;}
-.banner .bd {position: relative;z-index: 0;}
+.banner {margin-top: .8rem;position:relative; overflow:hidden;height:4rem;background: #fff;}
+.banner .bd {position: relative;z-index: 0;overflow: hidden;}
 .banner .hd {position: absolute;height: 28px;line-height: 28px;bottom: .5rem;right: 0;left:0;z-index: 1;text-align: center;}
 .banner .hd li{ display:inline-block; width:8px; height:8px; border-radius:50%; background:#d5dde0; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
 .banner .hd li.on{ background:#76b21a;}
-.banner ul li img {width: 100%;}
+.banner .bd li img{ width:100%;height:4rem; background:url(../images/loading.gif) center center no-repeat;display: inline-block;}
+.banner .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
 
 .container {padding: 0 .2rem;}
 /**nav **/
