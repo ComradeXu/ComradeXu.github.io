@@ -1,0 +1,28 @@
+/*
+ * ----------------------------------------------------------------
+ * Copyright (C) 2005-2008 成都彩程数字科技有限公司.
+ * All rights reserved.
+ * 项目名称      C/S模式Tab示例
+ * 版本说明      0.0.1
+ * 开发者        刘思远
+ * 创建时间      2009.03.23
+ * 修改记录      
+ * 文件名称      index.css
+ * 文件描述      C/S模式Tab示例样式
+ * 其他
+ *
+ * ----------------------------------------------------------------
+ */ 
+
+
+.ui-tabs .ui-tabs-nav li a.close {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    cursor: pointer;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 0;
+}
