@@ -20,6 +20,7 @@ header,footer,section,details,aside,menu,nav,article,hgroup,figure,figcaption,ti
 /* set image and video max width to 100% */
 img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-align:middle; border:none;-webkit-touch-callout:none}
 .wrapper {max-width: 768px;margin:0 auto;overflow: hidden;}
+.wrapper.ani {transform:translate(-270px);transition: transform .1s linear;}
 
 .noscroll,.noscroll body {overflow: hidden;}
 .noscroll body {position: relative;}
