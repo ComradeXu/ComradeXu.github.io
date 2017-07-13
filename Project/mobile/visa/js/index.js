@@ -40,8 +40,11 @@ $(function(){
 		$('.menu-ul').addClass('mhide');
 	})
 }); 
+
 var iconBtn = $('.icon-menu');
+var menuUl = $('.menu-ul');
 iconBtn.on('click', function () {
+	$.smartScroll(menuUl, '.scrollable');
 	$('html').addClass('noscroll');
 });
 $('.headerMask').on('click', function () {

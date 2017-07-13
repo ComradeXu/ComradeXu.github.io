@@ -35,10 +35,10 @@ header .icon-menu {display: inline-block;width: .46rem;height: .46rem;background
 .menu-ul li a {color: #fff;height: .9rem;line-height: .9rem;display: block;width: 100%;}
 .menu-con {float: right;height: 100%;width: 270px;background: #151515;}
 .headerMask {display: none;background: rgba(0,0,0,0.4);width: 100%;height: 100%;position: fixed;top: 0;z-index: 9999998;left: 0;}
-.menu-ul.mshow {animation: mshow .5s ease-in-out;z-index: 99999999;opacity: 1;}
-.menu-ul.mhide {animation: mhide .5s ease-in-out;}
-.wrapper.mshow1 {animation: mshow1 .5s ease-in-out;}
-.wrapper.mhide1 {animation: mhide1 .5s ease-in-out;}
+.menu-ul.mshow {-webkit-animation: mshow .5s ease-in-out;-moz-animation: mshow .5s ease-in-out;-o-animation: mshow .5s ease-in-out;animation: mshow .5s ease-in-out;z-index: 99999999;opacity: 1;}
+.menu-ul.mhide {-webkit-animation: mhide .5s ease-in-out;-moz-animation: mhide .5s ease-in-out;-o-animation: mhide .5s ease-in-out;animation: mhide .5s ease-in-out;}
+.wrapper.mshow1 {-webkit-animation: mshow1 .5s ease-in-out;-moz-animation: mshow1 .5s ease-in-out;-o-animation: mshow1 .5s ease-in-out;animation: mshow1 .5s ease-in-out;}
+.wrapper.mhide1 {-webkit-animation: mhide1 .5s ease-in-out;-moz-animation: mhide1 .5s ease-in-out;-o-animation: mhide1 .5s ease-in-out;animation: mhide1 .5s ease-in-out;}
 @keyframes mshow {
 	0% {-webkit-transform: translate(270px);-moz-transform: translate(270px);-o-transform: translate(270px);transform: translate(270px);}
 	100% {-webkit-transform: translate(0);-moz-transform: translate(0);-o-transform: translate(0);transform: translate(0);}
