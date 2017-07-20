@@ -45,7 +45,7 @@ header .icon-menu,.brand .icon-menu {display: inline-block;width: .46rem;height:
 .nav ul li a {box-sizing: border-box;float: left;width: 100%;position: relative;}
 .nav ul li:first-child a {border-right: 1px solid #eaeaea;}
 .nav ul li a h4 {font-size: .34rem;color: #333;}
-.nav ul li a h4.icon-mall:before {display:inline-block;content:'';width: .64rem;height: .64rem;margin-right: .06rem;margin-top: .08em;background: url(../images/wap03.png) no-repeat;background-size: 100%;vertical-align: top;}
+.nav ul li a h4.icon-malll:before {display:inline-block;content:'';width: .64rem;height: .64rem;margin-right: .06rem;margin-top: .08em;background: url(../images/wap03.png) no-repeat;background-size: 100%;vertical-align: top;}
 .nav ul li a h4.icon-visa:before {display:inline-block;content:'';width: .64rem;height: .64rem;margin-right: .06rem;margin-top: .08em;background: url(../images/wap04.png) no-repeat;background-size: 100%;vertical-align: top;}
 .nav ul li p {color: #999;font-size: .2rem;position: absolute;left: 50%;top:.46rem;margin-left: -.3rem;}
 
@@ -87,8 +87,8 @@ header .icon-menu,.brand .icon-menu {display: inline-block;width: .46rem;height:
 .visa-hot ul.visa-ul2 li {float: left;width: 33.3%;padding-left: .2rem;box-sizing: border-box;margin-bottom: .25rem;}
 .visa-hot ul.visa-ul2 li a {text-align: left;color: #333;}
 .visa-hot ul.visa-ul2 li a img {width: 100%;}
-.visa-hot .visa-info {background: #f7f7f7;padding: .1rem;font-size: .24rem;}
-.visa-hot .visa-info p {line-height: .4rem;}
+.visa-hot .visa-infoo {background: #f7f7f7;padding: .1rem;font-size: .24rem;}
+.visa-hot .visa-infoo p {line-height: .4rem;}
 .visa-hot .visa-pri {font-size: .22rem;color: #fa1e20;}
 .visa-hot .visa-pri span {font-size: .3rem;}
 .visa-hot .more-btn {width: 100%;padding: 0 .2rem;box-sizing: border-box;float: left;}
