@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html mip>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <meta content="yes" name="apple-mobile-web-app-capable"> 
+    <meta content="yes" name="apple-touch-fullscreen"> 
+    <meta content="telephone=no,email=no" name="format-detection"> 
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="http://www.eduego.com">
+    <title>手机站</title>
+    <style mip-custom>
+        html{font-size:10px}
+        @media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+        @media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+        @media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+        @media screen and (min-width:640px){html{font-size:22.5px}}
+        html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+        html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+        body {font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;height:100%;-webkit-text-size-adjust:none;color: #333;overflow-x: hidden;min-width: 320px;word-break: break-all;background: #f2f4f3;}
+        div,table,tbody,td,ul,li,ol,div,form,textarea,p,dd,dt,dl,fieldset,legend,iframe{list-style:none;margin:0px; padding:0px;}
+        body,h1,h2,h3,h4,h5,h6{margin:0px; padding:0px;text-rendering:optimizelegibility;}
+        ul, li{ list-style:none; vertical-align:bottom}
+        img,fieldset{ border:none}
+        font,input,textarea{padding:0px; margin:0px; vertical-align:middle; }
+        body a{outline:none;}
+        a,area{blr:expression(this.onFocus=this.blur());}
+        :focus{-moz-outline-style:none;}
+        .clearfix:after {content: "";display: block;visibility: hidden;clear: both;height: 0;font-size: 0;}
+        .clearfix {zoom: 1;}
+        .clear {clear: both;}
+        a:link,a:visited{ text-decoration:none;}
+        a:hover{text-decoration:none;}
+        .fl{float: left;}
+        .fr{float: right;}
+        header,footer,section,details,aside,menu,nav,article,hgroup,figure,figcaption,time{display: block; margin:0px; padding:0px}
+        /* set image and video max width to 100% */
+        img{max-width:100%; width:auto\9; -ms-interpolation-mode: bicubic; vertical-align:middle; border:none;-webkit-touch-callout:none}
+        .wrapper {max-width: 768px;margin:0 auto;overflow: hidden;}
+        .noscroll,.noscroll body {overflow: hidden;}
+        .noscroll body {position: relative;}
+
+        /** header **/
+        header {background: #fff;z-index: 999;max-width: 768px;margin:0 auto;overflow: hidden;}
+        header .logo {width: 18.7rem;font-size: 0;margin-left: .2rem;}
+        header .right-ul {font-size: 1.3rem;line-height: 2.3rem;margin-right: 1.5rem;margin-top: 1rem;}
+        header .icon-info {display: inline-block;width: 2.3rem;height: 2.3rem;margin-right: 1rem;background: url(images/wap01.png) no-repeat;background-size: 100%;}
+        header .icon-menu {display: inline-block;width: 2.3rem;height: 2.3rem;background: url(images/wap02.png) no-repeat;background-size: 100%;}
+
+        .swiper {margin-top: 4rem;}
+        .mip-carousel-indicator-wrapper {margin-top: -3rem;}
+        .swiper .mip-carousel-indicatorDot .mip-carousel-indecator-item {width: 8px;height: 8px;background: #d5dde0;}
+        .swiper .mip-carousel-indicatorDot .mip-carousel-activeitem {background: #76b21a;}
+        .right-bar {background-color: #151515;height: 100%;width: 270px;text-align: center;}
+        #right-sidebar {z-index: 99999999 !important;}
+        .right-bar ul li {border-bottom: 1px solid #2b2b2b;height: 4rem;width: 100}
+        .right-bar ul li a {color: #fff;height: 4rem;line-height: 4rem;display: block;width: 100%;font-size: 1.3rem;}
+        .MIP-SIDEBAR-MASK {z-index: 99999998 !important}
+
+        /** banner **/
+        .banner {margin-top: 4rem;position:relative; overflow:hidden;height:20rem;background: #fff;}
+        .banner .bd {position: relative;z-index: 0;overflow: hidden;}
+        .banner .hd {position: absolute;height: 28px;line-height: 28px;bottom: 2.5rem;right: 0;left:0;z-index: 1;text-align: center;}
+        .banner .hd li{ display:inline-block; width:8px; height:8px; border-radius:50%; background:#d5dde0; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+        .banner .hd li.on{ background:#76b21a;}
+        .banner .bd li img{ width:100%;display: inline-block;}
+        .banner .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+
+        .container {padding: 0 1rem;}
+        /**nav **/
+        .nav {background: #fff;border-radius: 3px;box-shadow: 0 0 10px #ddd;width: 100%;margin-bottom: 1rem;position: relative;z-index: 5;}
+        .nav ul li {width: 50%;float: left;box-sizing: border-box;padding:1.2rem 0;text-align: center;}
+        .nav ul li a {box-sizing: border-box;float: left;width: 100%;position: relative;}
+        .nav ul li:first-child a {border-right: 1px solid #eaeaea;}
+        .nav ul li a h4 {font-size: 1.6rem;color: #333;}
+        .nav ul li a h4.icon-mall:before {display:inline-block;content:'';width: 3.2rem;height: 3.2rem;margin-right: .3rem;margin-top: .4rem;background: url(images/wap03.png) no-repeat;background-size: 100%;vertical-align: top;}
+        .nav ul li a h4.icon-visa:before {display:inline-block;content:'';width: 3.2rem;height: 3.2rem;margin-right: .3rem;margin-top: .4rem;background: url(images/wap04.png) no-repeat;background-size: 100%;vertical-align: top;}
+        .nav ul li p {color: #999;font-size: 1rem;position: absolute;left: 50%;top:2.3rem;margin-left: -1.2rem;}
+
+        /** 签证指南 **/
+        .section {background: #fff;border-radius: 3px;margin-bottom: 1rem;}
+        .sec-tit {height: 4rem;line-height: 4rem;font-size: 1.3rem;padding-left: .5rem;position: relative;border-bottom: 1px solid #eaeaea;font-weight: bold;}
+        .sec-tit:before {content: '';border-left: 2px solid #709f2b;height: 1.4rem;width: 0;border-radius: 3px;position: absolute;left: 0;top: 1.2rem;}
+        .sec-tit .more {font-size: 1.2rem;float: right;position: relative;padding-right: 1rem;color: #777;font-weight: normal;}
+        .sec-tit .more:after {content: '';background: url(images/jiantou.png) no-repeat;background-size: contain;width: 1rem;height: 1.2rem;display: inline-block;vertical-align: middle;margin-top: -0.1rem;}
+        .sec-con ul {font-size: 0;padding-top: 1rem;}
+        .visa-tips .sec-con ul li {float: left;width: 25%;text-align: center;}
+        .visa-tips .sec-con ul li a {font-size: 1.2rem;color: #666;width: 100%;float: left;height: 6rem;}
+        .visa-tips .sec-con ul li a i {display: inline-block;width: 3.2rem;height: 3.2rem;}
+        .visa-tips .sec-con ul li a i.icon-tip1 {background: url(images/wap05.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip2 {background: url(images/wap06.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip3 {background: url(images/wap07.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip4 {background: url(images/wap08.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip5 {background: url(images/wap09.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip6 {background: url(images/wap10.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip7 {background: url(images/wap11.png) no-repeat;background-size: 100%;}
+        .visa-tips .sec-con ul li a i.icon-tip8 {background: url(images/wap12.png) no-repeat;background-size: 100%;}
+
+        /* 热门签证 */
+        .visa-hot .line {height: 1px;width: 100%;padding: 0 1rem;box-sizing: border-box;float:left;}
+        .visa-hot .line div {background: #eaeaea;height: 1px;}
+        .visa-hot ul.visa-ul1 {float: left;margin-right: 1rem;width: 100%;}
+        .visa-hot ul.visa-ul1 li {float: left;width: 50%;box-sizing: border-box;margin-bottom: 1.25rem;text-align: center;}
+        .visa-hot ul.visa-ul1 li.visa-spe {padding-left: 1rem;padding-right: .5rem;}
+        .visa-hot ul.visa-ul1 li:nth-child(2) {padding-left: .5rem;padding-right: 1rem;}
+        .visa-hot ul.visa-ul1 li a {font-size: 1.3rem;}
+        .visa-hot ul.visa-ul1 li img {width: 100%;}
+        .visa-hot .img-con {position: relative;}
+        .visa-hot .img-p {position: absolute;right: .5rem;top:.5rem;background: #444;border-radius: 3px;}
+        .visa-hot .img-p p {color: #fff;height: 2rem;line-height: 2rem;font-size: 1.3rem;}
+        .visa-hot .img-p p:first-child {background: #ff5758;padding: 0 .75rem;border-top-left-radius: 3px;border-top-right-radius: 3px;font-size: 1.1rem;}
+        .visa-hot .img-p p span {font-size: 1.5rem;}
+        .visa-hot .img-tit {color: #333;margin-top: .5rem;font-size: 1.3rem;height: 1.4rem;overflow: hidden;}
+        .visa-hot ul.visa-ul2 {padding-right: 1rem;float: left;width: 100%;box-sizing: border-box;}
+        .visa-hot ul.visa-ul2 li {float: left;width: 33.3%;padding-left: 1rem;box-sizing: border-box;margin-bottom: 1.25rem;}
+        .visa-hot ul.visa-ul2 li a {text-align: left;color: #333;}
+        .visa-hot ul.visa-ul2 li a img {width: 100%;}
+        .visa-hot .visa-info {background: #f7f7f7;padding: .5rem;font-size: 1.1rem;}
+        .visa-hot .visa-info p {line-height: 2rem;}
+        .visa-hot .visa-info p:first-child {height: 4rem;overflow: hidden;}
+        .visa-hot .visa-pri {font-size: 1.1rem;color: #fa1e20;}
+        .visa-hot .visa-pri span {font-size: 1.5rem;}
+        .visa-hot .more-btn {width: 100%;padding: 0 1rem;box-sizing: border-box;float: left;}
+        .visa-hot .more-btn a {display: block;text-align: center;color: #709f2b;border:1px solid #709f2b;border-radius: 3px;font-size: 1.3rem;margin-bottom: 1rem;padding: .3rem 0;}
+        .visa-hot .more-btn .icon-more {display: inline-block;width: 1.2rem;height: 2.3rem;background: url(images/jiantou1.png) no-repeat;background-size: 60%;vertical-align: middle;margin-top: .5rem;margin-left: .4rem;}
+
+        /* 常见问题 */
+        .usual-ques {padding-bottom: 1rem;}
+        .usual-ques ul {padding: 0 1rem;}
+        .usual-ques ul li {float: left;width: 100%;font-size: 1.3rem;padding: 1.1rem 0;white-space:nowrap;overflow: hidden;text-overflow:ellipsis;border-bottom: 1px solid #eaeaea;}
+        .usual-ques ul li a {color: #333;float: left;}
+        .usual-ques ul li span.ques-time {color: #999;}
+
+        /* 签证类型及材料 */
+        .visa-data {padding-bottom: 1rem;}
+        .visa-data ul {padding-top: 0;}
+        .visa-data ul li {float: left;width: 20%;font-size: 1.2rem;text-align: center;border-right: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;box-sizing: border-box;padding: 1rem 0;}
+        .visa-data ul li a {display: block;color: #666;}
+        .visa-data ul li a:before {content: '';height: 2.25rem;background-size: 100%;display: block;margin: 0 auto;}
+        .visa-data ul li:nth-child(1) a:before {width: 1.9rem;background: url(images/wap13.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(2) a:before {width: 1.9rem;background: url(images/wap14.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(3) a:before {width: 2.6rem;background: url(images/wap15.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(4) a:before {width: 1.4rem;background: url(images/wap16.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(5) a:before {width: 1.75rem;background: url(images/wap27.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(6) a:before {width: 1.9rem;background: url(images/wap17.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(7) a:before {width: 1.9rem;background: url(images/wap18.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(8) a:before {width: 1.9rem;background: url(images/wap19.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(9) a:before {width: 1.45rem;background: url(images/wap20.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(10) a:before {width: 1.45rem;background: url(images/wap21.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(11) a:before {width: 1.9rem;background: url(images/wap22.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(12) a:before {width: 1.9rem;background: url(images/wap23.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(13) a:before {width: 1.7rem;background: url(images/wap24.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(14) a:before {width: 1.9rem;background: url(images/wap25.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(15) a:before {width: 1.65rem;background: url(images/wap26.png) no-repeat center center;background-size: 100%;}
+        .visa-data ul li:nth-child(5),.visa-data ul li:nth-child(10),.visa-data ul li:nth-child(15) {border-right:none;}
+
+        /* footer */
+        footer {background: #333;color: #fff;text-align: center;padding: 1.25rem 0 1rem;}
+        footer .footer-link ul {font-size: 0;}
+        footer .footer-link ul li {display: inline-block;padding:0 1rem;border-right:1px solid #fff;}
+        footer .footer-link ul li:last-child {border:none;}
+        footer .footer-link ul li a {color: #fff;font-size: 1.3rem;line-height: 1.3rem;}
+        footer .footer-url {font-size: 1.1rem;margin-top: 1.3rem;}
+        footer .footer-copy {font-size: 1rem;margin-top: .8rem;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <mip-fixed type="top">
+            <header>
+                <div class="logo fl"><a data-type="mip" data-title="" href="#2"><mip-img layout="responsive" height="45" width="200" src="images/logo.png"></mip-img></a></div>
+                <div class="right-ul fr">
+                    <a data-type="mip" data-title="" href="#2"><i class="icon-info"></i></a>
+                    <span id="hamburger" class="icon-menu" on="tap:right-sidebar.open"></span>
+                </div>
+            </header>
+        </mip-fixed>
+        <mip-sidebar id='right-sidebar' layout="nodisplay" side="right" class="mip-hidden">
+            <div class="right-bar">
+                <ul>
+                    <li><a data-type="mip" data-title="" href="#4">首页</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">签证指南</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">申请大厅</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">签证产品</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">政策公告</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">常见问题</a></li>
+                    <li><a data-type="mip" data-title="" href="#4">材料下载</a></li>
+                </ul>
+            </div>
+        </mip-sidebar>
+        <div class="swiper">
+            <mip-carousel autoplay layout="responsive" width="600" height="350"  indicatorId="mip-carousel-example">
+                <a data-type="mip" data-title="" href="#2"><mip-img layout="responsive" height="400" src="images/banner.jpg"></mip-img></a>
+                <a data-type="mip" data-title="" href="#3"><mip-img layout="responsive" height="400" src="images/banner.jpg"></mip-img></a>
+                <a data-type="mip" data-title="" href="#4"><mip-img layout="responsive" height="400" src="images/banner.jpg"></mip-img></a>
+            </mip-carousel>
+            <div class="mip-carousel-indicator-wrapper">
+                <div class="mip-carousel-indicatorDot" id="mip-carousel-example">
+                    <div class="mip-carousel-activeitem mip-carousel-indecator-item"></div>
+                    <div class="mip-carousel-indecator-item"></div>
+                    <div class="mip-carousel-indecator-item"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container clearfix">
+            <div class="nav fl">
+                <ul>
+                    <li>
+                        <a data-type="mip" data-title="" href="#5">
+                            <h4 class="icon-mall">申请大厅</h4>
+                            <p>신청 홀</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-type="mip" data-title="" href="#6">
+                            <h4 class="icon-visa">签证产品</h4>
+                            <p>비자 제품</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="section visa-tips clearfix">
+                <div class="sec-tit">签证指南<a data-type="mip" data-title="" href="#4" class="more">更多</a></div>
+                <div class="sec-con">
+                    <ul>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip1"></i>
+                                <p>办理流程</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip2"></i>
+                                <p>领区划分</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip3"></i>
+                                <p>签证类型</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip4"></i>
+                                <p>查询预约</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip5"></i>
+                                <p>签证费用</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip6"></i>
+                                <p>办理时间</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip7"></i>
+                                <p>照片要求</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <i class="icon-tip8"></i>
+                                <p>签证加急</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section visa-hot clearfix">
+                <div class="sec-tit">热门签证</div>
+                <div class="sec-con">
+                    <ul class="visa-ul1">
+                        <li class="visa-spe">
+                            <a data-type="mip" data-title="" href="#2">
+                                <div class="img-con">
+                                    <mip-img layout="responsive" width="150" height="90" src="images/img01.png"></mip-img>
+                                    <div class="img-p">
+                                        <p>￥<span>1880</span>起</p>
+                                        <p>韩国</p>
+                                    </div>
+                                </div>
+                                <p class="img-tit">韩国签证办sdfsdf理韩国签sdfsdf理[北京领区]</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#3">
+                                <div class="img-con">
+                                    <mip-img layout="responsive" width="150" height="90" src="images/img01.png"></mip-img>
+                                    <div class="img-p">
+                                        <p>￥<span>1880</span>起</p>
+                                        <p>韩国</p>
+                                    </div>
+                                </div>
+                                <p class="img-tit">韩国签证办理[北京领区]</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="line"><div></div></div>
+                    <ul class="visa-ul2">
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <mip-img layout="responsive" width="150" height="90" src="images/img02.png"></mip-img>
+                                <div class="visa-info">
+                                    <p>韩国旅游签证(多次)[武汉领区]</p>
+                                    <p class="visa-pri">¥<span>1880</span>起</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <mip-img layout="responsive" width="150" height="90" src="images/img02.png"></mip-img>
+                                <div class="visa-info">
+                                    <p>[武汉领区]</p>
+                                    <p class="visa-pri">¥<span>1880</span>起</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="mip" data-title="" href="#2">
+                                <mip-img layout="responsive" width="150" height="90" src="images/img02.png"></mip-img>
+                                <div class="visa-info">
+                                    <p>韩国旅游签证(多次)[武汉领区]</p>
+                                    <p class="visa-pri">¥<span>1880</span>起</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="more-btn"><a data-type="mip" data-title="" href="#4">查看更多签证<i class="icon-more"></i></a></div>
+                </div>
+            </div>
+            <div class="section usual-ques clearfix">
+                <div class="sec-tit">常见问题<a data-type="mip" data-title="" href="#4" class="more">更多</a></div>
+                <div class="sec-con">
+                    <ul>
+                        <li><a data-type="mip" data-title="" href="#4">经证实：中国对韩国商务签证政策</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国签证服务中心提醒在韩中国公民提高教</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国免税制度规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国海关入境规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">广州、深圳户口申请韩国签证户口</a><span class="ques-time fr">07-12</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section usual-ques clearfix">
+                <div class="sec-tit">政策公告<a data-type="mip" data-title="" href="#4" class="more">更多</a></div>
+                <div class="sec-con">
+                    <ul>
+                        <li><a data-type="mip" data-title="" href="#4">经证实：中国对韩国商务签证政策</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国签证服务中心提醒在韩中国公民提高教</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国免税制度规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国海关入境规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">广州、深圳户口申请韩国签证户口</a><span class="ques-time fr">07-12</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section usual-ques clearfix">
+                <div class="sec-tit">材料下载<a data-type="mip" data-title="" href="#4" class="more">更多</a></div>
+                <div class="sec-con">
+                    <ul>
+                        <li><a data-type="mip" data-title="" href="#4">经证实：中国对韩国商务签证政策</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国签证服务中心提醒在韩中国公民提高教</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国免税制度规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">韩国海关入境规定</a><span class="ques-time fr">07-12</span></li>
+                        <li><a data-type="mip" data-title="" href="#4">广州、深圳户口申请韩国签证户口</a><span class="ques-time fr">07-12</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section visa-data clearfix">
+                <div class="sec-tit">签证类型及材料</div>
+                <div class="sec-con">
+                    <ul>
+                        <li><a data-type="mip" data-title="" href="#3">短期访问</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">治疗疗养</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">语言培训</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">专职就业</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">派驻</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">采访·宗教</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">投资</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">贸易经营</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">在外同胞</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">访问就业</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">探亲·同居</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">结婚移民</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">研修</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">非专职就业</a></li>
+                        <li><a data-type="mip" data-title="" href="#3">外交·公务</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-link">
+                <ul>
+                    <li><a data-type="mip" data-title="" href="#1">电脑版</a></li>
+                    <li><a data-type="mip" data-title="" href="#1">网站地图</a></li>
+                    <li><a data-type="mip" data-title="" href="#1">意见反馈</a></li>
+                    <li><a data-type="mip" data-title="" href="#1">登录</a></li>
+                </ul>
+            </div>
+            <div class="footer-url">韩国签证服务中心  kor.125visa.com</div>
+            <div class="footer-copy">京ICP备13048554号-2 Copyright © 2004 - 2017</div>
+        </footer>
+    </div>
+<script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>  
+<script src="https://mipcache.bdstatic.com/static/v1/mip-fixed/mip-fixed.js"></script>  
+<script src="https://mipcache.bdstatic.com/static/v1/mip-sidebar/mip-sidebar.js"></script>  
+</body>
+</html>
