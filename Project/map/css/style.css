@@ -1,0 +1,195 @@
+::selection {background-color: rgba(13,173,81,0.2);color: #333}
+::-moz-selection {background-color: rgba(13,173,81,0.2);color: #333}
+::-webkit-selection {background-color: rgba(13,173,81,0.2);color: #333}
+.mod-scroll {width: 0;height: 0;left: 0;top: 0;width: 100%;height: 100%;border: 1px dotted transparent;box-sizing: border-box}
+.mod-scroll_bar-x {width: 100%;height: 9px;background: #000;opacity: .1;filter: alpha(opacity=10);border-radius: 5px;position: absolute;bottom: 0;left: 0;font-size: 0;z-index: 3}
+.mod-scroll_bar-y {width: 9px;height: 100%;background: #000;opacity: .1;filter: alpha(opacity=10);border-radius: 5px;position: absolute;top: 0;z-index: 3}
+.mod-scroll_thumb-x {width: 30%;height: 9px;background: #000;position: absolute;bottom: 0;left: 0;opacity: .5;filter: alpha(opacity=50);border-radius: 5px;font-size: 0;z-index: 3}
+.mod-scroll_thumb-y {width: 9px;height: 30%;background: #000;position: absolute;top: 0;opacity: .5;filter: alpha(opacity=50);border-radius: 5px;z-index: 3}
+.mod-scroll--activate .mod-scroll_bar-x,.mod-scroll--activate .mod-scroll_bar-y {opacity: .2;filter: alpha(opacity=20)}
+.mod-scroll--activate .mod-scroll_thumb-x,.mod-scroll--activate .mod-scroll_thumb-y {opacity: .6;filter: alpha(opacity=60)}
+.sug-search {position: absolute;top: 42px;left: 12px;border: 1px solid #e3e4e6;border-top: 0 none;background: #fff;width: 375px;color: #454545;z-index: 999;white-space: nowrap;overflow: hidden}
+.sug-search ol {cursor: default}
+.sug-search li {padding: 8px 10px;cursor: pointer;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.sug-search .sug-query {font-weight: 800}
+.sug-search .sug-select {background: #f5f7f7}
+@media screen and (max-width: 1260px) {.mod-login { display:none}}
+.mod-logo {width: 181px;height: 28px;background: url(../images/logo-new.png) no-repeat left top;}
+.mod-switch_channel {margin-right: 12px;margin-left: -11px;margin-top: 4px;font-size: 12px;cursor: pointer;position: relative}
+.mod-switch_channel ul {display: none;position: absolute;z-index: 2;width: 56px;border: 1px solid #333;background: #fff;line-height: 20px;padding-top: 6px;padding-bottom: 6px;text-align: center;top: 26px}
+.mod-switch_channel ul a {text-indent: 4px;display: block;text-align: left}
+.mod-switch_channel ul a:hover {background-color: #f9f9f9}
+.mod-switch_channel ul span {display: inline-block;width: 0;height: 0;position: absolute;border: 6px solid;top: -12px;border-color: transparent transparent #333 transparent;margin-left: -6px}
+.mod-switch_channel ul span:before {content: ' ';display: block;border: 6px solid;border-color: transparent transparent #fff transparent;width: 0;height: 0;margin-left: -6px;margin-top: -5px}
+.mod-switch_channel p {color: #fff;background-color: #00ae66;position: relative;line-height: 20px;width: 58px;text-indent: 6px}
+.mod-switch_channel p:after {position: absolute;right: 6px;top: 40%;content: ' ';display: inline-block;width: 0;height: 0;border: 4px solid;border-color: #fff transparent transparent transparent}
+.mod-switch_channel:hover ul {display: block}
+.mod-switch_channel a {color: #333}
+.mod-switch_channel a:hover {text-decoration: none}
+.mod-map {position: absolute !important;top: 68px;right: 0;bottom: 0;left: 0;margin-left: 460px}
+.mod-zoom_panel {font-size: 26px;line-height: 26px;position: absolute;z-index: 1;right: 20px;bottom: 50px;width: 26px;text-align: center;border: 1px solid #555;border-bottom-width: 0;background: #fff;display: none}
+.mod-zoom_panel li {height: 26px;border-bottom: 1px solid #555555;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none}
+.mod-zoom_panel li:hover {color: #999999}
+.mod-zoom_panel li:first-child {font-size: 20px;line-height: 22px}
+.mod-side-control {display: none;position: absolute;z-index: 2;right: 0;top: 80px}
+.mod-side-control .li-item {float: left;height: 27px;line-height: 27px;background-color: #fbfbfb;border: 1px solid #555555;margin-right: 6px;padding-left: 8px;padding-right: 8px;font-size: 12px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;box-shadow: 0 2px 2px rgba(0,0,0,0.2)}
+.mod-side-control .li-item-around {position: relative;padding-right: 24px;margin-left: 14px;cursor: default;width: 50px;padding-left: 10px}
+.mod-side-control .li-item-around .drop-list {height: 174px;overflow: hidden;overflow-y: scroll;-webkit-overflow-scrolling: touch}
+.mod-side-control .li-item-around .drop-list ol {padding-top: 6px;padding-bottom: 6px;display: inline-block}
+.mod-side-control .li-item-around .item {float: left;padding-left: 0;width: 100%;text-align: center;position: relative}
+.mod-side-control .li-item-around .item i {background: url(../images/i-around-all.png) no-repeat left top;position: absolute;width: 16px;height: 16px;left: 7px;top: 4px}
+.mod-side-control .li-item-around .item-default i {background: none}
+.mod-side-control .li-item-around .item-store i {background-position: 0 -11px}
+.mod-side-control .li-item-around .item-bank i {background-position: 0 -36px}
+.mod-side-control .li-item-around .item-bus i {background-position: 0 -61px}
+.mod-side-control .li-item-around .item-station i {background-position: 0 -88px}
+.mod-side-control .li-item-around .item-education i {background-position: 0 -114px}
+.mod-side-control .li-item-around .item-hospital i {background-position: 0 -140px}
+.mod-side-control .li-item-around .item-fun i {background-position: 0 -166px}
+.mod-side-control .li-item-around .item-shop i {background-position: 0 -192px}
+.mod-side-control .li-item-around .item-sport i {background-position: 0 -218px}
+.mod-side-control .li-item-around .item-eat i {background-position: 0 -244px}
+.line-msg {min-height: 30px;min-width: 96px;background-color: #000;background-color: rgba(0,0,0,0.7);line-height: 30px;border-radius: 2px;padding-left: 6px;padding-right: 6px;display: none}
+.mod-search .btn {width: 64px;height: 26px;background-color: #53B371;vertical-align: middle;border: 1px solid #2e8d56;float: left;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;cursor: pointer;text-align: center}
+.mod-search .btn i {display: inline-block;width: 18px;height: 18px;vertical-align: middle;background: url(../images/ss.png) no-repeat left -1px}
+.mod-search .form .sug-search {top: 28px;left: 0;width: 283px}
+.mod-search .form .sug-search li {padding: 6px 100px 6px 8px;position: relative}
+.mod-search .form .sug-search li .sug-tip {position: absolute;right: 6px;color: #A3A3A3;font-size: 12px}
+.mod-search input {height: 26px;width: 210px;border: 1px solid #9ca0a7;border-right-width: 0;line-height: 26px;float: left;font-size: 12px;padding: 0 4px}
+.mod-search .aside {padding-left: 16px;font-size: 12px}
+.mod-search .aside .li,.mod-search .aside .li-other,.mod-search .aside .li-btn {float: left;height: 26px;width: 92px;line-height: 26px;border: 1px solid #cccccc;margin-right: 6px;position: relative;cursor: pointer}
+.mod-search .aside .li span,.mod-search .aside .li-other span,.mod-search .aside .li-btn span {margin-left: 4px}
+.mod-search .aside>ol>.li:first-child {width: 104px}
+.mod-search .aside .li-btn {width: auto;margin-right: 0;border-width: 0;margin-left: 6px}
+.mod-search .aside .li-btn i {display: inline-block;width: 20px;height: 16px;background-image: url(../images/clear.png);vertical-align: middle;margin-top: -3px;margin-right: 2px}
+.mod-search .aside .li-mixin {display: none;position: absolute;right: -1px;top: 26px;width: 192px;border: 1px solid #CCC;background-color: #FFF;padding-top: 16px;cursor: default}
+.mod-search .aside .li-mixin .li {float: none;margin-left: 81px;margin-bottom: 16px;cursor: pointer}
+.mod-search .aside .li-mixin .li p {position: absolute;left: -59px;cursor: default}
+.mod-login {position: absolute;right: 20px;top: 24px}
+.mod-login a {color: #333;font-size: 14px;}
+@media screen and (max-width: 1070px) {.mod-search .aside>ol>.li-btn {display:none}}
+.mod-side .ctrl,.mod-side .detail,.mod-side .btn-wrap {position: absolute;z-index: 2;top: 68px;bottom: 0;left: 0}
+.mod-side .detail {left: 56px;width: 403px;background-color: #fff;font-size: 12px;z-index: 4}
+.mod-side .detail .r-ctrl {font-size: 12px}
+.mod-side .detail .r-ctrl .li {float: left;height: 26px;width: 180px;line-height: 26px;border: 1px solid #cccccc;margin-right: 13px;margin-top: 4px;position: relative}
+.mod-side .detail .r-ctrl .li span {margin-left: 4px}
+.mod-side .detail .r-ctrl .m-main,.mod-side .detail .r-ctrl .m-top,.mod-side .detail .r-ctrl .m-btm {padding-left: 12px}
+.mod-side .detail .r-ctrl .m-top {height: 38px;line-height: 38px;font-weight: 800;background-color: #f5fafe}
+.mod-side .detail .r-ctrl .m-main {padding-top: 15px;padding-bottom: 17px;border-top: 1px solid #d2d2d2;border-bottom: 1px solid #d2d2d2}
+.mod-side .detail .r-ctrl .m-main .steam-input {border: 1px solid #a1a1a1;padding-left: 10px;height: 26px;width: 365px;line-height: 26px;margin-bottom: 14px}
+.mod-side .detail .r-ctrl .m-main button {margin-top: 16px;width: 376px;background-color: #3b95e5;color: #fff;font-size: 14px;font-weight: 800;border: 1px solid #32618b;text-align: center;height: 38px;line-height: 38px;cursor: pointer}
+.mod-side .detail .r-ctrl .m-main .sug-search {top: 43px}
+.mod-side .detail .r-ctrl .m-btm {color: #aaaaaa;padding-right: 12px;margin-top: 19px;position: relative}
+.mod-side .detail .r-ctrl .m-btm p {margin-left: 65px;line-height: 21px}
+.mod-side .detail .r-ctrl .m-btm .m-btm-tle {font-size: 13px;font-weight: 800;color: #000}
+.mod-side .detail .r-ctrl .m-btm span {position: absolute;left: 18px;top: 4px;width: 50px;height: 50px;background: url(../images/bell.png) no-repeat left top}
+.mod-side .detail .r-list .r-top {line-height: 40px;white-space: nowrap;text-overflow: ellipsis;background-color: #f5fafe;border-bottom: 1px solid #bcbcbc;text-indent: 14px;color: #999999;display: none}
+.mod-side .detail .r-list .r-top .i-top-remind {color: #333333;font-weight: 800}
+.mod-side .detail .r-list .r-top .i-btn-return {float: right;padding-right: 14px;color: #3c96e6;cursor: pointer}
+.mod-side .detail .r-list .r-top .subway-msg {font-size: 14px;color: #333333;position: relative;padding-right: 120px;text-overflow: ellipsis;white-space: nowrap;background-color: #fefeee;height: 60px;line-height: 60px}
+.mod-side .detail .r-list .r-top .subway-msg .subway-res {color: #aaaaaa}
+.mod-side .detail .r-list .r-top .subway-msg .subway-hide {display: none !important}
+.mod-side .detail .r-list .r-top .subway-msg .subway-select {width: 100px;line-height: 28px;height: 28px;border: 1px solid #ae4143;position: absolute;right: 14px;top: 15px;text-align: center;font-size: 12px;font-weight: 800;color: #ffffff;background-color: #e4605c;text-indent: 0;cursor: pointer}
+.mod-side .detail .r-list .r-top .subway-msg .subway-select:hover .subway-list {display: block}
+.mod-side .detail .r-list .r-top .subway-msg .subway-select i {display: inline-block;width: 14px;height: 14px;background-image: url();vertical-align: middle;margin-top: -2px;margin-right: 5px}
+.mod-side .detail .r-list .r-main .r-hd {background-color: #fafafa;height: 40px;line-height: 40px;text-indent: 14px;font-weight: 800}
+.mod-side .detail .r-list .r-main .r-hd .r-hd_i {color: #e4393c;padding-left: 4px;padding-right: 4px}
+.mod-side .detail .r-list .r-main .r-hd .r-hd_i_school,.mod-side .detail .r-list .r-main .r-hd .r-hd_i_station {display: none}
+.mod-side .detail .r-list .r-main .r-hd .r-hd_School .r-hd_i_school {display: inline}
+.mod-side .detail .r-list .r-main .r-hd .r-hd_Station .r-hd_i_station {display: inline}
+.mod-side .detail .r-list .r-main .r-hd2 {border-bottom: 1px solid #bcbcbc;border-top: 1px solid #bcbcbc;height: 40px;line-height: 40px;background-color: #fbfbfb}
+.mod-side .detail .r-list .r-main .r-hd2 ol {overflow: hidden;padding-left: 12px}
+.mod-side .detail .r-list .r-main .r-hd2 li {float: left;padding-left: 12px;padding-right: 12px;border-left: 1px solid transparent;border-right: 1px solid transparent;border-bottom: 1px solid transparent;cursor: pointer}
+.mod-side .detail .r-list .r-main .r-hd2 .desc {display: none}
+.mod-side .detail .r-list .r-main .r-hd2 .s-station {display: none}
+.mod-side .detail .r-list .r-main .r-hd2 .s-desc .desc {display: inline}
+.mod-side .detail .r-list .r-main .r-hd2 .s-desc .asc {display: none}
+.mod-side .detail .r-list .r-main .r-hd2 .on {border-color: #bcbcbc;background-color: #fff;border-bottom-color: #fff;cursor: default}
+.mod-side .detail .r-list .r-main .r-hd2 .s-price.on,.mod-side .detail .r-list .r-main .r-hd2 .s-area.on {cursor: pointer}
+.mod-side .detail .r-list .r-main .r-container {overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;height: 410px}
+.mod-side .detail .r-list .r-main .r-content .list-item {border-bottom: 1px solid #e4e4e4}
+.mod-side .detail .r-list .r-main .r-content .list-item a {display: block;width: 370px;padding: 22px 17px;color: #555555;font-size: 12px;position: relative;background-color: #ffffff;-webkit-transition: background-color .15s ease-in-out;transition: background-color .15s ease-in-out}
+.mod-side .detail .r-list .r-main .r-content .list-item a:hover {background-color: #fbfbfb}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside {float: left;width: 116px;height: 116px;margin-right: 18px;border-bottom: 4px solid transparent}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside img {width: 100%;height: 100%}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-btm {height: 22px;background-color: #494848;background-color: rgba(0,0,0,0.7);color: #fff;line-height: 22px;overflow: hidden;margin-top: -22px;margin-left: 0;position: absolute;z-index: 2}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-btm .item-img-icon {border: 2px solid #fff;height: 8px;width: 8px;margin-left: 5px;float: left;margin-top: 5px;padding: 0}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-btm .item-img-icon .i-icon-arrow {display: block;width: 0;height: 0;border: 3px solid transparent;border-width: 3px 3px 4px 5px;border-bottom-color: #fff}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-btm .item-img-icon .i-icon-dot {display: block;width: 2px;height: 2px;background-color: #fff;margin-top: -6px;margin-left: 1px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-btm span {float: left;text-align: center;padding-left: 4px;padding-right: 4px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-aside .item-top {position: absolute;top: 22px;padding: 5px 7px;font-size: 12px;background-color: #fcb846;color: #fff}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tle {font-size: 14px;color: #262626;font-weight: 800;height: 38px;overflow: hidden;text-overflow: ellipsis;line-height: 1.36}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tip_new,.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tip_decrease {font-size: 12px;color: #fff;font-weight: 400;background-color: #e23b41;margin-left: 4px;border-radius: 1px;padding: 2px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tip_decrease {background-color: #45ac71}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-des {white-space: nowrap;position: relative;margin-top: 2px;line-height: 1.84}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-des span {margin-right: 5px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-des .item-side {margin-right: 0;font-size: 16px;position: absolute;right: 0;bottom: -3px;color: #e4393c;font-weight: 800;font-family: tahoma}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-des .item-side span {font-size: 12px;font-weight: normal;margin-left: 2px;margin-right: 0}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-community {line-height: 1.84;min-height: 21px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-community .item-replace-com {display: none}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tag-wrap {margin-top: 3px;min-height: 29px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-extra {display: inline-block;border: 1px solid;margin-right: 6px;padding:6px;margin-top: 4px}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tag-color_1 {color: #2973b3}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tag-color_2 {color: #ff7800}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tag-color_3 {color: #fcb846}
+.mod-side .detail .r-list .r-main .r-content .list-item a .item-main .item-tag-color_4 {color: #9ec77d}
+.mod-side .detail .r-list .r-main .r-content .list-item a:hover {text-decoration: none}
+.mod-side .detail .r-list .r-main .r-content .list-item a:hover .item-main .item-community .item-exact-com {display: none}
+.mod-side .detail .r-list .r-main .r-content .list-item a:hover .item-main .item-community .item-replace-com {display: inline}
+.mod-side .detail .r-list .r-main .r-content .list-item-remind {font-size: 18px;text-align: center;line-height: 400px;color: #888888;background: url(../images/list404.png) no-repeat center 90px}
+.mod-side .detail .r-list .r-main .r-hd3 {border-bottom: 1px solid #e4e4e4;padding-left: 40px;position: relative}
+.mod-side .detail .r-list .r-main .r-hd3 .r-hd3-bg {position: absolute;width: 26px;height: 26px;border-radius: 13px;background-color: #3c96e6;top: 22px;left: 20px}
+.mod-side .detail .r-list .r-main .r-hd3 .r-hd3-bg .r-hd3-cycle {width: 12px;height: 12px;border-radius: 6px;background: #fff;position: absolute;left: 7px;top: 4px}
+.mod-side .detail .r-list .r-main .r-hd3 .r-hd3-bg .r-hd3-cycle div {position: absolute;width: 6px;height: 6px;background-color: #3c96e6;border-radius: 3px;left: 3px;top: 3px}
+.mod-side .detail .r-list .r-main .r-hd3 .r-hd3-bg .r-hd3-triangle {position: absolute;width: 0;height: 0;border: 5px solid transparent;border-top-width: 7px;border-top-color: #fff;top: 13px;left: 8px}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card {overflow: hidden;font-size: 12px;color: #aaaaaa;padding: 15px 20px 12px}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card li {float: left;width: 140px;margin-right: 16px;height: 22px;overflow: hidden;line-height: 22px;white-space: nowrap;text-overflow: ellipsis}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card .i-card-name {font-size: 18px;color: #262626;font-weight: 800}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card .i-card-name a {font-size: 18px;color: #262626;font-weight: 800}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card .i-card-price {color: #e4393c;width: 164px;margin-right: 0}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card .i-card-price span {font-size: 18px;font-weight: 800}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card .i-card-radio {width: 164px;margin-right: 0;display: none}
+.mod-side .detail .r-list .r-main .r-hd3 .i-card-5 .i-card-radio {display: none}
+.mod-side .detail .subway-list {display: none;background-color: #fff;position: absolute;z-index: 4;left: -1px;color: #000000;font-size: 12px;line-height: 24px;width: 100px;border: 1px solid #555555;text-align: left;font-weight: normal;cursor: default;min-height: 240px}
+.mod-side .detail .subway-list span:hover {color: #489e6d}
+.mod-side .detail .subway-list .line-item {padding-left: 10px;text-overflow: ellipsis;overflow: hidden}
+.mod-side .detail .subway-list .line-item:hover .station-wrapper {display: block}
+.mod-side .detail .station-wrapper {display: none;position: absolute;top: 0;left: 100px;top: -1px;height: 100%;border: 1px solid #555555;background-color: #fafafa}
+.mod-side .detail .station-list {width: 114px;display: inline-block;vertical-align: top;box-sizing: border-box;padding-top: 14px;padding-left: 18px;background: url(../images/subway-list-bg.png) no-repeat 11px 10px}
+.mod-side .detail .station-list .station-item {padding-left: 10px}
+.mod-side .detail .item-station,.mod-side .detail .item-line {display: block;text-overflow: ellipsis;overflow: hidden;cursor: pointer}
+.mod-side .detail .r-station_guide {position: relative;z-index: 4;display: none}
+.mod-side .detail .r-station_guide .subway-list {position: static;display: block;width: 100%;border-width: 0;height: 410px}
+.mod-side .detail .r-station_guide .subway-list .subway-list-inner {height: 100%;overflow-y: scroll;-webkit-overflow-scrolling: touch}
+.mod-side .detail .r-station_guide .subway-list .line-item_hover .item-line {background-color: #fbfbfb;color: #000000}
+.mod-side .detail .r-station_guide .subway-list .item-line {line-height: 44px;border-bottom: 1px solid #e4e4e4;margin-left: 5px;margin-right: 14px;font-size: 14px;font-weight: 800}
+.mod-side .detail .r-station_guide .subway-list .item-line:hover {background-color: #fbfbfb;color: #000000}
+.mod-side .detail .r-station_guide .subway-list .item-count {float: right;padding-right: 18px;font-size: 12px;color: #9b9b9b;font-weight: normal}
+.mod-side .detail .r-station_guide .subway-list .item-marker {margin-left: 8px;color: #b8b8b8}
+.mod-side .detail .r-station_guide .subway-list .station-wrapper {left: 372px;top: 60px;white-space: nowrap}
+.mod-side .detail .r-station_guide .r-header {line-height: 64px;border-bottom: 1px solid #bdbcb8;font-size: 14px;text-indent: 16px;height: 60px;background-color: #fdfeee;overflow: hidden}
+.mod-side .detail .r-station_guide .r-header .strong {float: right;font-size: 12px;padding-right: 22px}
+.mod-side .ctrl {width: 56px;text-align: center;color: #fff;background-color: #000}
+.mod-side .ctrl li {height: 56px;cursor: pointer;width: 55px;margin-bottom: 2px;font-size: 12px;overflow: hidden}
+.mod-side .ctrl .area i {display: block;height: 20px;width: 20px;margin: 10px auto 2px auto;background: url(../images/tt.png) no-repeat center center;}
+.mod-side .slide-bg {position: absolute;top: 0;background-color: #3c96e6;height: 56px;width: 55px;z-index: -1;transition: top .15s ease}
+.mod-side .btn-wrap {border-left: 1px solid #a6a6a6;left: 459px}
+.mod-side .btn {position: absolute;z-index: 3;top: 50%;bottom: 0;left: -1px;width: 12px;height: 52px;margin-top: -2px;cursor: pointer;color: #8d939a;background-color: #fff;border: 1px solid #a6a6a6;border-left-width: 0;text-shadow: 0 0 1px #8d939a;text-indent: 2px}
+.mod-side .btn:before {content: '\3c';font-weight: 900;font-size: 12px;line-height: 50px}
+.mod-side .btn:hover {color: #333333;text-shadow: 0 0 1px #333}
+.mod-side .close {left: 0}
+.mod-side .close .btn:before {content: '\3e'}
+
+
+html,body {width: 100%;height: 100%;overflow: hidden;-webkit-tap-highlight-color: rgba(0,0,0,0)}
+.header {padding-top: 20px;padding-bottom: 20px;border-bottom: 1px solid #858585;min-width: 980px;position: relative;z-index: 10}
+.drop-i {position: absolute;right: 6px;top: 9px;width: 12px;height: 8px;background: url(../images/xx.png) no-repeat;}
+.drop-open {background: url(../images/sss.png) no-repeat;}
+.drop-list {display: none;position: absolute;top: 26px;left: -1px;z-index: 1;border: 1px solid #cccccc;width: 100%;background: #FFF}
+.drop-list .item {color: #000000;cursor: pointer;padding-left: 5px}
+.drop-list .item:hover {background-color: #f9f9f9}
+.drop-list .clicked {cursor: default;background-color: transparent;color: #53B371}
+.drop-list .clicked:hover {background-color: transparent}
+
+
+

@@ -1,0 +1,130 @@
+/* css document */
+@charset "UTF-8";
+/* css reset */
+/* for 125Tec based on KISSY CSS Reset */
+
+/*
+    Please Pay attention to This:
+        this base css combine previous css & KISSY CSS Reset
+        According to company requirements , U need to change it
+        Birthday:2016.09.19
+        Creator:dsf
+*/
+
+/* margin & padding reset */
+body,h1,h2,h3,h4,h5,h6,p,/* structural elements */
+dl,dt,dd,ul,ol,li,/* list elements */
+input,textarea,/* form elements */
+th,td { /* table elements */
+    margin: 0;
+    padding: 0;
+}
+/* font-style reset */
+html,body {
+    height: 100%;
+}
+body {
+    font: 12px/1 "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+em,i,b {
+    font-style: normal;
+}
+/* list-style reset */
+ul,ol {
+    list-style: none;
+}
+/* a element reset */
+a {
+    text-decoration: none;
+    outline: none;
+}
+/* img element reset */
+img {
+    border: none;
+    vertical-align: top;
+}
+/* form elements reset */
+input,textarea {
+    outline: none;
+    -webkit-appearance: none;/*for mobile*/
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+input,select,textarea {
+    font-size: 100%; /* Inherit the font-size For IE */
+}
+:-ms-input-placeholder {
+    color: #999;
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+::-webkit-input-placeholder {
+    color: #999;
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+:-moz-placeholder {
+    color: #999;
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+::-moz-placeholder {
+    color: #999;
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+input,textarea,button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    resize: none;
+    font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","微软雅黑",'Segoe UI',Tahoma,"宋体b8b\4f53",SimSun,sans-serif
+}
+
+input[type="search"] {
+    box-sizing: content-box
+}
+/* table elements reset */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clear:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0
+}
+
+.clear {
+    display: inline-table;
+    *zoom:1}
+
+* html .clear {
+    height: 1%
+}
+
+.clear {
+    display: block
+}
+
+.hide {
+    display: none
+}
+/*  
+    date:2017.02.24
+    change:
+        body:font-family;
+    add:
+        input:-webkit-appearance;
+    remove:
+        a:color
+        a:hover;
+    --------------------------------------
+*/
