@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable"> 
+<meta content="yes" name="apple-touch-fullscreen"> 
+<meta content="telephone=no,email=no" name="format-detection"> 
+<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<title>解决移动端滑动穿透问题</title>
+<style>
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+
+  display: none;
+}
+.modal-frame {
+  position: absolute;left:10%;right:10%; top: 50%; transform: translateY(-50%);
+  border: solid 1px #ddd; background: #fff;
+  padding: 1em;
+}
+</style>
+</head>
+<body>
+<div class="text-center">
+  <a class="js-open-modal" href="javascript:" target="_blank" rel="external">Open Modal</a>
+  <a class="js-open-modal" href="javascript:" target="_blank" rel="external">Open Modal 2 (restore scrolling position)</a>
+  <div style="height:400px"></div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-frame">
+    <div style="height:9em;overflow-y:auto;">
+    这里是可滚动内容<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    Modal Content<br>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  var ModalHelper = (function(bodyCls) {
+    var scrollTop;
+    return {
+      afterOpen: function() {
+        scrollTop = document.scrollingElement.scrollTop;
+        document.body.classList.add(bodyCls);
+        document.body.style.top = -scrollTop + 'px';
+      },
+      beforeClose: function() {
+        document.body.classList.remove(bodyCls);
+        // scrollTop lost after set position:fixed, restore it back.
+        document.scrollingElement.scrollTop = scrollTop;
+      }
+    };
+  })('modal-open');
+
+  function openModal() {
+    document.getElementById('modal').style.display = 'block';
+    ModalHelper.afterOpen();
+  }
+  function closeModal() {
+    ModalHelper.beforeClose();
+    document.getElementById('modal').style.display = 'none';
+  }
+  var btns = document.querySelectorAll('.js-open-modal');
+  btns[0].onclick = openModal;
+  btns[1].onclick = openModal;
+  document.querySelector('#modal').onclick = closeModal;
+})();
+</script>
+<script>
+(function () {
+  if (document.scrollingElement) {
+    return
+  }
+  var element = null
+  function scrollingElement () {
+    if (element) {
+      return element
+    } else if (document.body.scrollTop) {
+      // speed up if scrollTop > 0
+      return (element = document.body)
+    }
+    var iframe = document.createElement('iframe')
+    iframe.style.height = '1px'
+    document.documentElement.appendChild(iframe)
+    var doc = iframe.contentWindow.document
+    doc.write('<!DOCTYPE html><div style="height:9999em">x</div>')
+    doc.close()
+    var isCompliant = doc.documentElement.scrollHeight > doc.body.scrollHeight
+    iframe.parentNode.removeChild(iframe)
+    return (element = isCompliant ? document.documentElement : document.body)
+  }
+  Object.defineProperty(document, 'scrollingElement', {
+    get: scrollingElement
+  })
+})();
+</script>
+</body>
+</html>
