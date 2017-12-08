@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"><meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+   <style type="text/css">
+        * {margin: 0;padding: 0;}
+        .lists-all {background-color: #fff;}
+        .lists-all .lists-item {font-size: 0;height: 1rem;box-sizing: border-box;padding: 0 .3rem 0 .3rem;overflow: hidden;border-bottom: .01rem solid #f7f7f7;}
+        .lists-all .lists-item .position {font-size: .24rem;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .slidePage {width: .6rem;text-align: right;position: fixed;right: 0;top: 0;height: 100%;font-size: .24rem;box-sizing: border-box;padding-right: .1rem;}
+        .slidePage div {width: .2rem;}
+        .slidePage a{display: inline-block; width: .2rem;text-align: center;color: #555;}
+        .groupTitle {font-size: .24rem;padding: .1rem .3rem;background-color: #F0F0F6;}
+        .letter {width: 1rem;height: 1rem;line-height: 1rem;text-align: center;background-color: rgba(0,0,0,0.3);position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border-radius: 50%;font-size: .4rem;color: #fff;opacity: 0;}
+        .flex-def { display: -webkit-box;  display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;}
+        .flex-zCenter { -webkit-box-pack: center; -moz-justify-content: center; -webkit-justify-content: center; justify-content: center; }
+        .flex-zBetween { -webkit-box-pack: justify; -moz-justify-content: space-between; -webkit-justify-content: space-between; justify-content: space-between; }
+        .flex-zEnd { -webkit-box-pack: end; -moz-justify-content: flex-end; -webkit-justify-content: flex-end; justify-content: flex-end; }
+        .flex-zStart { -webkit-box-pack: start; -moz-justify-content: start; -webkit-justify-content: start; justify-content: start; }
+
+        .flex-cCenter { -webkit-box-align: center; -moz-align-items: center; -webkit-align-items: center; align-items: center; }
+        .flex-cStart { -webkit-box-align: start; -moz-align-items: start; -webkit-align-items: start; align-items: start; }
+        .flex-cEnd { -webkit-box-align: end; -moz-align-items: flex-end; -webkit-align-items: flex-end; align-items: flex-end; }
+        .flex-cBaseline { -webkit-box-align: baseline; -moz-align-items: baseline; -webkit-align-items: baseline; align-items: baseline; }
+        .flex-cStretch { -webkit-box-align: stretch; -moz-align-items: stretch; -webkit-align-items: stretch; align-items: stretch; }
+
+        .flex-zTopBottom { -webkit-box-direction: normal; -webkit-box-orient: vertical; -moz-flex-direction: column; -webkit-flex-direction: column; flex-direction: column; }
+        .flex-zBottomTop { -webkit-box-pack: end; -webkit-box-direction: reverse; -webkit-box-orient: vertical; -moz-flex-direction: column-reverse; -webkit-flex-direction: column-reverse; flex-direction: column-reverse; }
+        .flex-zLeftRight { -webkit-box-direction: normal; -webkit-box-orient: horizontal; -moz-flex-direction: row; -webkit-flex-direction: row; flex-direction: row; }
+        .flex-zRightLeft { -webkit-box-pack: end; -webkit-box-direction: reverse; -webkit-box-orient: horizontal; -moz-flex-direction: row-reverse; -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }
+
+        .flex-item { -webkit-box-flex: 1.0; -moz-flex-grow: 1; -webkit-flex-grow: 1; flex-grow: 1; }
+   </style>
+</head>
+<body>
+    <div class="ma in">
+        <div class="lists-all resultList">
+            <p id="AA" class="groupTitle">AA</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <p class="position">科技公司</p> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p>
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p>
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p>
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p>
+                </div> 
+            </div> 
+            <p id="BB" class="groupTitle">B</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <p id="C" class="groupTitle">C</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <p id="D" class="groupTitle">D</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <p id="E" class="groupTitle">E</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <p id="Z" class="groupTitle">Z</p>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div>
+            <div class="lists-item flex-def flex-cCenter" tapmode=""> 
+                <div class="title"> 
+                    <p class="position">科技公司</p> 
+                </div> 
+            </div> 
+        </div>
+    </div>
+    <div class="slidePage flex-def flex-zTopBottom flex-zCenter flex-cEnd" ontouchend="touchEnd()"  ontouchmove="move()">
+        <div class="wrap">
+            <a ontouchstart="anchorJump(this)">AA</a>
+            <a ontouchstart="anchorJump(this)">BB</a>
+            <a ontouchstart="anchorJump(this)">C</a>
+            <a ontouchstart="anchorJump(this)">D</a>
+            <a ontouchstart="anchorJump(this)">E</a>
+            <a ontouchstart="anchorJump(this)">Z</a>
+        </div>
+    </div>
+    <div class="letter"></div>
+</body>
+<script type="text/javascript" src="./doT.min.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript">
+    //rem转换
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {    var clientWidth = docEl.clientWidth;    if (!clientWidth) return;    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';};
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    // 跳转锚点
+    function anchorJump(n) {
+        var text = $(n).text();
+        if (text.length < 3) {$('.letter').text(text)
+            $('.letter').css({'opacity':' 1'})
+            location.hash = '#' + text
+        }
+    }
+    // 滑动结束
+    function touchEnd() {
+        var opcityNum = 1;
+        setInterval(function () {opcityNum -= 0.1;if (opcityNum > 0) {    $('.letter').css({'opacity': opcityNum})
+            } else {    clearInterval();}
+        },50)
+    }
+    // 手指滑动
+    function move() {
+       //  获取开始点击的位置
+       //  每滑动一个a标签的高度切换一个锚点
+        event.preventDefault();
+        anchorJump(document.elementFromPoint(event.changedTouches[0].clientX,event.changedTouches[0].clientY))
+    }
+</script>
+</html>
