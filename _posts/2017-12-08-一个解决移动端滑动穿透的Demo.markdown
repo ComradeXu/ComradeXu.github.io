@@ -16,6 +16,7 @@ tags:
 **问题：**移动端当有 fixed 遮罩背景和弹出层时，在屏幕上滑动能够滑动背景下面的内容，这就是臭名昭著的滚动穿透问题。
 
 经过在各种搜索,发现了比较常见的几种解决方法:
+
 1:overflow: hidden
 ```scss
 .noscroll,.noscroll body {
@@ -25,8 +26,11 @@ tags:
 }
 ```
 页面弹出层上将 .noscroll 添加到 html 上，禁用 html 和 body 的滚动条
+
 但是这种方案有几个缺点:
+
 由于 html 和 body的滚动条都被禁用，弹出层后页面的滚动位置会丢失，会直接滚动到顶部，需要用 js 来还原
+
 页面的背景还是能够有滚的动的效果
 
 2:touchmove + preventDefault
@@ -36,9 +40,11 @@ noscroll.addEventListener('touchmove', function(e) {
 }, false);
 ```
 这样用 js 阻止滚动后看起来效果不错了，但是也有一个缺点：
+
 弹出层里不能有其它需要滚动的内容（如大段文字需要固定高度，显示滚动条也会被阻止）
 
 3:[**张鑫旭大佬的解决方案**](http://www.zhangxinxu.com/wordpress/2016/12/web-mobile-scroll-prevent-window-js-css/)
+
 用的zepto,手机测试确实没毛病,但是本人愚笨用的jquery一直报错,所以直接放弃了
 
 4:用iscroll插件 虽然可以解决,但是也会出来一些蛋疼的问题,放弃
@@ -50,8 +56,10 @@ body.modal-open {
     width: 100%;
 }
 ```
-(注:此方法html不要设置overflow:scroll;等属性)
+(注:此方法html不要设置overflow:scroll等属性)
+
 如果只是上面的 css，滚动条的位置同样会丢失
+
 所以如果需要保持滚动条的位置需要用 js 保存滚动条位置关闭的时候还原滚动位置
 ```scss
 var ModalHelper = (function(bodyCls) {
@@ -65,6 +73,7 @@ var ModalHelper = (function(bodyCls) {
     beforeClose: function() {
       document.body.classList.remove(bodyCls);
       // scrollTop lost after set position:fixed, restore it back.
+	  
       document.scrollingElement.scrollTop = scrollTop;
     }
   };
