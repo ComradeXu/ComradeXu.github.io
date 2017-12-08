@@ -2,7 +2,7 @@
 layout:     post
 title:      "一个解决移动端滑动穿透的Demo"
 subtitle:   "费了大半天劲弄的"
-date:       2017-12-08
+date:       2017-12-07
 author:     "ComradeXu"
 header-img: "img/post-bg-ios9-web.jpg"
 header-mask: 0.3

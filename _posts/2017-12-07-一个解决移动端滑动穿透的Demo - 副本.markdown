@@ -1,0 +1,18 @@
+---
+layout:     post
+title:      "仿微信联系人列表, 滑动字母索引"
+subtitle:   "很好用的一个组件"
+date:       2017-12-08
+author:     "ComradeXu"
+header-img: "img/post-bg-ios9-web.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    
+---
+
+#### 仿微信联系人列表, 滑动字母索引
+
+
+[**直接戳链接**](https://comradexu.github.io/Project/demo/contactlist/)
+
