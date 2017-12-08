@@ -41,7 +41,9 @@ noscroll.addEventListener('touchmove', function(e) {
 3:[**张鑫旭大佬的解决方案**](http://www.zhangxinxu.com/wordpress/2016/12/web-mobile-scroll-prevent-window-js-css/)
 用的zepto,手机测试确实没毛病,但是本人愚笨用的jquery一直报错,所以直接放弃了
 
-4:Google到的方法 position: fixed
+4:用iscroll插件 虽然可以解决,但是也会出来一些蛋疼的问题,放弃
+
+5:Google到的最终方法 position: fixed
 ```scss
 body.modal-open {
     position: fixed;
@@ -98,7 +100,7 @@ var ModalHelper = (function(bodyCls) {
 })();
 ```
 
-下面放一个[**完整的示例**](http://www.zhangxinxu.com/wordpress/2016/12/web-mobile-scroll-prevent-window-js-css/)
+下面放一个[**完整的示例**](https://comradexu.github.io/Project/demo/noscroll.html)
 
 
 
