@@ -9,8 +9,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
 <title>js图片变成线条图片</title>
 <style>
-    .btn 
-    {
+	.container {
+		width:1200px;margin: 0 auto;
+	}
+    .btn {
         
 		display: inline-block;
 		line-height: 20px;
@@ -31,9 +33,11 @@
 </style>
 </head>
 <body>
-<img src="images/robot.jpg" id="img">
-<p><label for="fileImg" class="btn">更换图片</label><input type="file" id="fileImg" accept="image/gif, image/jpeg, image/png" style="display:none;"></p> 
-<canvas></canvas>
+<div class="container">
+	<img src="images/robot.jpg" id="img">
+	<p><label for="fileImg" class="btn">更换图片</label><input type="file" id="fileImg" accept="image/gif, image/jpeg, image/png" style="display:none;"></p> 
+	<canvas></canvas>
+</div>
 <script src="jsfeat-min.js"></script>
 <script>
 var eleImg = document.getElementById('img');
