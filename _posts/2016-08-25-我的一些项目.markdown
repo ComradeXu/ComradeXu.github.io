@@ -68,6 +68,8 @@ tags:
 
 [**表白专用**](http://comradexu.github.io/ForYou/520/)
 
+[**图片变成线条图片**](http://comradexu.github.io/tools/imgToLine/itl.html)
+
 #### 一些插件Demo
 
 [**各种正则验证**](http://comradexu.github.io/tools/plugin/ValidateDemo.html)
