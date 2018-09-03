@@ -19,9 +19,14 @@
     <div class="con_btn">确定</div>
 </div>
 
-<div style="display:none"><script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+<div style="display:none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12afc939e6575796386696a1a40aee60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script></div>
 </body>
 </html>
@@ -48,25 +53,25 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 			}
 			else {
 				alert('failed'+this.getStatus());
-			}  
+			}
 			var latlon = position.coords.latitude+','+position.coords.longitude;
 			var url = "http://api.map.baidu.com/geocoder/v2/?ak=BM8N0DetTqzDZu7NLaduHQXx&callback=renderReverse&location="+latlon+"&output=json&pois=0";
-			$.ajax({ 
-				type: "GET", 
-				dataType: "jsonp", 
+			$.ajax({
+				type: "GET",
+				dataType: "jsonp",
 				url: url,
 				beforeSend: function(){
 					$("#your_position").html('正在定位...');
 				},
-				success: function (json) { 
+				success: function (json) {
 					if(json.status==0){
 						$("#your_position").html(json.result.formatted_address);
 					}
 				},
-				error: function (XMLHttpRequest, textStatus, errorThrown) { 
-					$("#your_position").html(latlon+"地理位置获取失败"); 
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					$("#your_position").html(latlon+"地理位置获取失败");
 				}
-			});      
+			});
 		},{enableHighAccuracy: true})
 	}
 	getLocation();

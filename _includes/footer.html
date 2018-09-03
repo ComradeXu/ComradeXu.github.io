@@ -70,7 +70,7 @@
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-                    
+
                 </p>
             </div>
         </div>
@@ -156,13 +156,14 @@
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>
-    var _baId = '{{ site.ba_track_id }}';
+    //var _baId = '{{ site.ba_track_id }}';
 
     // Originial
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      //hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      hm.src = "https://hm.baidu.com/hm.js?12afc939e6575796386696a1a40aee60";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -185,7 +186,7 @@
             l = $('<li class="'+n+'_nav"></li>').append(c);
             $(selector).append(l);
         });
-        return true;    
+        return true;
     }
 
     generateCatalog(".catalog-body");

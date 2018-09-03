@@ -7,8 +7,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
 <script language="javascript" type="text/javascript" src="Date/WdatePicker.js"></script>
-<script type="text/javascript"> 
-$(function(){ $.divselect("#divselect","#inputselect"); }); 
+<script type="text/javascript">
+$(function(){ $.divselect("#divselect","#inputselect"); });
 </script>
 </head>
 
@@ -20,7 +20,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
    <span class="h_name">神灯酒店管理后台</span>
    <a href="javascript:void(0)" class="fresh">刷新页面</a>
   </div>
-  <div class="h_login"><a href="#">管理员</a><a href="#">退出</a></div> 
+  <div class="h_login"><a href="#">管理员</a><a href="#">退出</a></div>
  </div>
 </div>
 <div class="clear"></div>
@@ -136,7 +136,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">新订单</div>
                <div class="list_sys"></div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
              <div class="pay_way">
                <a href="javascript:void(0)" class="pay_esc">驳回</a>
@@ -188,7 +188,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">在线支付</div>
                <div class="list_sys">未录入系统</div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
              <div class="pay_way">
                <a href="javascript:void(0)" class="floatright">确认录入</a>
@@ -238,7 +238,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">现金垫付 30</div>
                <div class="list_sys">未录入系统</div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
             </td>
            </tr>
@@ -315,7 +315,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">新订单</div>
                <div class="list_sys"></div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
              <div class="pay_way">
                <a href="javascript:void(0)" class="pay_esc">驳回</a>
@@ -367,7 +367,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">在线支付</div>
                <div class="list_sys">未录入系统</div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
              <div class="pay_way">
                <a href="javascript:void(0)" class="floatright">确认录入</a>
@@ -417,7 +417,7 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
                <div class="list_new">现金垫付 30</div>
                <div class="list_sys">未录入系统</div>
                <div class="list_total">共：<span class="color1">160</span></div>
-              </div> 
+              </div>
              </div>
             </td>
            </tr>
@@ -618,17 +618,17 @@ $(function(){ $.divselect("#divselect","#inputselect"); });
          <p>房间号码</p>
          <input type="text" value="" id="" class="ewm_input">
          <p>房间类型</p>
-        <div id="divselect"> 
+        <div id="divselect">
             <cite>请选择房间类型</cite>
             <div class="btn_xia"></div>
             <div class="sel_edit" onClick="ShowDiv(1)">编辑</div>
-            <ul> 
-               <li><a href="javascript:void(0);" selectid="1">大房间</a></li> 
-               <li><a href="javascript:void(0);" selectid="2">标准间</a></li> 
-               <li><a href="javascript:void(0);" selectid="3">豪华间</a></li> 
-            </ul> 
-		</div> 
-		<input name="" type="hidden" value="" id="inputselect"/> 
+            <ul>
+               <li><a href="javascript:void(0);" selectid="1">大房间</a></li>
+               <li><a href="javascript:void(0);" selectid="2">标准间</a></li>
+               <li><a href="javascript:void(0);" selectid="3">豪华间</a></li>
+            </ul>
+		</div>
+		<input name="" type="hidden" value="" id="inputselect"/>
         <input name="" id="" type="button" class="ewm_creat" value="生成二维码" onClick="ShowDiv(2)">
         </form>
        </div>
@@ -786,9 +786,14 @@ function delimg(id){
 	   showimg.html("<img  src='"+img+"'>");
 }
 </script>
-<div style="display:none"><script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+<div style="display:none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12afc939e6575796386696a1a40aee60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script></div>
 </body>
 </html>

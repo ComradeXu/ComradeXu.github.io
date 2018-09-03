@@ -15,7 +15,7 @@ $(function(){
 		$("label[lab='chec']").removeAttr('class') && $(this).attr('class','checked');
 		$('.pay_sel').removeAttr('checked') && $('#' + radioId).attr('checked','checked')
 	});
-	
+
 });
 </script>
 </head>
@@ -69,9 +69,14 @@ $(function(){
     <div class="pay_no_suc">
 		<div class="add_suc">同意协议后方可下单</div>
 	</div>
-<div style="display:none"><script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+<div style="display:none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12afc939e6575796386696a1a40aee60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script></div>
 </body>
 </html>

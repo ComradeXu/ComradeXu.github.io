@@ -2,18 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta content="yes" name="apple-mobile-web-app-capable"> 
-<meta content="yes" name="apple-touch-fullscreen"> 
-<meta content="telephone=no,email=no" name="format-detection"> 
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
 <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>js图片变成线条图片</title>
 <style>
 	.container {
 		width:1200px;margin: 0 auto;
 	}
     .btn {
-        
+
 		display: inline-block;
 		line-height: 20px;
 		font-size: 14px;
@@ -35,7 +35,7 @@
 <body>
 <div class="container">
 	<img src="images/robot.jpg" id="img">
-	<p><label for="fileImg" class="btn">更换图片</label><input type="file" id="fileImg" accept="image/gif, image/jpeg, image/png" style="display:none;"></p> 
+	<p><label for="fileImg" class="btn">更换图片</label><input type="file" id="fileImg" accept="image/gif, image/jpeg, image/png" style="display:none;"></p>
 	<canvas></canvas>
 </div>
 <script src="jsfeat-min.js"></script>
@@ -84,7 +84,7 @@ var fnCannyEdge = function (source, canvas, options) {
 	// 1. 灰度
 	// 2. 高斯模糊
 	// 3. canny边缘检测
-	
+
 	var img_u8 = new jsfeat.matrix_t(width, height, jsfeat.U8C1_t);
 	jsfeat.imgproc.grayscale(imageData.data, width, height, img_u8);
 	var kernelSize = (blur_radius + 1) * 2;
@@ -122,13 +122,18 @@ document.getElementById('fileImg').addEventListener('change', function (event) {
 	file = event.target.files[0];
     // 选择的文件是图片
     if (file.type.indexOf("image") == 0) {
-        reader.readAsDataURL(file);    
+        reader.readAsDataURL(file);
     }
 });
 </script>
-<div style="display:none"><script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe21692200bce7a07448dabb995750ab3' type='text/javascript'%3E%3C/script%3E"));
+<div style="display:none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12afc939e6575796386696a1a40aee60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script></div>
 </body>
 </html>
