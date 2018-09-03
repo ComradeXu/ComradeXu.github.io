@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <meta charset="utf-8" />
+                <title>文字矩阵</title>
+                <style>
+                * {margin: 0; padding: 0;}
+                body {background: black;}
+                canvas {display: block;}
+                </style>
+        </head>
+ 
+        <body>
+        <canvas id="c"></canvas>    <!-- 定义画布 -->
+        <script type="text/javascript">
+        var c = document.getElementById("c");  //拿到画布并赋值给c
+        var ctx = c.getContext("2d");     //创建画笔,2d的
+ 
+        c.height = window.innerHeight;  //获取屏幕分辨率:高
+        c.width = window.innerWidth;    //宽
+        var chinese = "10101111111111111100000000";
+        chinese = chinese.split("");   //split() 方法用于把一个字符串分割成字符串数组。
+ 
+        var font_size = 10;   //字体大小
+        var columns = Math.floor(c.width/font_size);  //屏幕大小除以字体大小=字体个数;向下取整
+        //an array of drops - one per column
+        var drops = [];  //创建一个数组
+        for(var x = 0; x < columns; x++)
+        drops[x] = 1;
+        //drawing the characters
+        function draw()
+        {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";//rgba:基础三色加不透明度
+        ctx.fillRect(0, 0, c.width, c.height);
+ 
+        ctx.fillStyle = "#0F0"; //green text
+        ctx.font = font_size + "px arial";
+        //looping over drops
+        for(var i = 0; i < drops.length; i++)
+        {
+        var text = chinese[Math.floor(Math.random()*chinese.length)];
+        ctx.fillText(text, i*font_size, drops[i]*font_size);
+ 
+        if(drops[i]*font_size > c.height && Math.random() > 0.975) //越接近一表示一起下落的可能性越低
+ 
+                drops[i] = 0;
+                 
+                drops[i]++;
+        }
+        }
+        setInterval(draw, 33);//时间间隔
+        </script>
+</body>
+</html>
