@@ -1,0 +1,16 @@
+.news-ul {border-bottom: 1px solid #e8e8e8;}
+.news-ul ul {display: flex;display: -webkit-flex;height: 1rem;line-height: 1rem;align-items: center;padding: 0 .3rem;}
+.news-ul ul li {flex:1;text-align: center;font-size: .32rem;position: relative;}
+.news-ul ul li.active {font-weight: bold;}
+.news-ul ul li.active:before {content: '';width: 100%;height: 3px;background: #4588f1;position: absolute;left: 0;bottom: -1px;}
+.news-ul ul li a {display: block;}
+
+.news-list dl:after {content: "";display: block;visibility: hidden;clear: both;height: 0;font-size: 0;}
+.news-list dl {font-size: .28rem;padding: .2rem 0;box-sizing: border-box;border-bottom: 1px solid #ececec;}
+.news-list dl .news-tit {max-height: .8rem;line-height: .4rem;overflow: hidden;margin-bottom: .1rem;}
+.news-list dl .news-sub {font-size: .24rem;color: #999;}
+.news-list dl .news-sub .iconfont {vertical-align: middle;margin-right: .06rem;}
+.setTop:before,.ask-list .news-tit.setTop:before {content: '';width: .61rem;height: .3rem;background: url(../images/setTop.png) no-repeat;background-size: 100% 100%;display: inline-block;vertical-align: middle;margin-right: .1rem;top: .04rem;}
+.ask-list .news-tit.setTop {padding-left: .75rem;}
+.ask-list .news-tit {position: relative;padding-left: .5rem;}
+.ask-list .news-tit:before {content: '';position: absolute;left: 0;top: 0;background: url(../images/icon-ask.png) no-repeat;width: .38rem;height: .42rem;background-size: 100% 100%;}

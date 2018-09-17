@@ -1,0 +1,68 @@
+.noscroll {height: 100%;}
+.noscroll,.noscroll body {overflow: hidden;}
+.noscroll body {position: relative;}
+
+.rules-sel {background: #fff;z-index: 3;position: relative;clear: both;}
+.rules-sel ul {display: flex;display: -webkit-flex;}
+.rules-sel li {font-size: .3rem;color: #333;text-align: center;height: .8rem;line-height: .8rem;flex: 1;}
+.rules-sel li .iconfont {color: #b0b0b0;margin-left: .04rem;font-size: .24rem;}
+.rules-sel li.active,.rules-sel li.active .iconfont {color: #1787e0;}
+
+.wrap-sel {background: #fff;z-index: 2;position: relative;clear: both;}
+.wrap-sel ul {display: flex;display: -webkit-flex;}
+.wrap-sel li {font-size: .32rem;color: #333;text-align: center;height: .8rem;line-height: .8rem;flex: 1;}
+.wrap-sel li .iconfont {color: #bbb;margin-left: .04rem;font-size: .24rem;vertical-align: middle;}
+.wrap-sel li .icon-ups {display: none;}
+.wrap-sel li.active i.icon-downs {display: inline-block;}
+.wrap-sel li.active i.icon-ups {display: none;}
+.wrap-sel li.active,.wrap-sel li.active .iconfont {color: #be0000;}
+.wrap-sel li.cur .icon-downs {display: none;}
+.wrap-sel li.cur .icon-ups {display: inline-block;}
+.wrap-sel li.cur,.wrap-sel li.cur .iconfont {color: #be0000;}
+.wrap-sel li.active.cur i.icon-downs {display: none;}
+.wrap-sel li.active.cur i.icon-ups {display: inline-block;}
+.wrap-sel-hide {display: none;position: absolute;width: 100%;box-sizing: border-box;z-index: 3;}
+.wrap-sel-hide .wrap-sel-con {background: #fff;padding: .16rem .1rem 0;float: left;width: 100%;box-sizing: border-box;display: none;max-height: 3.6rem;overflow-y: scroll;}
+.wrap-sel-hide ul {font-size: 0;}
+.wrap-sel-hide li {width: 33.33%;float: left;text-align: center;height: .66rem;line-height: .66rem;padding: 0 .1rem;box-sizing: border-box;margin-bottom: .2rem;}
+.wrap-sel-hide li a {font-size: .28rem;color:#555;background: #f5f5f5;border-radius: 3px;float: left;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;border:1px solid #f5f5f5;}
+.wrap-sel-hide li.cur a {color: #dd3635;background: #fff;border:1px solid #dd3635;}
+.wrap-sel-hide .wrap-sel-con1 li {width: 50%;}
+
+.jz-panel {position: fixed;right: 0;top: 0;width: 90%;height: 100%;font-size: .26rem;z-index: 10;display: none;overflow-y: auto;overflow-x: hidden;box-sizing: border-box;}
+.jz-box {background: #fff;height: 100%;transform: translate(100%,0);transition: transform .4s;position: fixed;top: 0;right: 0;width: 90%;z-index: 9;box-sizing: border-box;}
+.jz-panel .groupTitle {height: .8rem;line-height: .8rem;padding: 0 10px;font-weight: normal;}
+.jz-box-show {transform: translate(0,0);}
+.jz-box dl {padding: 0 .1rem;clear: both;}
+.jz-box dl dt {font-size: .3rem;margin-top: .3rem;padding: 0 .1rem;float: left;width: 100%;}
+.jz-box dl dt .jz-more {display: block;width: 10px;height: 10px;border-top: 1px solid #bfbfbf;border-right: 1px solid #bfbfbf;transform: rotate(-45deg);margin:.16rem .24rem 0 .16rem;}
+.jz-box dl dt .jz-moree {display: block;width: 10px;height: 10px;border-top: 1px solid #bfbfbf;border-right: 1px solid #bfbfbf;transform: rotate(135deg);margin:.02rem .24rem 0 .16rem;}
+.jz-box dl dt .jz-all {float: right;font-size: .26rem;display: block;margin:.02rem .24rem 0 0;color: #848689;}
+.jz-box dl dt .jz-all:after {content:'';display: inline-block;width: .18rem;height: .18rem;border-top: 1px solid #bfbfbf;border-right: 1px solid #bfbfbf;transform: rotate(45deg);}
+.jz-box dl dd {float: left;width: 33.33%;text-align: center;padding: 0 .1rem;box-sizing: border-box;margin-top: .2rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.jz-box dl dd a {height: .5rem;display: block;padding-left: 5px;padding-right: 5px;text-align: center;line-height: .5rem;background-color: #f0f2f5;border-radius: 5px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;border:1px solid #f0f2f5;}
+.jz-box dl dd a.active {border: 1px solid #1787e0;color:#1787e0;background: #fff;}
+.jz-btns {clear: both;bottom: 0;position: fixed;right:0;width: 100%;}
+.jz-btns .jz-btn {background-color: #fff;color: #252525;position: relative;width: 50%;float: left;text-align: center;font-size: .32rem;height: .8rem;line-height: .8rem;box-sizing: border-box;}
+.jz-btns .jz-l-btn {border-top: 1px solid #e3e5e9;}
+.jz-btns .jz-r-btn {background: #1787e0;color: #fff;}
+.scroll-box {padding-bottom: 1rem;overflow-y: scroll;overflow-x: hidden;box-sizing: border-box;background: #fff;height: 100%;}
+.jz-panel::-webkit-scrollbar,.jz-box::-webkit-scrollbar,.scroll-box::-webkit-scrollbar {display:none;}
+.jz-hide {display: none;clear: both;padding: 0 .1rem;}
+.scroll-box h2 {font-size: .28rem;color: #777;height: .82rem;line-height: .82rem;padding: 0 .2rem;text-align: center;position: relative;right: 0;top: 0;width: 100%;background: #fff;box-sizing: border-box;border-bottom: 1px solid #ddd;z-index: 66;}
+.scroll-box .jz-back:before {content: "\e640";font-family: "iconfont" !important;-webkit-font-smoothing: antialiased;font-style: normal;font-weight: normal;position: absolute;left: .2rem;color: #848689;font-size: .4rem;}
+.scroll-box .jz-all-ul {margin-top: .82rem;}
+.scroll-box .jz-all-ul li {float: left;width: 100%;font-size: .28rem;color: #777;height: .8rem;line-height: .8rem;background: #f7f7f7;}
+.scroll-box .jz-all-ul li.bob-none {border-bottom: none;}
+.scroll-box .jz-all-ul li span {margin-left: .2rem;}
+.scroll-box .jz-all-ul li i {float: right;}
+.scroll-box .jz-all-ul li i.up {display: block;width: 10px;height: 10px;border-top: 1px solid #bfbfbf;border-right: 1px solid #bfbfbf;transform: rotate(-45deg);margin:.4rem .44rem 0 0;}
+.scroll-box .jz-all-ul li i.down {display: none;}
+.scroll-box .jz-none {padding: 0 .4rem 0 .2rem;clear: both;font-size: .28rem;}
+.scroll-box .lists-all .lists-item p {padding: 0;}
+.scroll-box .lists-all .lists-item p a {display: block;height: .8rem;line-height: .84rem;border-bottom: 1px solid #f7f7f7;padding: 0;font-size: .26rem;}
+.scroll-box .jz-none a:last-child {border-bottom: none;}
+.scroll-boxx {padding-bottom: 0;}
+.jz-box-con {width: 400%;height: 100%;}
+.jz-selected {font-size: .26rem;color: #1787e0;float: right;margin-top: 1px;margin-right: .3rem;}
+.jz-modal {position: absolute;top: .82rem;right: 0;width: 100%;bottom: 0;overflow: auto;}

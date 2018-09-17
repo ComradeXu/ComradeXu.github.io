@@ -1,0 +1,24 @@
+.banner {height: 2.7rem;overflow: hidden;position: relative;}
+.banner li img {width: 100%;height: 2.7rem;}
+.banner .hd ul {font-size: 0;text-align: center;position: absolute;bottom: .2rem;left: 0;right: 0;}
+.banner .hd li { display:inline-block; width:5px; height:5px;border-radius:50%;text-indent:-9999px;overflow:hidden; margin:0 4px;background: #6e5a88;}
+.banner .hd li.on { background:#fff;}
+
+.wd-item {padding: .3rem 0;}
+.wd-item h2 {font-size: .32rem;}
+.wd-item p {margin-top: .15rem;}
+.wd-item p a {color: #444;font-size: .28rem;margin-left: .3rem;}
+.wd-item p a:first-child {margin-left: 0;}
+.wd-tag {color: #fe3600;font-weight: normal;margin-right: .1rem;}
+
+.nav {padding-top: 0;}
+.nav ul {display: flex;display: -webkit-flex;text-align: center;flex-wrap: wrap;}
+.nav li {flex: 0 0 25%;margin-top: .3rem;}
+.nav li a {display: block;}
+.nav li img {width: 1rem;height: 1rem;}
+.nav li p {margin-top: .1rem;}
+
+.hot-list .sec-tit {margin-bottom: 0;}
+.hot-list ul {display: flex;display: -webkit-flex;flex-wrap: wrap;align-content: flex-start;}
+.hot-list li {flex: 0 0 33.333333%;font-size: .28rem;color: #333;margin-top: .3rem;padding-right: .1rem;box-sizing: border-box;}
+.hot-list li img {width: .4rem;height: .4rem;vertical-align: middle;margin-right: .1rem;}
