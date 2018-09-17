@@ -1,6 +1,6 @@
 a,html {-webkit-tap-highlight-color: transparent;}
 html,body {-webkit-overflow-scrolling:touch;}
-.wrapper {/*max-width: 768px;*/margin:0 auto;overflow: hidden;}
+.wrapper {/*max-width: 768px;*/margin:0 auto;}
 body.modal-open {position: fixed;width: 100%;}
 .color333 {color: #333 !important;}
 .color666 {color: #666 !important;}
