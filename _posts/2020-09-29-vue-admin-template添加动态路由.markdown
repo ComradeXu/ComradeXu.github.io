@@ -17,7 +17,9 @@ tags:
 #### 怕忘了，mark一下
 
 vue-admin-template(我这个是没有roles版本的)执行安装
+
 1:..\src\store\modules\user.js文件下的
+
 mutations中添加
 ```js
 SET_MENUS: (state, menus) => {
@@ -73,7 +75,9 @@ function filterAsyncRouter(asyncRouterMap) {
 }
 ```
 在路由钩子中，过滤路由，并生成路由
+
 修改router.beforeEach路由钩子
+
 在await store.dispatch('user/getInfo')获取动态路由后添加代码
 ```js
 if (store.getters.menus.length < 1) {
@@ -88,6 +92,7 @@ next({ ...to, replace: true }) // 确保addRoutes已完成
 此处{ ...to, replace: true }必须添加，否则会出现新添加路由刷新404的情况，如果添加后出现一直死循环的情况请查看const hasGetUserInfo = store.getters.name里的name有没有获取到，这个是在..\src\store\modules\user.js文件getInfo后存储的，name也可以换成其他可以验证的参数
 
 4:合并路由
+
 修改..\src\layout\components\Sidebar\index.vue
 ```js
 routes() {
@@ -96,5 +101,6 @@ routes() {
 ```
 
 5:遇到的坑
+
 next({ ...to, replace: true })如果不添加，动态路由刷新会404；添加就一直死循环；原因if(hasGetUserInfo)的hasGetUserInfo验证问题
 添加完后点击动态添加的路由会空白页面，我遇到的两种情况，一种是component路径没有添加对，另一种就是添加了redirect路径重定向属性，去掉即可
